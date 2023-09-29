@@ -1,0 +1,117 @@
+spriteset (vofa_SPR_PUR, "gfx/vofa_0.png") {
+    template4()
+}
+
+spriteset (vofa_SPR_EMPTY, "gfx/vofa_1.png") {
+    template8()
+}
+
+spriteset (vofa_SPR_GOOD_1, "gfx/vofa_2.png") {
+    template8()
+}
+
+spriteset (vofa_SPR_GOOD_2, "gfx/vofa_3.png") {
+    template8()
+}
+
+spriteset (vofa_SPR_GOOD_3, "gfx/vofa_4.png") {
+    template8()
+}
+
+spriteset (vofa_SPR_BDMT_1, "gfx/vofa_5.png") {
+    template8()
+}
+
+spriteset (vofa_SPR_BDMT_2, "gfx/vofa_6.png") {
+    template8()
+}
+
+spriteset (vofa_SPR_GLAS_1, "gfx/vofa_7.png") {
+    template8()
+}
+
+spriteset (vofa_SPR_GLAS_2, "gfx/vofa_8.png") {
+    template8()
+}
+
+spriteset (vofa_SPR_GLAS_3, "gfx/vofa_9.png") {
+    template8()
+}
+
+spriteset (vofa_SPR_ENSP_1, "gfx/vofa_10.png") {
+    template8()
+}
+
+spriteset (vofa_SPR_ENSP_2, "gfx/vofa_11.png") {
+    template8()
+}
+
+spritegroup vofa_sprg_good {
+    loading: [vofa_SPR_EMPTY, vofa_SPR_GOOD_1, vofa_SPR_GOOD_2, vofa_SPR_GOOD_3];
+    loaded: [vofa_SPR_EMPTY, vofa_SPR_GOOD_1, vofa_SPR_GOOD_2, vofa_SPR_GOOD_3]; }
+
+spritegroup vofa_sprg_bdmt {
+    loading: [vofa_SPR_EMPTY, vofa_SPR_BDMT_1, vofa_SPR_BDMT_2];
+    loaded: [vofa_SPR_EMPTY, vofa_SPR_BDMT_1, vofa_SPR_BDMT_2]; }
+
+spritegroup vofa_sprg_glas {
+    loading: [vofa_SPR_EMPTY, vofa_SPR_GLAS_1, vofa_SPR_GLAS_2, vofa_SPR_GLAS_3];
+    loaded: [vofa_SPR_EMPTY, vofa_SPR_GLAS_1, vofa_SPR_GLAS_2, vofa_SPR_GLAS_3]; }
+
+spritegroup vofa_sprg_ensp {
+    loading: [vofa_SPR_EMPTY, vofa_SPR_ENSP_1, vofa_SPR_ENSP_2];
+    loaded: [vofa_SPR_EMPTY, vofa_SPR_ENSP_1, vofa_SPR_ENSP_2]; }
+
+switch (FEAT_TRAINS, SELF, vofa_gfx, cargo_type_in_veh) {
+    BDMT: vofa_sprg_bdmt;
+    ENSP: vofa_sprg_ensp;
+    FMSP: vofa_sprg_ensp;
+    GLAS: vofa_sprg_glas;
+    default: vofa_sprg_good; }
+
+item (FEAT_TRAINS, vofa) { graphics {
+    additional_text: string(STR_ADD_VOFA, string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 69;
+    colour_mapping: switch_recolour_lights;
+    default: vofa_gfx;
+    length: 8;
+    purchase: vofa_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, vofa) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [LVST, WOOD];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 15;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1987,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_VOFA, string(STR_PUR_CONTAINER_WAGON));
+    non_refittable_cargo_classes: bitmask(CC_COVERED, CC_OVERSIZED, CC_REFRIGERATED);
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_EXPRESS, CC_HAZARDOUS, CC_PIECE_GOODS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 8;
+    speed: 80 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 24 ton;
+}}

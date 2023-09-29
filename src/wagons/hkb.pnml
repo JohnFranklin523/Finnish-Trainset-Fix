@@ -1,0 +1,228 @@
+spriteset (hkb_SPR_PUR, "gfx/hkb_0.png") {
+    template4()
+}
+
+spriteset (hkb_SPR_EMPTY, "gfx/hkb_1.png") {
+    template11()
+}
+
+spriteset (hkb_SPR_DEF_V1, "gfx/hkb_2.png") {
+    template11()
+}
+
+spriteset (hkb_SPR_DEF_V2, "gfx/hkb_3.png") {
+    template11()
+}
+
+spriteset (hkb_SPR_FOOD_V1, "gfx/hkb_4.png") {
+    template11()
+}
+
+spriteset (hkb_SPR_FOOD_V2, "gfx/hkb_5.png") {
+    template11()
+}
+
+spriteset (hkb_SPR_WOOD_1, "gfx/hkb_6.png") {
+    template11()
+}
+
+spriteset (hkb_SPR_WOOD_2, "gfx/hkb_7.png") {
+    template11()
+}
+
+spriteset (hkb_SPR_STEL_1, "gfx/hkb_8.png") {
+    template11()
+}
+
+spriteset (hkb_SPR_STEL_2, "gfx/hkb_9.png") {
+    template11()
+}
+
+spriteset (hkb_SPR_WDPR_1, "gfx/hkb_10.png") {
+    template11()
+}
+
+spriteset (hkb_SPR_WDPR_2, "gfx/hkb_11.png") {
+    template11()
+}
+
+spritegroup hkb_sprg_def_v1 {
+    loading: [hkb_SPR_EMPTY, hkb_SPR_DEF_V1];
+    loaded: [hkb_SPR_EMPTY, hkb_SPR_DEF_V1]; }
+
+spritegroup hkb_sprg_def_v2 {
+    loading: [hkb_SPR_EMPTY, hkb_SPR_DEF_V2];
+    loaded: [hkb_SPR_EMPTY, hkb_SPR_DEF_V2]; }
+
+spritegroup hkb_sprg_food_v1 {
+    loading: [hkb_SPR_EMPTY, hkb_SPR_FOOD_V1];
+    loaded: [hkb_SPR_EMPTY, hkb_SPR_FOOD_V1]; }
+
+spritegroup hkb_sprg_food_v2 {
+    loading: [hkb_SPR_EMPTY, hkb_SPR_FOOD_V2];
+    loaded: [hkb_SPR_EMPTY, hkb_SPR_FOOD_V2]; }
+
+spritegroup hkb_sprg_wood {
+    loading: [hkb_SPR_EMPTY, hkb_SPR_WOOD_1, hkb_SPR_WOOD_2];
+    loaded: [hkb_SPR_EMPTY, hkb_SPR_WOOD_1, hkb_SPR_WOOD_2]; }
+
+spritegroup hkb_sprg_stel {
+    loading: [hkb_SPR_EMPTY, hkb_SPR_STEL_1, hkb_SPR_STEL_2];
+    loaded: [hkb_SPR_EMPTY, hkb_SPR_STEL_1, hkb_SPR_STEL_2]; }
+
+spritegroup hkb_sprg_wdpr {
+    loading: [hkb_SPR_EMPTY, hkb_SPR_WDPR_1, hkb_SPR_WDPR_2];
+    loaded: [hkb_SPR_EMPTY, hkb_SPR_WDPR_1, hkb_SPR_WDPR_2]; }
+
+random_switch (FEAT_TRAINS, SELF, hkb_random_def) {
+    1: hkb_sprg_def_v1;
+    1: hkb_sprg_def_v2; }
+
+random_switch (FEAT_TRAINS, SELF, hkb_random_food) {
+    1: hkb_sprg_food_v1;
+    1: hkb_sprg_food_v2; }
+
+switch (FEAT_TRAINS, SELF, hkb_cargo_gfx, cargo_type_in_veh) {
+    FOOD: hkb_random_food;
+    STEL: hkb_sprg_stel;
+    WDPR: hkb_sprg_wdpr;
+    WOOD: hkb_sprg_wood;
+    default: hkb_random_def; }
+
+spriteset (hkb_SPR_DEF_V2_copy, "gfx/hkb_3.png") {
+    template12()
+}
+
+spriteset (hkb_SPR_EMPTY_copy, "gfx/hkb_1.png") {
+    template12()
+}
+
+spriteset (hkb_SPR_DEF_V1_copy, "gfx/hkb_2.png") {
+    template12()
+}
+
+spriteset (hkb_SPR_WDPR_2_copy, "gfx/hkb_11.png") {
+    template12()
+}
+
+spriteset (hkb_SPR_WDPR_1_copy, "gfx/hkb_10.png") {
+    template12()
+}
+
+spriteset (hkb_SPR_WOOD_2_copy, "gfx/hkb_7.png") {
+    template12()
+}
+
+spriteset (hkb_SPR_WOOD_1_copy, "gfx/hkb_6.png") {
+    template12()
+}
+
+spriteset (hkb_SPR_STEL_2_copy, "gfx/hkb_9.png") {
+    template12()
+}
+
+spriteset (hkb_SPR_STEL_1_copy, "gfx/hkb_8.png") {
+    template12()
+}
+
+spriteset (hkb_SPR_FOOD_V2_copy, "gfx/hkb_5.png") {
+    template12()
+}
+
+spriteset (hkb_SPR_FOOD_V1_copy, "gfx/hkb_4.png") {
+    template12()
+}
+
+spritegroup hkb_sprg_def_v2_copy {
+    loading: [hkb_SPR_EMPTY_copy, hkb_SPR_DEF_V2_copy];
+    loaded: [hkb_SPR_EMPTY_copy, hkb_SPR_DEF_V2_copy]; }
+
+spritegroup hkb_sprg_def_v1_copy {
+    loading: [hkb_SPR_EMPTY_copy, hkb_SPR_DEF_V1_copy];
+    loaded: [hkb_SPR_EMPTY_copy, hkb_SPR_DEF_V1_copy]; }
+
+spritegroup hkb_sprg_wdpr_copy {
+    loading: [hkb_SPR_EMPTY_copy, hkb_SPR_WDPR_1_copy, hkb_SPR_WDPR_2_copy];
+    loaded: [hkb_SPR_EMPTY_copy, hkb_SPR_WDPR_1_copy, hkb_SPR_WDPR_2_copy]; }
+
+spritegroup hkb_sprg_wood_copy {
+    loading: [hkb_SPR_EMPTY_copy, hkb_SPR_WOOD_1_copy, hkb_SPR_WOOD_2_copy];
+    loaded: [hkb_SPR_EMPTY_copy, hkb_SPR_WOOD_1_copy, hkb_SPR_WOOD_2_copy]; }
+
+spritegroup hkb_sprg_stel_copy {
+    loading: [hkb_SPR_EMPTY_copy, hkb_SPR_STEL_1_copy, hkb_SPR_STEL_2_copy];
+    loaded: [hkb_SPR_EMPTY_copy, hkb_SPR_STEL_1_copy, hkb_SPR_STEL_2_copy]; }
+
+spritegroup hkb_sprg_food_v2_copy {
+    loading: [hkb_SPR_EMPTY_copy, hkb_SPR_FOOD_V2_copy];
+    loaded: [hkb_SPR_EMPTY_copy, hkb_SPR_FOOD_V2_copy]; }
+
+spritegroup hkb_sprg_food_v1_copy {
+    loading: [hkb_SPR_EMPTY_copy, hkb_SPR_FOOD_V1_copy];
+    loaded: [hkb_SPR_EMPTY_copy, hkb_SPR_FOOD_V1_copy]; }
+
+random_switch (FEAT_TRAINS, SELF, hkb_random_def_copy) {
+    1: hkb_sprg_def_v1_copy;
+    1: hkb_sprg_def_v2_copy; }
+
+random_switch (FEAT_TRAINS, SELF, hkb_random_food_copy) {
+    1: hkb_sprg_food_v1_copy;
+    1: hkb_sprg_food_v2_copy; }
+
+switch (FEAT_TRAINS, SELF, hkb_cargo_gfx_copy, cargo_type_in_veh) {
+    FOOD: hkb_random_food_copy;
+    STEL: hkb_sprg_stel_copy;
+    WDPR: hkb_sprg_wdpr_copy;
+    WOOD: hkb_sprg_wood_copy;
+    default: hkb_random_def_copy; }
+
+switch (FEAT_TRAINS, SELF, hkb_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: hkb_cargo_gfx_copy;
+    default: hkb_cargo_gfx; }
+
+item (FEAT_TRAINS, hkb) { graphics {
+    additional_text: string(STR_ADD_HKB, string(STR_ADD_MANUFACTURER), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 27;
+    colour_mapping: switch_recolour_lights;
+    default: hkb_gfx_flipped;
+    length: 6;
+    purchase: hkb_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, hkb) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [LVST, WOOD];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 9;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1970,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_HKB, string(STR_PUR_FLAT_WAGON));
+    non_refittable_cargo_classes: bitmask(CC_COVERED, CC_REFRIGERATED);
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_EXPRESS, CC_HAZARDOUS, CC_OVERSIZED, CC_PIECE_GOODS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 4;
+    speed: 100 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 13 ton;
+}}

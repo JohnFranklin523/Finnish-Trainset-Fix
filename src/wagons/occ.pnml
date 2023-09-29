@@ -1,0 +1,124 @@
+spriteset (occ_SPR_PUR, "gfx/occ_0.png") {
+    template4()
+}
+
+spriteset (occ_SPR_EMPTY, "gfx/occ_1.png") {
+    template8()
+}
+
+spriteset (occ_SPR_STEL_1, "gfx/occ_2.png") {
+    template8()
+}
+
+spriteset (occ_SPR_STEL_2, "gfx/occ_3.png") {
+    template8()
+}
+
+spriteset (occ_SPR_DEF_V1_1, "gfx/occ_4.png") {
+    template8()
+}
+
+spriteset (occ_SPR_DEF_V1_2, "gfx/occ_5.png") {
+    template8()
+}
+
+spriteset (occ_SPR_DEF_V2_1, "gfx/occ_6.png") {
+    template8()
+}
+
+spriteset (occ_SPR_DEF_V2_2, "gfx/occ_7.png") {
+    template8()
+}
+
+spriteset (occ_SPR_DEF_V3_1, "gfx/occ_8.png") {
+    template8()
+}
+
+spriteset (occ_SPR_DEF_V3_2, "gfx/occ_9.png") {
+    template8()
+}
+
+spriteset (occ_SPR_DEF_V4_1, "gfx/occ_10.png") {
+    template8()
+}
+
+spriteset (occ_SPR_DEF_V4_2, "gfx/occ_11.png") {
+    template8()
+}
+
+spritegroup occ_sprg_stel {
+    loading: [occ_SPR_EMPTY, occ_SPR_STEL_1, occ_SPR_STEL_2];
+    loaded: [occ_SPR_EMPTY, occ_SPR_STEL_1, occ_SPR_STEL_2]; }
+
+spritegroup occ_sprg_def_v1 {
+    loading: [occ_SPR_EMPTY, occ_SPR_DEF_V1_1, occ_SPR_DEF_V1_2];
+    loaded: [occ_SPR_EMPTY, occ_SPR_DEF_V1_1, occ_SPR_DEF_V1_2]; }
+
+spritegroup occ_sprg_def_v2 {
+    loading: [occ_SPR_EMPTY, occ_SPR_DEF_V2_1, occ_SPR_DEF_V2_2];
+    loaded: [occ_SPR_EMPTY, occ_SPR_DEF_V2_1, occ_SPR_DEF_V2_2]; }
+
+spritegroup occ_sprg_def_v3 {
+    loading: [occ_SPR_EMPTY, occ_SPR_DEF_V3_1, occ_SPR_DEF_V3_2];
+    loaded: [occ_SPR_EMPTY, occ_SPR_DEF_V3_1, occ_SPR_DEF_V3_2]; }
+
+spritegroup occ_sprg_def_v4 {
+    loading: [occ_SPR_EMPTY, occ_SPR_DEF_V4_1, occ_SPR_DEF_V4_2];
+    loaded: [occ_SPR_EMPTY, occ_SPR_DEF_V4_1, occ_SPR_DEF_V4_2]; }
+
+random_switch (FEAT_TRAINS, SELF, occ_gfx_def) {
+    1: occ_sprg_def_v1;
+    1: occ_sprg_def_v2;
+    1: occ_sprg_def_v3;
+    1: occ_sprg_def_v4; }
+
+switch (FEAT_TRAINS, SELF, occ_gfx, cargo_type_in_veh) {
+    STEL: occ_sprg_stel;
+    default: occ_gfx_def; }
+
+item (FEAT_TRAINS, occ) { graphics {
+    additional_text: string(STR_ADD_OCC, string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 58;
+    colour_mapping: switch_recolour_lights;
+    default: occ_gfx;
+    length: 8;
+    purchase: occ_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, occ) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [LVST, WOOD];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 15;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1970,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_OCC, string(STR_PUR_FLAT_WAGON));
+    non_refittable_cargo_classes: bitmask(CC_COVERED, CC_REFRIGERATED);
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_EXPRESS, CC_HAZARDOUS, CC_OVERSIZED, CC_PIECE_GOODS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 6;
+    speed: 100 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 22 ton;
+}}

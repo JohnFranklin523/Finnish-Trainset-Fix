@@ -1,0 +1,118 @@
+// Define 25kV AC
+switch (FEAT_TRAINS, SELF, twentyfivekvac, current_railtype) {
+    SAAA: return 1;
+    SABA: return 1;
+    SACA: return 1;
+    SADA: return 1;
+    SAEA: return 1;
+    SBAA: return 1;
+    SBBA: return 1;
+    SBCA: return 1;
+    SBDA: return 1;
+    SBEA: return 1;
+    SCAA: return 1;
+    SCBA: return 1;
+    SCCA: return 1;
+    SCDA: return 1;
+    SCEA: return 1;
+    SDAA: return 1;
+    SDBA: return 1;
+    SDCA: return 1;
+    SDDA: return 1;
+    SDEA: return 1;
+    SEAA: return 1;
+    SEBA: return 1;
+    SECA: return 1;
+    SEDA: return 1;
+    SEEA: return 1;
+    SFAA: return 1;
+    SFBA: return 1;
+    SFCA: return 1;
+    SFDA: return 1;
+    SFEA: return 1;
+    SGAA: return 1;
+    SGBA: return 1;
+    SGCA: return 1;
+    SGDA: return 1;
+    SGEA: return 1;
+    SHAA: return 1;
+    SHBA: return 1;
+    SHCA: return 1;
+    SHDA: return 1;
+    SHEA: return 1;
+    SIAA: return 1;
+    SIBA: return 1;
+    SICA: return 1;
+    SIDA: return 1;
+    SIEA: return 1;
+    SJAA: return 1;
+    SJBA: return 1;
+    SJCA: return 1;
+    SJDA: return 1;
+    SJEA: return 1;
+    ERA1: return 1;
+    ERA2: return 1;
+    ERA3: return 1;
+    ERA4: return 1;
+    return 0;
+}
+
+/*
+
+BITMASK SHEET FROM CHINA SET: TRAINS
+
+bitmask(0): default, reserved
+bitmask(1): restaurant car
+bitmask(2): air condition generator car (reserved)
+bitmask(3): conductor car
+bitmask(4): brake van
+bitmask(5): reserved
+bitmask(6): locomotives unable to supply electricity for cars (reserved)
+bitmask(7): locomotives able to supply electricity for cars (reserved)
+
+For example, 
+bitmask_vehicle_info:           bitmask(1, 3);
+
+*/
+// Another running cost factor depending on the existence of restaurant car - changed in v0.0.8 - now halves the runing costs of passenger cars instead of elimination 
+switch (FEAT_TRAINS, PARENT, cafecostfactor, hasbit(bitmask_consist_info, 1)) {
+    1: return 1;
+    return 2;
+}
+
+// Cargo age period factor depending on Restaurant Car: attaching restaurant car increases cargo age period of medium and long range passenger cars (i.e. not commuter cars) by 1/4
+switch (FEAT_TRAINS, PARENT, cafedecayfactor, hasbit(bitmask_consist_info, 1)) {
+    1: return 5;
+    return 4;
+}
+
+// Electric Engines MUST BE ELECTRIFIED to supply electricity
+
+switch (FEAT_TRAINS, SELF, airconditioner, vehicle_is_powered) {
+    1: return bitmask(7);
+    return 0;
+}
+
+// Ordinary cargos cannot feel comfortable. LVST can. PASS can eat. Others cannot.
+
+switch (FEAT_TRAINS, SELF, passcaneat, (cargo_classes == CC_PASSENGERS)) {
+    1: cafedecayfactor;
+    return 4;
+}
+
+switch (FEAT_TRAINS, SELF, comfortpass, (cargo_classes == CC_PASSENGERS)) {
+    1: return 80;
+    return 50;
+}
+
+switch (FEAT_TRAINS, SELF, comfortlvst, cargo_type_in_veh == LVST) {
+    1: return 555;
+    return 185;
+}
+
+// Attaching restaurant car to mail car does not half the running cost of mail car
+
+switch (FEAT_TRAINS, SELF, mailcannoteat, (cargo_classes == CC_PASSENGERS)) {
+    1: cafecostfactor;
+    return 2;
+}

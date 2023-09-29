@@ -1,0 +1,110 @@
+switch (FEAT_TRAINS, SELF, dr14_snd_0_depot_100, vehicle_is_in_depot) {
+    0: sound("sfx/dr14_idle.wav", 100); }
+
+switch (FEAT_TRAINS, SELF, dr14_snd_0_100, extra_callback_info1) {
+    1: sound("sfx/dr14_acc.wav", 100);
+    7: sound("sfx/dr14_run.wav", 100);
+    8: dr14_snd_0_depot_100; }
+
+switch (FEAT_TRAINS, SELF, dr14_snd_0_depot_66, vehicle_is_in_depot) {
+    0: sound("sfx/dr14_idle.wav", 66); }
+
+switch (FEAT_TRAINS, SELF, dr14_snd_0_66, extra_callback_info1) {
+    1: sound("sfx/dr14_acc.wav", 66);
+    7: sound("sfx/dr14_run.wav", 66);
+    8: dr14_snd_0_depot_66; }
+
+switch (FEAT_TRAINS, SELF, dr14_snd_0_depot_33, vehicle_is_in_depot) {
+    0: sound("sfx/dr14_idle.wav", 33); }
+
+switch (FEAT_TRAINS, SELF, dr14_snd_0_33, extra_callback_info1) {
+    1: sound("sfx/dr14_acc.wav", 33);
+    7: sound("sfx/dr14_run.wav", 33);
+    8: dr14_snd_0_depot_33; }
+
+switch (FEAT_TRAINS, SELF, dr14_SND, param_volume) {
+    0: CB_FAILED;
+    1: dr14_snd_0_33;
+    2: dr14_snd_0_66;
+    3: dr14_snd_0_100; }
+
+spriteset (dr14_SPR_PUR, "gfx/dr14_0.png") {
+    template4()
+}
+
+spriteset (dr14_SPR_DEF, "gfx/dr14_1.png") {
+    template9()
+}
+
+switch (FEAT_TRAINS, SELF, dr14_speedcheck, cargo_subtype) {
+    1: 43;
+    default: 75; }
+
+switch (FEAT_TRAINS, SELF, dr14_te_coef, cargo_subtype) {
+    1: 80;
+    default: 53; }
+
+switch (FEAT_TRAINS, SELF, dr14_subtype_text, cargo_subtype) {
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DEFAULT), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DR14_REGEAR)), "");
+    default: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DEFAULT), "", ""); }
+
+spriteset (dr14_SPR_DEF_copy, "gfx/dr14_1.png") {
+    template10()
+}
+
+switch (FEAT_TRAINS, SELF, dr14_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: dr14_SPR_DEF_copy;
+    default: dr14_SPR_DEF; }
+
+item (FEAT_TRAINS, dr14) { graphics {
+    additional_text: string(STR_ADD_DR14, string(STR_ADD_SERVICE), string(STR_ADD_HEAVY_SHUNTING), string(STR_ADD_MEDIUM_FREIGHT), string(STR_ADD_MANUFACTURER), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_PRIME_MOVER), string(STR_ADD_TRANSMISSION), string(STR_ADD_HYDRAULIC), string(STR_ADD_REGEARING), string(STR_ADD_T_GEAR), string(STR_ADD_V_GEAR));
+    cargo_capacity: 0;
+    cargo_subtype_text: dr14_subtype_text;
+    colour_mapping: switch_recolour_lights;
+    default: dr14_gfx_flipped;
+    length: 7;
+    purchase: dr14_SPR_PUR;
+    sound_effect: dr14_SND;
+    speed: dr14_speedcheck;
+    tractive_effort_coefficient: dr14_te_coef;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, dr14) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [PASS];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 40;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1968,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 50;
+    name: string(STR_PUR_DR14, string(STR_PUR_DIESEL));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 1190 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: NO_CARGO_CLASS;
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 90;
+    speed: 75 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.209;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 86 ton;
+}}

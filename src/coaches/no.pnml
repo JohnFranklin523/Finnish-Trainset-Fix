@@ -1,0 +1,62 @@
+spriteset (no_SPR_PUR, "gfx/no_0.png") {
+    template4()
+}
+
+spriteset (no_SPR_DEF, "gfx/no_1.png") {
+    template9()
+}
+
+spriteset (no_SPR_DEF_copy, "gfx/no_1.png") {
+    template10()
+}
+
+switch (FEAT_TRAINS, SELF, no_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: no_SPR_DEF_copy;
+    default: no_SPR_DEF; }
+
+item (FEAT_TRAINS, no) { graphics {
+    additional_text: string(STR_ADD_NO, string(STR_ADD_SERVICE), string(STR_ADD_SECURE_TRANSPORT), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_WOOD), string(STR_ADD_1_5ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_WOODEN_COACH));
+    cargo_capacity: 35;
+    colour_mapping: switch_recolour_lights;
+    default: no_gfx_flipped;
+    length: 7;
+    purchase: no_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, no) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 240 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 27;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1935,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 50;
+    name: string(STR_PUR_NO, string(STR_PUR_ARMOURED_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_ARMOURED);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 17;
+    speed: 110 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 25 ton;
+}}

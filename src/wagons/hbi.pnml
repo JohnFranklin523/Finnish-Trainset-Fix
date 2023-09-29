@@ -1,0 +1,210 @@
+spriteset (hbi_SPR_PUR, "gfx/hbi_0.png") {
+    template4()
+}
+
+spriteset (hbi_SPR_CLOSED, "gfx/hbi_1.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_OPEN, "gfx/hbi_2.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_STEL_1, "gfx/hbi_3.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_STEL_2, "gfx/hbi_4.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_STEL_3, "gfx/hbi_5.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_WOOD_1, "gfx/hbi_6.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_WOOD_2, "gfx/hbi_7.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_WOOD_3, "gfx/hbi_8.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_PAPR_1, "gfx/hbi_9.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_PAPR_2, "gfx/hbi_10.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_PAPR_3, "gfx/hbi_11.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_PLAS_1, "gfx/hbi_12.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_PLAS_2, "gfx/hbi_13.png") {
+    template11()
+}
+
+spriteset (hbi_SPR_PLAS_3, "gfx/hbi_14.png") {
+    template11()
+}
+
+spritegroup hbi_sprg_stel {
+    loading: [hbi_SPR_OPEN, hbi_SPR_STEL_1, hbi_SPR_STEL_2, hbi_SPR_STEL_3];
+    loaded: [hbi_SPR_CLOSED]; }
+
+spritegroup hbi_sprg_wood {
+    loading: [hbi_SPR_OPEN, hbi_SPR_WOOD_1, hbi_SPR_WOOD_2, hbi_SPR_WOOD_3];
+    loaded: [hbi_SPR_CLOSED]; }
+
+spritegroup hbi_sprg_papr {
+    loading: [hbi_SPR_OPEN, hbi_SPR_PAPR_1, hbi_SPR_PAPR_2, hbi_SPR_PAPR_3];
+    loaded: [hbi_SPR_CLOSED]; }
+
+spritegroup hbi_sprg_plas {
+    loading: [hbi_SPR_OPEN, hbi_SPR_PLAS_1, hbi_SPR_PLAS_2, hbi_SPR_PLAS_3];
+    loaded: [hbi_SPR_CLOSED]; }
+
+switch (FEAT_TRAINS, SELF, hbi_cargo_gfx, cargo_type_in_veh) {
+    PAPR: hbi_sprg_papr;
+    PLAS: hbi_sprg_plas;
+    STEL: hbi_sprg_stel;
+    default: hbi_sprg_wood; }
+
+spriteset (hbi_SPR_CLOSED_copy, "gfx/hbi_1.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_WOOD_3_copy, "gfx/hbi_8.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_WOOD_2_copy, "gfx/hbi_7.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_WOOD_1_copy, "gfx/hbi_6.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_OPEN_copy, "gfx/hbi_2.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_PLAS_3_copy, "gfx/hbi_14.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_PLAS_2_copy, "gfx/hbi_13.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_PLAS_1_copy, "gfx/hbi_12.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_PAPR_3_copy, "gfx/hbi_11.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_PAPR_2_copy, "gfx/hbi_10.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_PAPR_1_copy, "gfx/hbi_9.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_STEL_3_copy, "gfx/hbi_5.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_STEL_2_copy, "gfx/hbi_4.png") {
+    template12()
+}
+
+spriteset (hbi_SPR_STEL_1_copy, "gfx/hbi_3.png") {
+    template12()
+}
+
+spritegroup hbi_sprg_wood_copy {
+    loading: [hbi_SPR_OPEN_copy, hbi_SPR_WOOD_1_copy, hbi_SPR_WOOD_2_copy, hbi_SPR_WOOD_3_copy];
+    loaded: [hbi_SPR_CLOSED_copy]; }
+
+spritegroup hbi_sprg_plas_copy {
+    loading: [hbi_SPR_OPEN_copy, hbi_SPR_PLAS_1_copy, hbi_SPR_PLAS_2_copy, hbi_SPR_PLAS_3_copy];
+    loaded: [hbi_SPR_CLOSED_copy]; }
+
+spritegroup hbi_sprg_papr_copy {
+    loading: [hbi_SPR_OPEN_copy, hbi_SPR_PAPR_1_copy, hbi_SPR_PAPR_2_copy, hbi_SPR_PAPR_3_copy];
+    loaded: [hbi_SPR_CLOSED_copy]; }
+
+spritegroup hbi_sprg_stel_copy {
+    loading: [hbi_SPR_OPEN_copy, hbi_SPR_STEL_1_copy, hbi_SPR_STEL_2_copy, hbi_SPR_STEL_3_copy];
+    loaded: [hbi_SPR_CLOSED_copy]; }
+
+switch (FEAT_TRAINS, SELF, hbi_cargo_gfx_copy, cargo_type_in_veh) {
+    PAPR: hbi_sprg_papr_copy;
+    PLAS: hbi_sprg_plas_copy;
+    STEL: hbi_sprg_stel_copy;
+    default: hbi_sprg_wood_copy; }
+
+switch (FEAT_TRAINS, SELF, hbi_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: hbi_cargo_gfx_copy;
+    default: hbi_cargo_gfx; }
+
+item (FEAT_TRAINS, hbi) { graphics {
+    additional_text: string(STR_ADD_HBI, string(STR_ADD_MANUFACTURER), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 26;
+    colour_mapping: switch_recolour_lights;
+    default: hbi_gfx_flipped;
+    length: 6;
+    purchase: hbi_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, hbi) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [BDMT, ENSP, MNSP, PAPR, WDPR];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [WOOD];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 10;
+    default_cargo_type: BDMT;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1981,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_HBI, string(STR_PUR_COVERED_LUMBER_WAGON));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: NO_CARGO_CLASS;
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 4;
+    speed: 100 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 14 ton;
+}}

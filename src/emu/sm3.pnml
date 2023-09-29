@@ -1,0 +1,294 @@
+spriteset (sm3_SPR_R_PUR, "gfx/sm3_0.png") {
+    template0()
+}
+
+spriteset (sm3_SPR_R_FRONT, "gfx/sm3_1.png") {
+    template8()
+}
+
+spriteset (sm3_SPR_R_COACH, "gfx/sm3_2.png") {
+    template8()
+}
+
+spriteset (sm3_SPR_R_COACH_PANTO_DOWN, "gfx/sm3_3.png") {
+    template8()
+}
+
+spriteset (sm3_SPR_R_COACH_PANTO_UP, "gfx/sm3_4.png") {
+    template8()
+}
+
+spriteset (sm3_SPR_R_REAR, "gfx/sm3_5.png") {
+    template8()
+}
+
+spriteset (sm3_SPR_G_PUR, "gfx/sm3_6.png") {
+    template0()
+}
+
+spriteset (sm3_SPR_G_FRONT, "gfx/sm3_7.png") {
+    template8()
+}
+
+spriteset (sm3_SPR_G_COACH, "gfx/sm3_8.png") {
+    template8()
+}
+
+spriteset (sm3_SPR_G_COACH_PANTO_DOWN, "gfx/sm3_9.png") {
+    template8()
+}
+
+spriteset (sm3_SPR_G_COACH_PANTO_UP, "gfx/sm3_10.png") {
+    template8()
+}
+
+spriteset (sm3_SPR_G_REAR, "gfx/sm3_11.png") {
+    template8()
+}
+
+switch (FEAT_TRAINS, SELF, sm3_subtext_0, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_RED), "", ""); }
+
+switch (FEAT_TRAINS, SELF, sm3_subtext_2008, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_RED), "", "");
+    3: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_GREEN), "", ""); }
+
+switch (FEAT_TRAINS, SELF, sm3_SUBTYPE_BY_YEAR, current_year) {
+    0..2007: sm3_subtext_0;
+    default: sm3_subtext_2008; }
+
+switch (FEAT_TRAINS, SELF, sm3_pos_gfx_r, position_in_articulated_veh) {
+    0: sm3_SPR_R_FRONT;
+    1: sm3_SPR_R_COACH;
+    2..3: sm3_SPR_R_COACH_PANTO_DOWN;
+    4: sm3_SPR_R_COACH;
+    5: sm3_SPR_R_REAR; }
+
+switch (FEAT_TRAINS, SELF, sm3_pos_gfx_g, position_in_articulated_veh) {
+    0: sm3_SPR_G_FRONT;
+    1: sm3_SPR_G_COACH;
+    2..3: sm3_SPR_G_COACH_PANTO_DOWN;
+    4: sm3_SPR_G_COACH;
+    5: sm3_SPR_G_REAR; }
+
+switch (FEAT_TRAINS, SELF, sm3_pur_gfx, current_year) {
+    0..2008: sm3_SPR_R_PUR;
+    default: sm3_SPR_G_PUR; }
+
+switch (FEAT_TRAINS, SELF, sm3_autolivery, current_year) {
+    0..2008: sm3_pos_gfx_r;
+    default: sm3_pos_gfx_g; }
+
+switch (FEAT_TRAINS, SELF, sm3_buildlivery, build_year) {
+    0..2008: sm3_pos_gfx_r;
+    default: sm3_pos_gfx_g; }
+
+switch (FEAT_TRAINS, SELF, sm3_liverychoice, cargo_subtype) {
+    1: sm3_buildlivery;
+    2: sm3_pos_gfx_r;
+    3: sm3_pos_gfx_g;
+    default: sm3_autolivery; }
+
+switch (FEAT_TRAINS, SELF, sm3_articulated, extra_callback_info1) {
+    1: sm3_part_1;
+    2: sm3_part_2;
+    3: sm3_part_3;
+    4: sm3_part_4;
+    5: sm3_part_5;
+    6: CB_RESULT_NO_MORE_ARTICULATED_PARTS; }
+
+item (FEAT_TRAINS, sm3) { graphics {
+    additional_text: string(STR_ADD_SM3, string(STR_ADD_SERVICE), string(STR_ADD_EXPRESS_PASSENGERS), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_MANUFACTURER), string(STR_ADD_TRANSMISSION), string(STR_ADD_ELECTRIC), string(STR_ADD_CONSIST), string(STR_ADD_TRACTION_MOTORS));
+    articulated_part: sm3_articulated;
+    cargo_capacity: 46;
+    cargo_subtype_text: sm3_SUBTYPE_BY_YEAR;
+    colour_mapping: switch_recolour_lights;
+    default: sm3_liverychoice;
+    length: 8;
+    cargo_age_period: (60 * 5) << param_cargo_decay;
+    purchase: sm3_pur_gfx;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, sm3_part_1) { graphics {
+    cargo_capacity: 49;
+    colour_mapping: switch_recolour_lights;
+    default: sm3_liverychoice;
+    length: 8;
+    cargo_age_period: (50 * 5) << param_cargo_decay;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, sm3_part_2) { graphics {
+    cargo_capacity: 25;
+    colour_mapping: switch_recolour_lights;
+    default: sm3_liverychoice;
+    length: 8;
+    cargo_age_period: (50 * 5) << param_cargo_decay;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_ELECTRIC, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, sm3_part_3) { graphics {
+    cargo_capacity: 64;
+    colour_mapping: switch_recolour_lights;
+    default: sm3_liverychoice;
+    length: 8;
+    cargo_age_period: (50 * 5) << param_cargo_decay;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_ELECTRIC, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, sm3_part_4) { graphics {
+    cargo_capacity: 64;
+    colour_mapping: switch_recolour_lights;
+    default: sm3_liverychoice;
+    length: 8;
+    cargo_age_period: (50 * 5) << param_cargo_decay;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, sm3_part_5) { graphics {
+    cargo_capacity: 59;
+    colour_mapping: switch_recolour_lights;
+    default: sm3_liverychoice;
+    length: 8;
+    cargo_age_period: (50 * 5) << param_cargo_decay;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, sm3) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 231;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 255;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_ELECTRIC;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1994,01,01);
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP, TRAIN_FLAG_TILT);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_SM3, string(STR_PUR_ELECTRIC));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 5440 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    reliability_decay: 34;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 249;
+    speed: 220 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.049;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 328 ton;
+}}
+item (FEAT_TRAINS, sm3_part_1) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 231;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP, TRAIN_FLAG_TILT);
+    name: string(STR_PUR_SM3, string(STR_PUR_ELECTRIC));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, sm3_part_2) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 231;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP, TRAIN_FLAG_TILT);
+    name: string(STR_PUR_SM3, string(STR_PUR_ELECTRIC));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, sm3_part_3) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 231;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP, TRAIN_FLAG_TILT);
+    name: string(STR_PUR_SM3, string(STR_PUR_ELECTRIC));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, sm3_part_4) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 231;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP, TRAIN_FLAG_TILT);
+    name: string(STR_PUR_SM3, string(STR_PUR_ELECTRIC));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, sm3_part_5) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 231;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP, TRAIN_FLAG_TILT);
+    name: string(STR_PUR_SM3, string(STR_PUR_ELECTRIC));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}

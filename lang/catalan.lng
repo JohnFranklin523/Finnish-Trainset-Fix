@@ -1,0 +1,215 @@
+##grflangid 0x22
+##plural 0
+##gender Masculin Femenin
+
+
+STR_PARAM_LOADING_SPEED_LOCAL        :Velocitat de càrrega de passatgers locals
+STR_PARAM_LOADING_SPEED_LOCAL_DESC   :Velocitat de càrrega de passatgers locals. Per defecte: 40
+STR_PARAM_LOADING_SPEED_EXPRESS      :Velocitat de càrrega de passatgers exprés
+STR_PARAM_LOADING_SPEED_EXPRESS_DESC :Velocitat de càrrega de passatgers exprés. Per defecte: 25
+STR_PARAM_LOADING_SPEED_SLEEPER      :Velocitat de càrrega en vagons llit
+STR_PARAM_LOADING_SPEED_SLEEPER_DESC :Velocitat de càrrega de passatgers de vagons llit. Per defecte: 15
+
+STR_PARAM_PURCHASE_COST      :Preus de compra
+STR_PARAM_PURCHASE_COST_DESC :Ajusta els preus de compra dels vehicles. Per defecte: 25%
+STR_PARAM_RUNNING_COST       :Costos de circulació
+STR_PARAM_RUNNING_COST_DESC  :Ajustar els costos de circulació dels vehicles. Per defecte: 25%
+
+STR_PARAM_DIVIDE_16 :6,25%
+STR_PARAM_DIVIDE_8  :12,5%
+STR_PARAM_DIVIDE_4  :25%
+STR_PARAM_DIVIDE_2  :50%
+STR_PARAM_NORMAL    :100%
+STR_PARAM_TIMES_2   :200%
+STR_PARAM_TIMES_4   :400%
+STR_PARAM_TIMES_8   :800%
+STR_PARAM_TIMES_16  :1.600%
+
+STR_PARAM_RUNNING_COST_WAGON_ENABLE      :Costos de circulació dels vagons
+STR_PARAM_RUNNING_COST_WAGON_ENABLE_DESC :Empra aquesta opció per a activar o desactivar els costos de circulació dels vagons.
+
+STR_PARAM_VOL          :Sons de circulació
+STR_PARAM_VOL_DESC     :Canvia el volum dels sons dels vehicles en moviment, o desactiva'ls completament.
+STR_PARAM_VOL_66       :66%
+STR_PARAM_VOL_33       :33%
+STR_PARAM_VOL_DISABLED :Desactivat
+
+STR_SUBTYPE_AUTO         :Decoració depenent de l'època
+STR_SUBTYPE_BLUE         :Color blau
+STR_SUBTYPE_BUILD        :Disseny d'any de construcció
+STR_SUBTYPE_DEFAULT      :Decoració per defecte
+STR_SUBTYPE_DM7_REGEAR   :reajustat per a 115 km/h
+STR_SUBTYPE_DM8_2PART    :2 Parts
+STR_SUBTYPE_DM8_3PART    :3 Parts
+STR_SUBTYPE_DM10_REGEAR  :reajustat per a 120 km/h
+STR_SUBTYPE_DR13_REGEAR  :reajustat per a 100 km/h i esforç de tracció 290 kN
+STR_SUBTYPE_DR14_REGEAR  :reajustat per a 43 km/h i esforç de tracció 269 kN
+STR_SUBTYPE_DV12_2500    :Sèries 2500
+STR_SUBTYPE_DV12_2600    :Sèries 2600
+STR_SUBTYPE_DV12_2700    :Sèries 2700
+STR_SUBTYPE_DV12_2500R   :Sèries 2500, redissenyat
+STR_SUBTYPE_DV12_2600R   :Sèries 2600, redissenyat
+STR_SUBTYPE_DV12_2700R   :Sèries 2700, redissenyat
+STR_SUBTYPE_DV12_REGEAR  :reajustat per a 85 km/h i esforç de tracció 200 kN
+STR_SUBTYPE_GREEN        :Color verd
+STR_SUBTYPE_GREEN_YELLOW :Colors verd i groc
+STR_SUBTYPE_RANDOM       :Disseny aleatori
+STR_SUBTYPE_SM1_MINT     :prototip 1990
+STR_SUBTYPE_SM6_REGEAR   :reajustat per a 250 km/h i amb costos de circulació majors
+STR_SUBTYPE_SR1_REGEAR   :reajustat per a 160 km/h i esforç de tracció 245 kN
+STR_SUBTYPE_SR2_V        :logotip "V"
+STR_SUBTYPE_SR2_VR       :logotip "VR"
+STR_SUBTYPE_RED          :Color vermell
+STR_SUBTYPE_WHITE_RED    :Colors blanc i vermell
+STR_SUBTYPE_YELLOW       :Color groc
+STR_SUBTYPE_YELLOW_RED   :Colors groc i vermell
+STR_SUBTYPE_YELLOW_NOSE  :variant amb morro groc
+
+STR_ADD_1ST :1a
+STR_ADD_1_5ST :1.5
+STR_ADD_2ND :2a
+STR_ADD_3RD :3a
+STR_ADD_3RD_2ND_TRANSITION :Transició de 3a a 2a classe
+STR_ADD_BLUE_COACH :vagó blau
+STR_ADD_BOGIES :Bogies
+STR_ADD_CAR_CARRIER_COACH :vagó transportador de cotxes
+STR_ADD_CAR_HEATING :Calefacció de cotxe disponible
+STR_ADD_CHASSIS_GEN :Generació del xassís
+STR_ADD_COACH_CLASS :Classe turista
+STR_ADD_COMPOSITE :compost
+STR_ADD_CONSIST :Element
+STR_ADD_ELECTRIC :elèctric
+STR_ADD_EXPRESS_PASSENGERS :passatgers exprés
+STR_ADD_GENERAL_PURPOSE :ús general
+STR_ADD_HEAVY_FREIGHT :càrrega pesant
+STR_ADD_HEAVY_SHUNTING :maniobres pesants
+STR_ADD_HYDRAULIC :hidràulic
+STR_ADD_HYDRAULIC_MECHANICAL :hidràulic-mecànic
+STR_ADD_H_GEAR :Mecanisme H
+STR_ADD_IC2_DOUBLE_DECKER :Interurbà 2 de dos pisos
+STR_ADD_IC_SINGLE_DECK :Interurbà d'un sol pis
+STR_ADD_INTERNATIONAL_PASSENGERS :passatgers internacionals
+STR_ADD_JACOBS_BOGIES :Jacob's Bogies
+STR_ADD_LAST_MILE :Dos vehicles dièsel de trams finals
+STR_ADD_LIGHT_FREIGHT :càrrega lleugera
+STR_ADD_LIGHT_SHUNTING :Maniobres lleugeres
+STR_ADD_LOCAL_PASSENGERS :passatgers locals
+STR_ADD_MANUFACTURER :Constructor
+STR_ADD_MECHANICAL :mecànic
+STR_ADD_MEDIUM_FREIGHT :càrrega mitjana
+STR_ADD_OTHER_INFO :Informació addicional
+STR_ADD_PET :Compartiment per a mascotes
+STR_ADD_POSTAL :postal
+STR_ADD_PRESIDENTIAL :Presidencial
+STR_ADD_PRIME_MOVER :Primer motor
+STR_ADD_REGEARING :Reorientació
+STR_ADD_REGIONAL_PASSENGERS :passatgers regionals
+STR_ADD_SECURE_TRANSPORT :transport segur
+STR_ADD_SERVICE :Servei
+STR_ADD_SHUNTING :maniobres
+STR_ADD_SLEEPER :vagó llit
+STR_ADD_SM7_INFO :+724 cv si electrificat
+STR_ADD_SMOKING :Compartiment de fumadors
+STR_ADD_SPECIAL :especial
+STR_ADD_STEEL :acer
+STR_ADD_TRACTION_MOTORS :Motors tractors
+STR_ADD_TRANSMISSION :Transmissió
+STR_ADD_T_GEAR :Mecanisme T
+STR_ADD_UIC_AXLE_ORDER :Ordre d'eixos UIC
+STR_ADD_V_GEAR :Mecanisme V
+STR_ADD_WITH_DM3 :Emprat amb els Dm3, Dm4 i Hr11
+STR_ADD_WITH_DM7 :Emprat amb el Dm7
+STR_ADD_WITH_DMG7 :Emprat amb el DmG7
+STR_ADD_WITH_SHIP :Emprat en trens d'entrega exprés
+STR_ADD_WOOD :fusta
+STR_ADD_WOODEN_COACH :vagó de fusta
+STR_PUR_1ST_2ND_CLASS_EXPRESS_COACH :Vagó exprés de 1a/2a classe
+STR_PUR_1ST_3RD_CLASS_COACH :Vagó de 1a/3a classe
+STR_PUR_1ST_CLASS_COACH :Vagó de 1a classe
+STR_PUR_1ST_CLASS_EXPRESS_COACH :Vagó exprés de 1a classe
+STR_PUR_1ST_CLASS_IC_COACH :Vagó interurbà de 1a classe
+STR_PUR_2ND_3RD_CLASS_COACH :Vagó de 2a/3a classe
+STR_PUR_2ND_3RD_SLEEPER_COACH :Vagó llit de 2a/3a classe
+STR_PUR_2ND_BUSINESS_CLASS_IC_DOUBLEDECKER_COACH :Vagó de dos pisos de 2a classe/Business interurbà
+STR_PUR_2ND_CLASS_COACH :Vagó de 2a classe
+STR_PUR_2ND_CLASS_EXPRESS_COACH :Vagó exprés de 2a classe
+STR_PUR_2ND_CLASS_EXPRESS_CONDUCTOR_LUGGAGE_COACH :Vagó d'equipatge/conductors de 2a classe exprés
+STR_PUR_2ND_CLASS_IC_COACH :Vagó interurbà de 2a classe
+STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_COACH :Vagó de dos pisos de 2a classe interurbà
+STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_CONDUCTOR_COACH :Vagó de conductors de dos pisos i 2a classe interurbà
+STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_SLEEPER_COACH :Vagó llit interurbà de 2a classe de dos pisos
+STR_PUR_2ND_CLASS_SALON_COACH :Vagó saló de 2a classe
+STR_PUR_2ND_CLASS_SLEEPER_COACH :Vagó llit de 2a classe
+STR_PUR_3RD_CLASS_COACH :Vagó de 3a classe
+STR_PUR_3RD_CLASS_CONDUCTOR_COACH :Vagó per conductors de 3a classe
+STR_PUR_3RD_CLASS_LOCAL_COACH :Vagó de 3a classe local
+STR_PUR_3RD_CLASS_LOCAL_COACH_2ND_GEN :Vagó de 3a classe local de 2a generació
+STR_PUR_3RD_CLASS_SLEEPER_COACH :Vagó llit de 3a classe
+STR_PUR_3RD_CLASS_SLEEPER_COACH_2ND_GEN :Vagó llit de 3a classe de 2a generació
+STR_PUR_ACID_WAGON :Vagó per a àcid
+STR_PUR_AMMONIA_WAGON :Vagó Ammonia
+STR_PUR_ARMOURED_COACH :Vagó blindat
+STR_PUR_AUTOMOBILE_CARRIER :Transportador d'automòbils
+STR_PUR_CAR_CARRIER_COACH :Vagó transportador de cotxes
+STR_PUR_COAL_WAGON :Vagó de carbó
+STR_PUR_COMBINED_TRANSPORT_WAGON :Vagó combinat de transport
+STR_PUR_CONDUCTOR_COACH :Vagó de conductors
+STR_PUR_CONTAINER_WAGON :Vagó contenidor
+STR_PUR_COVERED_CELLULOSE_WAGON :Vagó cobert per cel·lulosa
+STR_PUR_COVERED_HOPPER_WAGON :Vagó tremuja cobert
+STR_PUR_COVERED_LUMBER_WAGON :Vagó per a fusta cobert
+STR_PUR_COVERED_WAGON :Vagó cobert
+STR_PUR_DIESEL :Dièsel
+STR_PUR_ELECTRIC :Elèctric
+STR_PUR_EXPRESS_ARMOURED_COACH :Vagó exprés blindat
+STR_PUR_EXPRESS_BAR_COACH :Vagó bar exprés
+STR_PUR_EXPRESS_CAFE_RESTAURANT_COACH :Vagó exprés cafè restaurant
+STR_PUR_EXPRESS_LUGGAGE_CONDUCTOR_COACH :Vagó d'equipatge/conductors exprés
+STR_PUR_EXPRESS_RESTAURANT_COACH :Vagó restaurant exprés "Raileri"
+STR_PUR_EXPRESS_TRAINSET :Conjunt de trens exprés
+STR_PUR_FLAT_WAGON :Vagó plataforma
+STR_PUR_FLAT_WAGON_LARGER :Vagó plataforma (gran)
+STR_PUR_FLAT_WAGON_SMALLER :Vagó plataforma (petit)
+STR_PUR_GENERATOR_COACH :Vagó generador
+STR_PUR_GRAVEL_WAGON :Vagó per a grava
+STR_PUR_HEAVY_LOAD_CONTAINER_WAGON :Vagó contenidor/càrrega pesant
+STR_PUR_IC_DOUBLEDECKER_CAB_CAR :Cotxe cabina de dos pisos interurbà
+STR_PUR_IC_DOUBLEDECKER_RESTAURANT_COACH :Vagó restaurant de dos pisos interurbà
+STR_PUR_IC_RESTAURANT_COACH :Vagó restaurant interurbà
+STR_PUR_LIMESTONE_WAGON :Vagó per a roques calcàries
+STR_PUR_LIQUID_GAS_WAGON :Vagó de gas líquid
+STR_PUR_LOCAL_COACH :Vagó local
+STR_PUR_LUGGAGE_CONDUCTOR_COACH :Vagó d'equipatge/conductors
+STR_PUR_LUMBER_WAGON :Vagó per a fusta
+STR_PUR_LYE_WAGON :Vagó Lye
+STR_PUR_MAIL_COACH :Vagó de correu exprés
+STR_PUR_MAIL_COACH_2ND_GEN :Vagó de correu de 2a generació
+STR_PUR_OIL_WAGON :Vagó de petroli
+STR_PUR_OPEN_WAGON :Vagó obert
+STR_PUR_ORE_CONTAINER_WAGON :Vagó contenidor de mineral
+STR_PUR_ORE_WAGON :Vagó de mineral
+STR_PUR_PEAT_WOOD_CHIP_WAGON :Vagó de torba/pèl·lets
+STR_PUR_PETROL_WAGON :Vagó de petroli
+STR_PUR_POWDER_WAGON :Vagó per a talc
+STR_PUR_PRESIDENTIAL_COACH :Vagó presidencial
+STR_PUR_REFRIGERATED_WAGON :Vagó refrigerat
+STR_PUR_RESTAURANT_COACH :Vagó restaurant
+STR_PUR_SCRAP_WAGON :Vagó de ferralla/residus
+STR_PUR_SIBELIUS_1ST_CLASS_INTERNATIONAL_COACH :Vagó de 1a classe internacional "Sibelius"
+STR_PUR_SIBELIUS_2ND_CLASS_INTERNATIONAL_COACH :Vagó de 2a classe internacional "Sibelius"
+STR_PUR_SIBELIUS_INTERNATIONAL_GENERATOR_CONDUCTOR_COACH :Vagó generador/conductors internacional "Sibelius"
+STR_PUR_SIBELIUS_INTERNATIONAL_LUGGAGE_CONDUCTOR_COACH :Vagó d'equipatge/conductors internacional "Sibelius"
+STR_PUR_SIBELIUS_INTERNATIONAL_RESTAURANT_COACH :Vagó restaurant internacional "Sibelius"
+STR_PUR_SILJA_LINE_2ND_CLASS_EXPRESS_COACH :Vagó exprés de 2a classe "Silja Line"
+STR_PUR_SLIDING_ROOF_WAGON :Vagó amb sostre lliscant
+STR_PUR_STEAM :Vapor
+STR_PUR_STEEL_COIL_WAGON :Vagó per a bobines d'acer
+STR_PUR_TALC_WAGON :Vagó Talc
+STR_PUR_TANK_WAGON :Vagó cisterna
+STR_PUR_TIMBER_WAGON :Vagó de fusta
+STR_PUR_TRAILER_FOR_DM6 :Tràiler de Dm6
+STR_PUR_TRAILER_FOR_DM7 :Tràiler per al Dm7
+STR_PUR_TRAILER_FOR_DMG7 :Tràiler per al DmG7
+STR_PUR_TRANSFORMER_HEAVY :Vagó transformador/càrrega pesant
+STR_PUR_WOOD_CHIP_CONTAINER_WAGON :Vagó contenidor de pèl·lets
+STR_PUR_WOOD_CHIP_WAGON :Vagó de pèl·lets

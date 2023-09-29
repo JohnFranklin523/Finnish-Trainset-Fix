@@ -1,0 +1,220 @@
+##grflangid 0x03
+##plural 2
+##gender m m2 f
+
+STR_GRF_DESC_EXTRA  :Véhicules ferroviaires utilisés en Finlande depuis le XIXème siècle à nos jours.
+STR_GRF_DESC_README :Voir le lisez-moi pour plus d'informations.
+
+STR_PARAM_LOADING_SPEED_LOCAL        :Vitesse de chargement{NBSP}: Voitures locales
+STR_PARAM_LOADING_SPEED_LOCAL_DESC   :Vitesse de chargement des voitures omnibus. (40 par défaut)
+STR_PARAM_LOADING_SPEED_EXPRESS      :Vitesse de chargement{NBSP}: Voitures express
+STR_PARAM_LOADING_SPEED_EXPRESS_DESC :Vitesse de chargement des voitures express. (25 par défaut)
+STR_PARAM_LOADING_SPEED_SLEEPER      :Vitesse de chargement{NBSP}: Voitures couchettes
+STR_PARAM_LOADING_SPEED_SLEEPER_DESC :Vitesse de chargement des voitures-couchettes. (15 par défaut)
+
+STR_PARAM_PURCHASE_COST      :Prix d'achat
+STR_PARAM_PURCHASE_COST_DESC :Ce réglage sert à ajuster le prix d'achat des véhicules. Par défaut{NBSP}: 25%
+STR_PARAM_RUNNING_COST       :Coûts de fonctionnement
+STR_PARAM_RUNNING_COST_DESC  :Ce réglage sert à ajuster les coûts de fonctionnement des véhicules. Par défaut{NBSP}: 25%
+
+STR_PARAM_DIVIDE_16 :6.25%
+STR_PARAM_DIVIDE_8  :12.5%
+STR_PARAM_DIVIDE_4  :25%
+STR_PARAM_DIVIDE_2  :50%
+STR_PARAM_NORMAL    :100%
+STR_PARAM_TIMES_2   :200%
+STR_PARAM_TIMES_4   :400%
+STR_PARAM_TIMES_8   :800%
+STR_PARAM_TIMES_16  :1600%
+
+STR_PARAM_RUNNING_COST_WAGON_ENABLE      :Coûts de fonctionnement des wagons
+STR_PARAM_RUNNING_COST_WAGON_ENABLE_DESC :Ce réglage sert à (dés)activer les coûts de fonctionnement des wagons.
+
+STR_PARAM_VOL          :Ambiance sonore
+STR_PARAM_VOL_DESC     :Ce réglage change le volume des bruits de moteurs, ou les désactive complètement.
+STR_PARAM_VOL_66       :66%
+STR_PARAM_VOL_33       :33%
+STR_PARAM_VOL_DISABLED :Silence
+
+STR_SUBTYPE_AUTO         :Livrée évolutive
+STR_SUBTYPE_BLUE         :Livrée bleue
+STR_SUBTYPE_BUILD        :Livrée de l'année d'achat
+STR_SUBTYPE_DEFAULT      :Livrée par défaut
+STR_SUBTYPE_DM7_REGEAR   :remotorisé pour du 115{NBSP}km/h
+STR_SUBTYPE_DM8_2PART    :2 parties
+STR_SUBTYPE_DM8_3PART    :3 parties
+STR_SUBTYPE_DM10_REGEAR  :remotorisé pour du 120{NBSP}km/h
+STR_SUBTYPE_DR13_REGEAR  :remotorisé pour du 100{NBSP}km/h, 290{NBSP}kN
+STR_SUBTYPE_DR14_REGEAR  :remotorisé pour du 43{NBSP}km/h, 269{NBSP}kN
+STR_SUBTYPE_DV12_2500    :Série 2500
+STR_SUBTYPE_DV12_2600    :Série 2600
+STR_SUBTYPE_DV12_2700    :Série 2700
+STR_SUBTYPE_DV12_2500R   :Série 2500, rénovée
+STR_SUBTYPE_DV12_2600R   :Série 2600, rénovée
+STR_SUBTYPE_DV12_2700R   :Série 2700, rénovée
+STR_SUBTYPE_DV12_REGEAR  :remotorisé pour du 85{NBSP}km/h, 200{NBSP}kN
+STR_SUBTYPE_GREEN        :Livrée verte
+STR_SUBTYPE_GREEN_YELLOW :LIvrée verte et jaune
+STR_SUBTYPE_PROTOTYPE    :prototype
+STR_SUBTYPE_RANDOM       :Livrée aléatoire
+STR_SUBTYPE_SM1_MINT     :prototype de 1990
+STR_SUBTYPE_SM6_REGEAR   :remotorisé pour du 250{NBSP}km/h, coût de fonctionnement augmenté
+STR_SUBTYPE_SR1_REGEAR   :remotorisé pour du 160{NBSP}km/h, 245{NBSP}kN
+STR_SUBTYPE_SR2_V        :logo "V"
+STR_SUBTYPE_SR2_VR       :logo "VR"
+STR_SUBTYPE_RED          :Livrée rouge
+STR_SUBTYPE_USR3         :USr3 (livrée de démonstration)
+STR_SUBTYPE_VIOLET       :Livrée violette
+STR_SUBTYPE_WHITE_RED    :Livrée blanche et rouge
+STR_SUBTYPE_YELLOW       :Livrée jaune
+STR_SUBTYPE_YELLOW_RED   :Livrée jaune et rouge
+STR_SUBTYPE_YELLOW_NOSE  :variante à nez jaune
+
+STR_ADD_1ST :1ère
+STR_ADD_1_5ST :1,5ème
+STR_ADD_2ND :2ème
+STR_ADD_3RD :3ème
+STR_ADD_3RD_2ND_TRANSITION :Transition 3ème -> 2ème classe
+STR_ADD_BLUE_COACH :Voiture bleue
+STR_ADD_BOGIES :Bogies
+STR_ADD_CAR_CARRIER_COACH :fourgon porte-automobile
+STR_ADD_CAR_HEATING :Chauffage des automobiles disponible
+STR_ADD_CHASSIS_GEN :Génération de chassis
+STR_ADD_COACH_CLASS :Classe voyageurs
+STR_ADD_COMPOSITE :composite
+STR_ADD_CONSIST :Composition
+STR_ADD_ELECTRIC :électrique
+STR_ADD_EXPRESS_PASSENGERS :passagers express
+STR_ADD_GENERAL_PURPOSE :polyvalent
+STR_ADD_HEAVY_FREIGHT :fret lourd
+STR_ADD_HEAVY_SHUNTING :triage lourd
+STR_ADD_HYDRAULIC :hydraulique
+STR_ADD_HYDRAULIC_MECHANICAL :hydraulique-mécanique
+STR_ADD_H_GEAR :"H"
+STR_ADD_IC2_DOUBLE_DECKER :InterCity2 à 2 niveaux
+STR_ADD_IC_SINGLE_DECK :InterCity
+STR_ADD_INTERNATIONAL_PASSENGERS :passagers international
+STR_ADD_JACOBS_BOGIES :Bogies jacobs
+STR_ADD_LAST_MILE :Moteurs diesel de secours
+STR_ADD_LIGHT_FREIGHT :fret léger
+STR_ADD_LIGHT_SHUNTING :triage léger
+STR_ADD_LOCAL_PASSENGERS :omnibus
+STR_ADD_MANUFACTURER :Fabricant
+STR_ADD_MECHANICAL :mécanique
+STR_ADD_MEDIUM_FREIGHT :fret moyen
+STR_ADD_OTHER_INFO :Autres infos
+STR_ADD_PET :Compartiment pour animaux
+STR_ADD_POSTAL :postal
+STR_ADD_PRESIDENTIAL :Présidentiel
+STR_ADD_PRIME_MOVER :Moteur principal
+STR_ADD_REGEARING :Rapport (boîte de vitesse)
+STR_ADD_REGIONAL_PASSENGERS :passagers régional
+STR_ADD_SECURE_TRANSPORT :transport sécurisé
+STR_ADD_SERVICE :Service
+STR_ADD_SHUNTING :triage
+STR_ADD_SLEEPER :couchettes
+STR_ADD_SM7_INFO :+724{NBSP}ch si électrifié
+STR_ADD_SMOKING :Compartiment fumeur
+STR_ADD_SPECIAL :spécial
+STR_ADD_STEEL :acier
+STR_ADD_TRACTION_MOTORS :Moteurs de traction
+STR_ADD_TRANSMISSION :Transmission
+STR_ADD_T_GEAR :"T"
+STR_ADD_UIC_AXLE_ORDER :Disposition des essieux (UIC)
+STR_ADD_V_GEAR :"V"
+STR_ADD_WITH_DM3 :Couplé avec les Dm3, Dm4 et Hr11
+STR_ADD_WITH_DM7 :Couplé avec la Dm7
+STR_ADD_WITH_DMG7 :Couplé avec la DmG7
+STR_ADD_WITH_SHIP :Pour trains de messagerie rapide
+STR_ADD_WOOD :bois
+STR_ADD_WOODEN_COACH :Voiture en bois
+STR_PUR_1ST_2ND_CLASS_EXPRESS_COACH :Voiture express 1ère/2ème classe
+STR_PUR_1ST_3RD_CLASS_COACH :Voiture 1ère/3ème classe
+STR_PUR_1ST_CLASS_COACH :Voiture 1ère classe
+STR_PUR_1ST_CLASS_EXPRESS_COACH :Voiture express 1ère classe
+STR_PUR_1ST_CLASS_IC_COACH :Voiture InterCity 1ère classe
+STR_PUR_2ND_3RD_CLASS_COACH :Voiture 2ème/3ème classe
+STR_PUR_2ND_3RD_SLEEPER_COACH :Voiture-couchettes 2ème/3ème classe
+STR_PUR_2ND_BUSINESS_CLASS_IC_DOUBLEDECKER_COACH :Voiture InterCity 2ème classe / classe affaires à 2 niveaux
+STR_PUR_2ND_CLASS_COACH :Voiture 2ème classe
+STR_PUR_2ND_CLASS_EXPRESS_COACH :Voiture express 2ème classe
+STR_PUR_2ND_CLASS_EXPRESS_CONDUCTOR_LUGGAGE_COACH :Voiture express 2ème classe + compartiment bagages et chef de train
+STR_PUR_2ND_CLASS_IC_COACH :Voiture InterCity 2ème classe
+STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_COACH :Voiture InterCity 2ème classe à 2 niveaux
+STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_CONDUCTOR_COACH :Voiture InterCity 2ème classe à 2 niveaux + compartiment chef de train
+STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_SLEEPER_COACH :Voiture-couchettes InterCity 2ème classe à 2 niveaux
+STR_PUR_2ND_CLASS_SALON_COACH :Voiture-salon 2ème classe
+STR_PUR_2ND_CLASS_SLEEPER_COACH :Voiture-couchettes 2ème classe
+STR_PUR_3RD_CLASS_COACH :Voiture 3ème classe
+STR_PUR_3RD_CLASS_CONDUCTOR_COACH :Voiture 3ème classe + compartiment chef de train
+STR_PUR_3RD_CLASS_LOCAL_COACH :Voiture omnibus 3ème classe
+STR_PUR_3RD_CLASS_LOCAL_COACH_2ND_GEN :Voiture omnibus 3ème classe 2ème génération
+STR_PUR_3RD_CLASS_SLEEPER_COACH :Voiture-couchettes 3ème classe
+STR_PUR_3RD_CLASS_SLEEPER_COACH_2ND_GEN :Voiture-couchettes 3ème classe 2ème génération
+STR_PUR_ACID_WAGON :Wagon à acide
+STR_PUR_AMMONIA_WAGON :Wagon à ammoniac
+STR_PUR_ARMOURED_COACH :Fourgon blindé
+STR_PUR_AUTOMOBILE_CARRIER :Wagon porte-automobiles
+STR_PUR_CAR_CARRIER_COACH :Fourgon porte-automobiles
+STR_PUR_COAL_WAGON :Wagon à charbon
+STR_PUR_COMBINED_TRANSPORT_WAGON :Wagon intermodal
+STR_PUR_CONDUCTOR_COACH :Voiture + compartiment chef de train
+STR_PUR_CONTAINER_WAGON :Wagon porte-container
+STR_PUR_COVERED_CELLULOSE_WAGON :Wagon couvert à cellulose
+STR_PUR_COVERED_HOPPER_WAGON :Wagon-trémie couvert
+STR_PUR_COVERED_LUMBER_WAGON :Wagon de bois d'œuvre couvert
+STR_PUR_COVERED_WAGON :Wagon couvert
+STR_PUR_DIESEL :Diesel
+STR_PUR_ELECTRIC :Électrique
+STR_PUR_EXPRESS_ARMOURED_COACH :Fourgon express blindé
+STR_PUR_EXPRESS_BAR_COACH :Voiture-bar express
+STR_PUR_EXPRESS_CAFE_RESTAURANT_COACH :Voiture café-restaurant express
+STR_PUR_EXPRESS_LUGGAGE_CONDUCTOR_COACH :Fourgon à bagages express + compartiment chef de train
+STR_PUR_EXPRESS_RESTAURANT_COACH :Voiture-restaurant express
+STR_PUR_EXPRESS_TRAINSET :Rame express
+STR_PUR_FLAT_WAGON :Wagon plat
+STR_PUR_FLAT_WAGON_LARGER :Wagon plat (grand)
+STR_PUR_FLAT_WAGON_SMALLER :Wagon plat (petit)
+STR_PUR_GENERATOR_COACH :Fourgon-générateur
+STR_PUR_GRAVEL_WAGON :Wagon à graviers
+STR_PUR_HEAVY_LOAD_CONTAINER_WAGON :Wagon porte-container lourd
+STR_PUR_IC_DOUBLEDECKER_CAB_CAR :Voiture-pilote InterCity à 2 niveaux
+STR_PUR_IC_DOUBLEDECKER_RESTAURANT_COACH :Voiture-restaurant InterCity à 2 niveaux
+STR_PUR_IC_RESTAURANT_COACH :Voiture-restaurant express
+STR_PUR_LIMESTONE_WAGON :Wagon de calcaire
+STR_PUR_LIQUID_GAS_WAGON :Wagon à gaz liquéfié
+STR_PUR_LOCAL_COACH :Voiture omnibus
+STR_PUR_LUGGAGE_CONDUCTOR_COACH :Fourgon à bagages + compartiment chef de train
+STR_PUR_LUMBER_WAGON :Wagon de bois d'œuvre
+STR_PUR_LYE_WAGON :Wagon à soude
+STR_PUR_MAIL_COACH :Fourgon postal express
+STR_PUR_MAIL_COACH_2ND_GEN :Fourgon postal 2ème génération
+STR_PUR_OIL_WAGON :Wagon à pétrole
+STR_PUR_OPEN_WAGON :Wagon-tombereau
+STR_PUR_ORE_CONTAINER_WAGON :Wagon à container de minerai
+STR_PUR_ORE_WAGON :Wagon à minerai
+STR_PUR_PEAT_WOOD_CHIP_WAGON :Wagon à tourbe / copeaux de bois
+STR_PUR_PETROL_WAGON :Wagon à essence
+STR_PUR_POWDER_WAGON :Wagon à poudres
+STR_PUR_PRESIDENTIAL_COACH :Voiture présidentielle
+STR_PUR_REFRIGERATED_WAGON :Wagon frigorifique
+STR_PUR_RESTAURANT_COACH :Voiture-restaurant
+STR_PUR_SCRAP_WAGON :Wagon à ferraille
+STR_PUR_SIBELIUS_1ST_CLASS_INTERNATIONAL_COACH :Voiture internationale 1ère classe "Sibelius"
+STR_PUR_SIBELIUS_2ND_CLASS_INTERNATIONAL_COACH :Voiture internationale 2ème classe "Sibelius"
+STR_PUR_SIBELIUS_INTERNATIONAL_GENERATOR_CONDUCTOR_COACH :Fourgon-générateur international "Sibelius" + compartiment chef de train
+STR_PUR_SIBELIUS_INTERNATIONAL_LUGGAGE_CONDUCTOR_COACH :Fourgon à bagages international "Sibelius" + compartiment chef de train
+STR_PUR_SIBELIUS_INTERNATIONAL_RESTAURANT_COACH :Voiture-restaurant internationale "Sibelius"
+STR_PUR_SILJA_LINE_2ND_CLASS_EXPRESS_COACH :Voiture express 2ème classe "Silja Line"
+STR_PUR_SLIDING_ROOF_WAGON :Wagon à capot télescopique
+STR_PUR_STEAM :Vapeur
+STR_PUR_STEEL_COIL_WAGON :Wagon porte-bobines
+STR_PUR_TALC_WAGON :Wagon à talc
+STR_PUR_TANK_WAGON :Wagon-citerne
+STR_PUR_TIMBER_WAGON :Wagon à grumes
+STR_PUR_TRAILER_FOR_DM6 :Remorque pour Dm6
+STR_PUR_TRAILER_FOR_DM7 :Remorque pour Dm7
+STR_PUR_TRAILER_FOR_DMG7 :Remorque pour DmG7
+STR_PUR_TRANSFORMER_HEAVY :Wagon mille-pattes (charges très lourdes)
+STR_PUR_WOOD_CHIP_CONTAINER_WAGON :Wagon à container de copeaux de bois
+STR_PUR_WOOD_CHIP_WAGON :Wagon à copeaux de bois

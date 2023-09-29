@@ -1,0 +1,120 @@
+spriteset (hain_SPR_PUR, "gfx/hain_0.png") {
+    template4()
+}
+
+spriteset (hain_SPR_CLOSED, "gfx/hain_1.png") {
+    template8()
+}
+
+spriteset (hain_SPR_OPEN, "gfx/hain_2.png") {
+    template8()
+}
+
+spriteset (hain_SPR_STEL_1, "gfx/hain_3.png") {
+    template8()
+}
+
+spriteset (hain_SPR_STEL_2, "gfx/hain_4.png") {
+    template8()
+}
+
+spriteset (hain_SPR_WOOD_1, "gfx/hain_5.png") {
+    template8()
+}
+
+spriteset (hain_SPR_WOOD_2, "gfx/hain_6.png") {
+    template8()
+}
+
+spriteset (hain_SPR_PAPR_1, "gfx/hain_7.png") {
+    template8()
+}
+
+spriteset (hain_SPR_PAPR_2, "gfx/hain_8.png") {
+    template8()
+}
+
+spriteset (hain_SPR_PAPR_3, "gfx/hain_9.png") {
+    template8()
+}
+
+spriteset (hain_SPR_PLAS_1, "gfx/hain_10.png") {
+    template8()
+}
+
+spriteset (hain_SPR_PLAS_2, "gfx/hain_11.png") {
+    template8()
+}
+
+spriteset (hain_SPR_PLAS_3, "gfx/hain_12.png") {
+    template8()
+}
+
+spritegroup hain_sprg_stel {
+    loading: [hain_SPR_OPEN, hain_SPR_STEL_1, hain_SPR_STEL_2];
+    loaded: [hain_SPR_CLOSED]; }
+
+spritegroup hain_sprg_wood {
+    loading: [hain_SPR_OPEN, hain_SPR_WOOD_1, hain_SPR_WOOD_2];
+    loaded: [hain_SPR_CLOSED]; }
+
+spritegroup hain_sprg_papr {
+    loading: [hain_SPR_OPEN, hain_SPR_PAPR_1, hain_SPR_PAPR_2, hain_SPR_PAPR_3];
+    loaded: [hain_SPR_CLOSED]; }
+
+spritegroup hain_sprg_plas {
+    loading: [hain_SPR_OPEN, hain_SPR_PLAS_1, hain_SPR_PLAS_2, hain_SPR_PLAS_3];
+    loaded: [hain_SPR_CLOSED]; }
+
+switch (FEAT_TRAINS, SELF, hain_cargo_gfx, cargo_type_in_veh) {
+    PAPR: hain_sprg_papr;
+    PLAS: hain_sprg_plas;
+    STEL: hain_sprg_stel;
+    default: hain_sprg_wood; }
+
+item (FEAT_TRAINS, hain) { graphics {
+    additional_text: string(STR_ADD_HAIN, string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 64;
+    colour_mapping: switch_recolour_lights;
+    default: hain_cargo_gfx;
+    length: 8;
+    purchase: hain_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, hain) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [BDMT, ENSP, MNSP, PAPR, WDPR];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [WOOD];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 17;
+    default_cargo_type: BDMT;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1998,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_HAIN, string(STR_PUR_COVERED_CELLULOSE_WAGON));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: NO_CARGO_CLASS;
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 6;
+    speed: 120 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 25 ton;
+}}

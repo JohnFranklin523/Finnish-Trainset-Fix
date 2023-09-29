@@ -1,0 +1,55 @@
+spriteset (ei2nd_SPR_PUR, "gfx/ei2nd_0.png") {
+    template4()
+}
+
+spriteset (ei2nd_SPR_DEF, "gfx/ei2nd_1.png") {
+    template8()
+}
+
+item (FEAT_TRAINS, ei2nd) { graphics {
+    additional_text: string(STR_ADD_EI2ND, string(STR_ADD_SERVICE), string(STR_ADD_LOCAL_PASSENGERS), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_WOOD), string(STR_ADD_2ND), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_WOODEN_COACH), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES), string(STR_ADD_OTHER_INFO), string(STR_ADD_3RD_2ND_TRANSITION));
+    cargo_capacity: 100;
+    colour_mapping: switch_recolour_lights;
+    default: ei2nd_SPR_DEF;
+    length: 8;
+    cargo_age_period: (40 * 4) << param_cargo_decay;
+    purchase: ei2nd_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, ei2nd) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 162;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 44;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1939,01,01);
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 40;
+    name: string(STR_PUR_EI2ND, string(STR_PUR_3RD_CLASS_LOCAL_COACH_2ND_GEN));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 8;
+    speed: 110 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 34 ton;
+}}

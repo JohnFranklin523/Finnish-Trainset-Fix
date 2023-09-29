@@ -1,0 +1,289 @@
+spriteset (rt_SPR_BLUE_PUR, "gfx/rt_0.png") {
+    template4()
+}
+
+spriteset (rt_SPR_BLUE_CLOSED, "gfx/rt_1.png") {
+    template6()
+}
+
+spriteset (rt_SPR_BLUE_OPEN, "gfx/rt_2.png") {
+    template6()
+}
+
+spriteset (rt_SPR_BLUE_CLOSED_REAR, "gfx/rt_3.png") {
+    template6()
+}
+
+spriteset (rt_SPR_BLUE_OPEN_REAR, "gfx/rt_4.png") {
+    template6()
+}
+
+spriteset (rt_SPR_RED_PUR, "gfx/rt_5.png") {
+    template4()
+}
+
+spriteset (rt_SPR_RED_CLOSED, "gfx/rt_6.png") {
+    template6()
+}
+
+spriteset (rt_SPR_RED_OPEN, "gfx/rt_7.png") {
+    template6()
+}
+
+spriteset (rt_SPR_RED_CLOSED_REAR, "gfx/rt_8.png") {
+    template6()
+}
+
+spriteset (rt_SPR_RED_OPEN_REAR, "gfx/rt_9.png") {
+    template6()
+}
+
+switch (FEAT_TRAINS, SELF, rt_subtext_0, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BLUE), "", ""); }
+
+switch (FEAT_TRAINS, SELF, rt_subtext_1990, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BLUE), "", "");
+    3: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_RED), "", ""); }
+
+switch (FEAT_TRAINS, SELF, rt_SUBTYPE_BY_YEAR, current_year) {
+    0..1989: rt_subtext_0;
+    default: rt_subtext_1990; }
+
+spritegroup rt_sprg_blue_rear {
+    loading: [rt_SPR_BLUE_OPEN_REAR];
+    loaded: [rt_SPR_BLUE_CLOSED_REAR]; }
+
+spritegroup rt_sprg_blue {
+    loading: [rt_SPR_BLUE_OPEN];
+    loaded: [rt_SPR_BLUE_CLOSED]; }
+
+spritegroup rt_sprg_red_rear {
+    loading: [rt_SPR_RED_OPEN_REAR];
+    loaded: [rt_SPR_RED_CLOSED_REAR]; }
+
+spritegroup rt_sprg_red {
+    loading: [rt_SPR_RED_OPEN];
+    loaded: [rt_SPR_RED_CLOSED]; }
+
+switch (FEAT_TRAINS, SELF, rt_gfx_blue, position_in_consist_from_end) {
+    1: rt_sprg_blue_rear;
+    default: rt_sprg_blue; }
+
+switch (FEAT_TRAINS, SELF, rt_gfx_red, position_in_consist_from_end) {
+    1: rt_sprg_red_rear;
+    default: rt_sprg_red; }
+
+switch (FEAT_TRAINS, SELF, rt_pur_gfx, current_year) {
+    0..1989: rt_SPR_BLUE_PUR;
+    default: rt_SPR_RED_PUR; }
+
+switch (FEAT_TRAINS, SELF, rt_autolivery, current_year) {
+    0..1989: rt_gfx_blue;
+    default: rt_gfx_red; }
+
+switch (FEAT_TRAINS, SELF, rt_buildlivery, build_year) {
+    0..1989: rt_gfx_blue;
+    default: rt_gfx_red; }
+
+switch (FEAT_TRAINS, SELF, rt_liverychoice, cargo_subtype) {
+    1: rt_buildlivery;
+    2: rt_gfx_blue;
+    3: rt_gfx_red;
+    default: rt_autolivery; }
+
+spriteset (rt_SPR_RED_CLOSED_copy, "gfx/rt_6.png") {
+    template7()
+}
+
+spriteset (rt_SPR_RED_OPEN_copy, "gfx/rt_7.png") {
+    template7()
+}
+
+spriteset (rt_SPR_RED_CLOSED_REAR_copy, "gfx/rt_8.png") {
+    template7()
+}
+
+spriteset (rt_SPR_RED_OPEN_REAR_copy, "gfx/rt_9.png") {
+    template7()
+}
+
+spriteset (rt_SPR_BLUE_CLOSED_copy, "gfx/rt_1.png") {
+    template7()
+}
+
+spriteset (rt_SPR_BLUE_OPEN_copy, "gfx/rt_2.png") {
+    template7()
+}
+
+spriteset (rt_SPR_BLUE_CLOSED_REAR_copy, "gfx/rt_3.png") {
+    template7()
+}
+
+spriteset (rt_SPR_BLUE_OPEN_REAR_copy, "gfx/rt_4.png") {
+    template7()
+}
+
+switch (FEAT_TRAINS, SELF, rt_gfx_depot_2, extra_callback_info1) {
+    0x10: spriteset_empty;
+    default: rt_liverychoice; }
+
+switch (FEAT_TRAINS, SELF, rt_articulated, extra_callback_info1) {
+    1: rt_fake_arti_1;
+    2: rt_fake_arti_2;
+    3: CB_RESULT_NO_MORE_ARTICULATED_PARTS; }
+
+spritegroup rt_sprg_red_copy {
+    loading: [rt_SPR_RED_OPEN_copy];
+    loaded: [rt_SPR_RED_CLOSED_copy]; }
+
+spritegroup rt_sprg_red_rear_copy {
+    loading: [rt_SPR_RED_OPEN_REAR_copy];
+    loaded: [rt_SPR_RED_CLOSED_REAR_copy]; }
+
+spritegroup rt_sprg_blue_copy {
+    loading: [rt_SPR_BLUE_OPEN_copy];
+    loaded: [rt_SPR_BLUE_CLOSED_copy]; }
+
+spritegroup rt_sprg_blue_rear_copy {
+    loading: [rt_SPR_BLUE_OPEN_REAR_copy];
+    loaded: [rt_SPR_BLUE_CLOSED_REAR_copy]; }
+
+switch (FEAT_TRAINS, SELF, rt_gfx_red_copy, position_in_consist_from_end) {
+    1: rt_sprg_red_rear_copy;
+    default: rt_sprg_red_copy; }
+
+switch (FEAT_TRAINS, SELF, rt_gfx_blue_copy, position_in_consist_from_end) {
+    1: rt_sprg_blue_rear_copy;
+    default: rt_sprg_blue_copy; }
+
+switch (FEAT_TRAINS, SELF, rt_buildlivery_copy, build_year) {
+    0..1989: rt_gfx_blue_copy;
+    default: rt_gfx_red_copy; }
+
+switch (FEAT_TRAINS, SELF, rt_autolivery_copy, current_year) {
+    0..1989: rt_gfx_blue_copy;
+    default: rt_gfx_red_copy; }
+
+switch (FEAT_TRAINS, SELF, rt_liverychoice_copy, cargo_subtype) {
+    1: rt_buildlivery_copy;
+    2: rt_gfx_blue_copy;
+    3: rt_gfx_red_copy;
+    default: rt_autolivery_copy; }
+
+switch (FEAT_TRAINS, SELF, rt_gfx_depot_1, extra_callback_info1) {
+    0x10: rt_liverychoice_copy;
+    default: spriteset_empty; }
+
+item (FEAT_TRAINS, rt) { graphics {
+    additional_text: string(STR_ADD_RT, string(STR_ADD_SERVICE), string(STR_ADD_EXPRESS_PASSENGERS), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_STEEL), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_BLUE_COACH), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    articulated_part: rt_articulated;
+    cargo_capacity: 0;
+    cargo_subtype_text: rt_SUBTYPE_BY_YEAR;
+    colour_mapping: switch_recolour_lights;
+    default: rt_gfx_depot_1;
+    length: 4;
+    purchase: rt_pur_gfx;
+    visual_effect_and_powered: visual_effect_and_powered(
+VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, rt_fake_arti_1) { graphics {
+    additional_text: string(STR_ADD_RT, string(STR_ADD_SERVICE), string(STR_ADD_EXPRESS_PASSENGERS), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_STEEL), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_BLUE_COACH), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    cargo_capacity: 45;
+    cargo_subtype_text: rt_SUBTYPE_BY_YEAR;
+    colour_mapping: switch_recolour_lights;
+    default: rt_gfx_depot_2;
+    length: 2;
+    cargo_age_period: (50 * 5) << param_cargo_decay;
+    purchase: rt_pur_gfx;
+}}
+item (FEAT_TRAINS, rt_fake_arti_2) { graphics {
+    additional_text: string(STR_ADD_RT, string(STR_ADD_SERVICE), string(STR_ADD_EXPRESS_PASSENGERS), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_STEEL), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_BLUE_COACH), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    cargo_capacity: 0;
+    cargo_subtype_text: rt_SUBTYPE_BY_YEAR;
+    colour_mapping: switch_recolour_lights;
+    default: spriteset_empty;
+    length: 4;
+    purchase: rt_pur_gfx;
+    visual_effect_and_powered: visual_effect_and_powered(
+VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, rt) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: bitmask(1);
+    cargo_age_period: 278;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 87;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1972,01,01);
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 45;
+    name: string(STR_PUR_RT, string(STR_PUR_EXPRESS_RESTAURANT_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 15;
+    speed: 140 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 44 ton;
+}}
+item (FEAT_TRAINS, rt_fake_arti_1) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 278;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    name: string(STR_PUR_RT, string(STR_PUR_EXPRESS_RESTAURANT_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, rt_fake_arti_2) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 278;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    name: string(STR_PUR_RT, string(STR_PUR_EXPRESS_RESTAURANT_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}

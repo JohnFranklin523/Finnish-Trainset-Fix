@@ -1,0 +1,116 @@
+switch (FEAT_TRAINS, SELF, move66_snd_0_depot_100, vehicle_is_in_depot) {
+    0: sound("sfx/move66_idle.wav", 100); }
+
+switch (FEAT_TRAINS, SELF, move66_snd_0_100, extra_callback_info1) {
+    1: sound("sfx/move66_acc.wav", 100);
+    7: sound("sfx/move66_run.wav", 100);
+    8: move66_snd_0_depot_100; }
+
+switch (FEAT_TRAINS, SELF, move66_snd_0_depot_66, vehicle_is_in_depot) {
+    0: sound("sfx/move66_idle.wav", 66); }
+
+switch (FEAT_TRAINS, SELF, move66_snd_0_66, extra_callback_info1) {
+    1: sound("sfx/move66_acc.wav", 66);
+    7: sound("sfx/move66_run.wav", 66);
+    8: move66_snd_0_depot_66; }
+
+switch (FEAT_TRAINS, SELF, move66_snd_0_depot_33, vehicle_is_in_depot) {
+    0: sound("sfx/move66_idle.wav", 33); }
+
+switch (FEAT_TRAINS, SELF, move66_snd_0_33, extra_callback_info1) {
+    1: sound("sfx/move66_acc.wav", 33);
+    7: sound("sfx/move66_run.wav", 33);
+    8: move66_snd_0_depot_33; }
+
+switch (FEAT_TRAINS, SELF, move66_SND, param_volume) {
+    0: CB_FAILED;
+    1: move66_snd_0_33;
+    2: move66_snd_0_66;
+    3: move66_snd_0_100; }
+
+spriteset (move66_SPR_PUR, "gfx/move66_0.png") {
+    template4()
+}
+
+spriteset (move66_SPR_RED, "gfx/move66_1.png") {
+    template1()
+}
+
+spriteset (move66_SPR_YELLOW, "gfx/move66_2.png") {
+    template1()
+}
+
+switch (FEAT_TRAINS, SELF, move66_liverychoice, cargo_subtype) {
+    1: move66_SPR_YELLOW;
+    default: move66_SPR_RED; }
+
+switch (FEAT_TRAINS, SELF, move66_subtype_text, cargo_subtype) {
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_YELLOW), "", "");
+    default: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_RED), "", ""); }
+
+spriteset (move66_SPR_RED_copy, "gfx/move66_1.png") {
+    template5()
+}
+
+spriteset (move66_SPR_YELLOW_copy, "gfx/move66_2.png") {
+    template5()
+}
+
+switch (FEAT_TRAINS, SELF, move66_liverychoice_copy, cargo_subtype) {
+    1: move66_SPR_YELLOW_copy;
+    default: move66_SPR_RED_copy; }
+
+switch (FEAT_TRAINS, SELF, move66_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: move66_liverychoice_copy;
+    default: move66_liverychoice; }
+
+item (FEAT_TRAINS, move66) { graphics {
+    additional_text: string(STR_ADD_MOVE66, string(STR_ADD_SERVICE), string(STR_ADD_SHUNTING), string(STR_ADD_MANUFACTURER), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_PRIME_MOVER), string(STR_ADD_TRANSMISSION), string(STR_ADD_HYDRAULIC));
+    cargo_capacity: 0;
+    cargo_subtype_text: move66_subtype_text;
+    colour_mapping: switch_recolour_lights;
+    default: move66_gfx_flipped;
+    length: 5;
+    purchase: move66_SPR_PUR;
+    sound_effect: move66_SND;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, move66) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [PASS];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 19;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1967,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 40;
+    name: string(STR_PUR_MOVE66, string(STR_PUR_DIESEL));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 545 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: NO_CARGO_CLASS;
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 41;
+    speed: 65 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.256;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 45 ton;
+}}

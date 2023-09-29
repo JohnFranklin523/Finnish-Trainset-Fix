@@ -1,0 +1,62 @@
+spriteset (fo_SPR_PUR, "gfx/fo_0.png") {
+    template4()
+}
+
+spriteset (fo_SPR_CLOSED, "gfx/fo_1.png") {
+    template8()
+}
+
+spriteset (fo_SPR_OPEN, "gfx/fo_2.png") {
+    template8()
+}
+
+spritegroup fo_sprg {
+    loading: [fo_SPR_OPEN];
+    loaded: [fo_SPR_CLOSED]; }
+
+item (FEAT_TRAINS, fo) { graphics {
+    additional_text: string(STR_ADD_FO, string(STR_ADD_SERVICE), string(STR_ADD_EXPRESS_PASSENGERS), string(STR_ADD_SLEEPER), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_WOOD), string(STR_ADD_1_5ST), string(STR_ADD_COACH_CLASS), string(STR_ADD_WOODEN_COACH));
+    cargo_capacity: 25;
+    colour_mapping: switch_recolour_lights;
+    default: fo_sprg;
+    length: 8;
+    purchase: fo_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, fo) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 200 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 39;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1924,01,01);
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 50;
+    name: string(STR_PUR_FO, string(STR_PUR_LUGGAGE_CONDUCTOR_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_ARMOURED, CC_MAIL);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 10;
+    speed: 100 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 25 ton;
+}}

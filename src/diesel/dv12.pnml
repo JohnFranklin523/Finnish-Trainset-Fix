@@ -1,0 +1,366 @@
+switch (FEAT_TRAINS, SELF, dv12_snd_0_depot_100, vehicle_is_in_depot) {
+    0: sound("sfx/dv12_idle.wav", 100); }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_0_100, extra_callback_info1) {
+    1: sound("sfx/dv12_acc.wav", 100);
+    7: sound("sfx/dv12_run.wav", 100);
+    8: dv12_snd_0_depot_100; }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_0_depot_66, vehicle_is_in_depot) {
+    0: sound("sfx/dv12_idle.wav", 66); }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_0_66, extra_callback_info1) {
+    1: sound("sfx/dv12_acc.wav", 66);
+    7: sound("sfx/dv12_run.wav", 66);
+    8: dv12_snd_0_depot_66; }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_0_depot_33, vehicle_is_in_depot) {
+    0: sound("sfx/dv12_idle.wav", 33); }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_0_33, extra_callback_info1) {
+    1: sound("sfx/dv12_acc.wav", 33);
+    7: sound("sfx/dv12_run.wav", 33);
+    8: dv12_snd_0_depot_33; }
+
+switch (FEAT_TRAINS, SELF, dv12_SND_2500, param_volume) {
+    0: CB_FAILED;
+    1: dv12_snd_0_33;
+    2: dv12_snd_0_66;
+    3: dv12_snd_0_100; }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_1_depot_100, vehicle_is_in_depot) {
+    0: sound("sfx/dv12_26_idle.wav", 100); }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_1_100, extra_callback_info1) {
+    1: sound("sfx/dv12_26_acc.wav", 100);
+    7: sound("sfx/dv12_26_run.wav", 100);
+    8: dv12_snd_1_depot_100; }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_1_depot_66, vehicle_is_in_depot) {
+    0: sound("sfx/dv12_26_idle.wav", 66); }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_1_66, extra_callback_info1) {
+    1: sound("sfx/dv12_26_acc.wav", 66);
+    7: sound("sfx/dv12_26_run.wav", 66);
+    8: dv12_snd_1_depot_66; }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_1_depot_33, vehicle_is_in_depot) {
+    0: sound("sfx/dv12_26_idle.wav", 33); }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_1_33, extra_callback_info1) {
+    1: sound("sfx/dv12_26_acc.wav", 33);
+    7: sound("sfx/dv12_26_run.wav", 33);
+    8: dv12_snd_1_depot_33; }
+
+switch (FEAT_TRAINS, SELF, dv12_SND_2600, param_volume) {
+    0: CB_FAILED;
+    1: dv12_snd_1_33;
+    2: dv12_snd_1_66;
+    3: dv12_snd_1_100; }
+
+spriteset (dv12_SPR_2500_PUR, "gfx/dv12_0.png") {
+    template4()
+}
+
+spriteset (dv12_SPR_2600_PUR, "gfx/dv12_1.png") {
+    template4()
+}
+
+spriteset (dv12_SPR_2700_PUR, "gfx/dv12_2.png") {
+    template4()
+}
+
+spriteset (dv12_SPR_2600_R_PUR, "gfx/dv12_3.png") {
+    template4()
+}
+
+spriteset (dv12_SPR_2500, "gfx/dv12_4.png") {
+    template9()
+}
+
+spriteset (dv12_SPR_2600, "gfx/dv12_5.png") {
+    template9()
+}
+
+spriteset (dv12_SPR_2700, "gfx/dv12_6.png") {
+    template9()
+}
+
+spriteset (dv12_SPR_2500_R, "gfx/dv12_7.png") {
+    template9()
+}
+
+spriteset (dv12_SPR_2600_R, "gfx/dv12_8.png") {
+    template9()
+}
+
+spriteset (dv12_SPR_2700_R, "gfx/dv12_9.png") {
+    template9()
+}
+
+switch (FEAT_TRAINS, SELF, dv12_subtext_0, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    10: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), "", "");
+    8: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    9: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), ""); }
+
+switch (FEAT_TRAINS, SELF, dv12_subtext_1967, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    10: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    11: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), "", "");
+    3: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700), "", "");
+    8: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    9: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), ""); }
+
+switch (FEAT_TRAINS, SELF, dv12_subtext_1975, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    10: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    11: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    12: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2600), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), "", "");
+    3: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700), "", "");
+    4: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2600), "", "");
+    8: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    9: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), ""); }
+
+switch (FEAT_TRAINS, SELF, dv12_subtext_2004, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    10: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    11: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    12: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2600), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    13: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500R), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), "", "");
+    3: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700), "", "");
+    4: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2600), "", "");
+    5: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500R), "", "");
+    8: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    9: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), ""); }
+
+switch (FEAT_TRAINS, SELF, dv12_subtext_2005, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    10: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    11: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    12: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2600), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    13: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500R), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    14: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700R), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), "", "");
+    3: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700), "", "");
+    4: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2600), "", "");
+    5: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500R), "", "");
+    6: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700R), "", "");
+    8: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    9: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), ""); }
+
+switch (FEAT_TRAINS, SELF, dv12_subtext_2007, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    10: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    11: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    12: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2600), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    13: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500R), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    14: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700R), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    15: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2600R), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500), "", "");
+    3: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700), "", "");
+    4: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2600), "", "");
+    5: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2500R), "", "");
+    6: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2700R), "", "");
+    7: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DV12_2600R), "", "");
+    8: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), "");
+    9: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), string(STR_SUBTYPE_HLP_2ND, string(STR_SUBTYPE_DV12_REGEAR)), ""); }
+
+switch (FEAT_TRAINS, SELF, dv12_SUBTYPE_BY_YEAR, current_year) {
+    0..1966: dv12_subtext_0;
+    1967..1974: dv12_subtext_1967;
+    1975..2003: dv12_subtext_1975;
+    2004..2004: dv12_subtext_2004;
+    2005..2006: dv12_subtext_2005;
+    default: dv12_subtext_2007; }
+
+switch (FEAT_TRAINS, SELF, dv12_purchase_gfx, build_year) {
+    0..1966: dv12_SPR_2500_PUR;
+    1967..1974: dv12_SPR_2700_PUR;
+    1975..2003: dv12_SPR_2600_PUR;
+    default: dv12_SPR_2600_R_PUR; }
+
+switch (FEAT_TRAINS, SELF, dv12_refur_2500, current_year) {
+    0..2003: dv12_SPR_2500;
+    default: dv12_SPR_2500_R; }
+
+switch (FEAT_TRAINS, SELF, dv12_refur_2700, current_year) {
+    0..2004: dv12_SPR_2700;
+    default: dv12_SPR_2700_R; }
+
+switch (FEAT_TRAINS, SELF, dv12_refur_2600, current_year) {
+    0..2007: dv12_SPR_2600;
+    default: dv12_SPR_2600_R; }
+
+switch (FEAT_TRAINS, SELF, dv12_autolivery, current_year) {
+    0..1966: dv12_refur_2500;
+    1967..1974: dv12_refur_2700;
+    1975..2003: dv12_refur_2600;
+    default: dv12_SPR_2600_R; }
+
+switch (FEAT_TRAINS, SELF, dv12_buildlivery, build_year) {
+    0..1966: dv12_SPR_2500;
+    1967..1974: dv12_SPR_2700;
+    1975..2003: dv12_SPR_2600;
+    default: dv12_SPR_2600_R; }
+
+switch (FEAT_TRAINS, SELF, dv12_speedcheck, cargo_subtype) {
+    1..7: 125;
+    8..15: 85;
+    default: 125; }
+
+switch (FEAT_TRAINS, SELF, dv12_tractive_coeff, cargo_subtype) {
+    1..7: 59;
+    8..15: 84;
+    default: 59; }
+
+switch (FEAT_TRAINS, SELF, dv12_liverychoice, cargo_subtype % 8) {
+    0: dv12_autolivery;
+    1: dv12_buildlivery;
+    2: dv12_SPR_2500;
+    3: dv12_SPR_2700;
+    4: dv12_SPR_2600;
+    5: dv12_SPR_2500_R;
+    6: dv12_SPR_2700_R;
+    7: dv12_SPR_2600_R; }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_auto, current_year) {
+    0..1966: dv12_SND_2500;
+    default: dv12_SND_2600; }
+
+switch (FEAT_TRAINS, SELF, dv12_snd_build, build_year) {
+    0..1966: dv12_SND_2500;
+    default: dv12_SND_2600; }
+
+switch (FEAT_TRAINS, SELF, dv12_snd, cargo_subtype % 8) {
+    0: dv12_snd_auto;
+    1: dv12_snd_build;
+    2: dv12_SND_2500;
+    3..4: dv12_SND_2600;
+    5: dv12_SND_2500;
+    6..7: dv12_SND_2600; }
+
+spriteset (dv12_SPR_2600_R_copy, "gfx/dv12_8.png") {
+    template10()
+}
+
+spriteset (dv12_SPR_2700_R_copy, "gfx/dv12_9.png") {
+    template10()
+}
+
+spriteset (dv12_SPR_2500_R_copy, "gfx/dv12_7.png") {
+    template10()
+}
+
+spriteset (dv12_SPR_2600_copy, "gfx/dv12_5.png") {
+    template10()
+}
+
+spriteset (dv12_SPR_2700_copy, "gfx/dv12_6.png") {
+    template10()
+}
+
+spriteset (dv12_SPR_2500_copy, "gfx/dv12_4.png") {
+    template10()
+}
+
+switch (FEAT_TRAINS, SELF, dv12_buildlivery_copy, build_year) {
+    0..1966: dv12_SPR_2500_copy;
+    1967..1974: dv12_SPR_2700_copy;
+    1975..2003: dv12_SPR_2600_copy;
+    default: dv12_SPR_2600_R_copy; }
+
+switch (FEAT_TRAINS, SELF, dv12_refur_2600_copy, current_year) {
+    0..2007: dv12_SPR_2600_copy;
+    default: dv12_SPR_2600_R_copy; }
+
+switch (FEAT_TRAINS, SELF, dv12_refur_2700_copy, current_year) {
+    0..2004: dv12_SPR_2700_copy;
+    default: dv12_SPR_2700_R_copy; }
+
+switch (FEAT_TRAINS, SELF, dv12_refur_2500_copy, current_year) {
+    0..2003: dv12_SPR_2500_copy;
+    default: dv12_SPR_2500_R_copy; }
+
+switch (FEAT_TRAINS, SELF, dv12_autolivery_copy, current_year) {
+    0..1966: dv12_refur_2500_copy;
+    1967..1974: dv12_refur_2700_copy;
+    1975..2003: dv12_refur_2600_copy;
+    default: dv12_SPR_2600_R_copy; }
+
+switch (FEAT_TRAINS, SELF, dv12_liverychoice_copy, cargo_subtype % 8) {
+    0: dv12_autolivery_copy;
+    1: dv12_buildlivery_copy;
+    2: dv12_SPR_2500_copy;
+    3: dv12_SPR_2700_copy;
+    4: dv12_SPR_2600_copy;
+    5: dv12_SPR_2500_R_copy;
+    6: dv12_SPR_2700_R_copy;
+    7: dv12_SPR_2600_R_copy; }
+
+switch (FEAT_TRAINS, SELF, dv12_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: dv12_liverychoice_copy;
+    default: dv12_liverychoice; }
+
+item (FEAT_TRAINS, dv12) { graphics {
+    additional_text: string(STR_ADD_DV12, string(STR_ADD_SERVICE), string(STR_ADD_GENERAL_PURPOSE), string(STR_ADD_MANUFACTURER), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_PRIME_MOVER), string(STR_ADD_TRANSMISSION), string(STR_ADD_HYDRAULIC), string(STR_ADD_REGEARING), string(STR_ADD_H_GEAR), string(STR_ADD_T_GEAR));
+    cargo_capacity: 0;
+    cargo_subtype_text: dv12_SUBTYPE_BY_YEAR;
+    colour_mapping: switch_recolour_lights;
+    default: dv12_gfx_flipped;
+    length: 7;
+    purchase: dv12_purchase_gfx;
+    sound_effect: dv12_snd;
+    speed: dv12_speedcheck;
+    tractive_effort_coefficient: dv12_tractive_coeff;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, dv12) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [PASS];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 48;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1963,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_DV12, string(STR_PUR_DIESEL));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 1360 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: NO_CARGO_CLASS;
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 103;
+    speed: 125 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.215;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 66 ton;
+}}

@@ -1,0 +1,93 @@
+
+spriteset (a1_SPR_PUR, "gfx/a1_0.png") {
+    template0()
+}
+
+spriteset (a1_SPR_LOCO, "gfx/a1_1.png") {
+    template1()
+}
+
+spriteset (a1_SPR_TENDER, "gfx/a1_2.png") {
+    template2()
+}
+
+switch (FEAT_TRAINS, SELF, a1_articulated, extra_callback_info1) {
+    1: a1_part_1;
+    2: CB_RESULT_NO_MORE_ARTICULATED_PARTS; }
+
+item (FEAT_TRAINS, a1) { graphics {
+    additional_text: string(STR_ADD_A1, string(STR_ADD_SERVICE), string(STR_ADD_EXPRESS_PASSENGERS), string(STR_ADD_MANUFACTURER), string(STR_ADD_UIC_AXLE_ORDER));
+    articulated_part: a1_articulated;
+    cargo_capacity: 0;
+    colour_mapping: switch_recolour_lights;
+    default: a1_SPR_LOCO;
+    length: 5;
+    purchase: a1_SPR_PUR;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_STEAM, -2, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, a1_part_1) { graphics {
+    cargo_capacity: 0;
+    colour_mapping: switch_recolour_lights;
+    default: a1_SPR_TENDER;
+    length: 3;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, a1) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [PASS];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 2;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_STEAM;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1861,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 51;
+    name: string(STR_PUR_A1, string(STR_PUR_STEAM));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 510 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: NO_CARGO_CLASS;
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 70;
+    speed: 80 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.061;
+    vehicle_life: 51;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 49 ton;
+}}
+item (FEAT_TRAINS, a1_part_1) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [PASS];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    name: string(STR_PUR_A1, string(STR_PUR_STEAM));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: NO_CARGO_CLASS;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}

@@ -1,0 +1,62 @@
+spriteset (vgk_SPR_PUR, "gfx/vgk_0.png") {
+    template4()
+}
+
+spriteset (vgk_SPR_V1, "gfx/vgk_1.png") {
+    template8()
+}
+
+spriteset (vgk_SPR_V2, "gfx/vgk_2.png") {
+    template8()
+}
+
+random_switch (FEAT_TRAINS, SELF, vgk_gfx) {
+    1: vgk_SPR_V1;
+    1: vgk_SPR_V2; }
+
+item (FEAT_TRAINS, vgk) { graphics {
+    additional_text: string(STR_ADD_VGK, string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 68;
+    colour_mapping: switch_recolour_lights;
+    default: vgk_gfx;
+    length: 8;
+    purchase: vgk_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, vgk) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [WOOD];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 13;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1960,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_VGK, string(STR_PUR_COVERED_WAGON));
+    non_refittable_cargo_classes: bitmask(CC_OVERSIZED, CC_REFRIGERATED);
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_COVERED, CC_EXPRESS, CC_HAZARDOUS, CC_PIECE_GOODS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 6;
+    speed: 80 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 24 ton;
+}}

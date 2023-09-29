@@ -1,0 +1,200 @@
+spriteset (efit_SPR_OLD_PUR, "gfx/efit_0.png") {
+    template4()
+}
+
+spriteset (efit_SPR_OLD_CLOSED, "gfx/efit_1.png") {
+    template6()
+}
+
+spriteset (efit_SPR_OLD_OPEN, "gfx/efit_2.png") {
+    template6()
+}
+
+spriteset (efit_SPR_OLD_CLOSED_REAR, "gfx/efit_3.png") {
+    template6()
+}
+
+spriteset (efit_SPR_OLD_OPEN_REAR, "gfx/efit_4.png") {
+    template6()
+}
+
+spriteset (efit_SPR_NEW_PUR, "gfx/efit_5.png") {
+    template4()
+}
+
+spriteset (efit_SPR_NEW_CLOSED, "gfx/efit_6.png") {
+    template6()
+}
+
+spriteset (efit_SPR_NEW_OPEN, "gfx/efit_7.png") {
+    template6()
+}
+
+spriteset (efit_SPR_NEW_CLOSED_REAR, "gfx/efit_8.png") {
+    template6()
+}
+
+spriteset (efit_SPR_NEW_OPEN_REAR, "gfx/efit_9.png") {
+    template6()
+}
+
+spritegroup efit_sprg_rear {
+    loading: [efit_SPR_OLD_OPEN_REAR];
+    loaded: [efit_SPR_OLD_CLOSED_REAR]; }
+
+spritegroup efit_sprg {
+    loading: [efit_SPR_OLD_OPEN];
+    loaded: [efit_SPR_OLD_CLOSED]; }
+
+switch (FEAT_TRAINS, SELF, efit_gfx, position_in_consist_from_end) {
+    1: efit_sprg_rear;
+    default: efit_sprg; }
+
+spriteset (efit_SPR_OLD_CLOSED_copy, "gfx/efit_1.png") {
+    template7()
+}
+
+spriteset (efit_SPR_OLD_OPEN_copy, "gfx/efit_2.png") {
+    template7()
+}
+
+spriteset (efit_SPR_OLD_CLOSED_REAR_copy, "gfx/efit_3.png") {
+    template7()
+}
+
+spriteset (efit_SPR_OLD_OPEN_REAR_copy, "gfx/efit_4.png") {
+    template7()
+}
+
+switch (FEAT_TRAINS, SELF, efit_gfx_depot_2, extra_callback_info1) {
+    0x10: spriteset_empty;
+    default: efit_gfx; }
+
+switch (FEAT_TRAINS, SELF, efit_articulated, extra_callback_info1) {
+    1: efit_fake_arti_1;
+    2: efit_fake_arti_2;
+    3: CB_RESULT_NO_MORE_ARTICULATED_PARTS; }
+
+spritegroup efit_sprg_copy {
+    loading: [efit_SPR_OLD_OPEN_copy];
+    loaded: [efit_SPR_OLD_CLOSED_copy]; }
+
+spritegroup efit_sprg_rear_copy {
+    loading: [efit_SPR_OLD_OPEN_REAR_copy];
+    loaded: [efit_SPR_OLD_CLOSED_REAR_copy]; }
+
+switch (FEAT_TRAINS, SELF, efit_gfx_copy, position_in_consist_from_end) {
+    1: efit_sprg_rear_copy;
+    default: efit_sprg_copy; }
+
+switch (FEAT_TRAINS, SELF, efit_gfx_depot_1, extra_callback_info1) {
+    0x10: efit_gfx_copy;
+    default: spriteset_empty; }
+
+item (FEAT_TRAINS, efit) { graphics {
+    additional_text: string(STR_ADD_EFIT, string(STR_ADD_SERVICE), string(STR_ADD_EXPRESS_PASSENGERS), string(STR_ADD_REGIONAL_PASSENGERS), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_STEEL), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_BLUE_COACH), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    articulated_part: efit_articulated;
+    cargo_capacity: 0;
+    colour_mapping: switch_recolour_lights;
+    default: efit_gfx_depot_1;
+    length: 4;
+    running_cost_factor: 6 * cafecostfactor();
+    purchase: efit_SPR_OLD_PUR;
+    visual_effect_and_powered: visual_effect_and_powered(
+VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, efit_fake_arti_1) { graphics {
+    additional_text: string(STR_ADD_EFIT, string(STR_ADD_SERVICE), string(STR_ADD_EXPRESS_PASSENGERS), string(STR_ADD_REGIONAL_PASSENGERS), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_STEEL), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_BLUE_COACH), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    cargo_capacity: 46;
+    colour_mapping: switch_recolour_lights;
+    default: efit_gfx_depot_2;
+    length: 2;
+    cargo_age_period: (50 * cafedecayfactor()) << param_cargo_decay;
+    purchase: efit_SPR_OLD_PUR;
+}}
+item (FEAT_TRAINS, efit_fake_arti_2) { graphics {
+    additional_text: string(STR_ADD_EFIT, string(STR_ADD_SERVICE), string(STR_ADD_EXPRESS_PASSENGERS), string(STR_ADD_REGIONAL_PASSENGERS), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_STEEL), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_BLUE_COACH), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    cargo_capacity: 0;
+    colour_mapping: switch_recolour_lights;
+    default: spriteset_empty;
+    length: 4;
+    purchase: efit_SPR_OLD_PUR;
+    visual_effect_and_powered: visual_effect_and_powered(
+VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, efit) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 208;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 79;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1966,01,01);
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 50;
+    name: string(STR_PUR_EFIT, string(STR_PUR_2ND_CLASS_EXPRESS_CONDUCTOR_LUGGAGE_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 12;
+    speed: 140 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 51 ton;
+}}
+item (FEAT_TRAINS, efit_fake_arti_1) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 208;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    name: string(STR_PUR_EFIT, string(STR_PUR_2ND_CLASS_EXPRESS_CONDUCTOR_LUGGAGE_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, efit_fake_arti_2) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 208;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    name: string(STR_PUR_EFIT, string(STR_PUR_2ND_CLASS_EXPRESS_CONDUCTOR_LUGGAGE_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}

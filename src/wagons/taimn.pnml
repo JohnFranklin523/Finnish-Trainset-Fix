@@ -1,0 +1,248 @@
+spriteset (taimn_SPR_PUR, "gfx/taimn_0.png") {
+    template4()
+}
+
+spriteset (taimn_SPR_CLOSED, "gfx/taimn_1.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_OPEN, "gfx/taimn_2.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_COAL_1, "gfx/taimn_3.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_COAL_2, "gfx/taimn_4.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_COAL_3, "gfx/taimn_5.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_COAL_4, "gfx/taimn_6.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_ORE_1, "gfx/taimn_7.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_ORE_2, "gfx/taimn_8.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_ORE_3, "gfx/taimn_9.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_ORE_4, "gfx/taimn_10.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_STONE_1, "gfx/taimn_11.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_STONE_2, "gfx/taimn_12.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_STONE_3, "gfx/taimn_13.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_STONE_4, "gfx/taimn_14.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_SAND_1, "gfx/taimn_15.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_SAND_2, "gfx/taimn_16.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_SAND_3, "gfx/taimn_17.png") {
+    template11()
+}
+
+spriteset (taimn_SPR_SAND_4, "gfx/taimn_18.png") {
+    template11()
+}
+
+spritegroup taimn_sprg_coal {
+    loading: [taimn_SPR_OPEN, taimn_SPR_COAL_1, taimn_SPR_COAL_2, taimn_SPR_COAL_3, taimn_SPR_COAL_4];
+    loaded: [taimn_SPR_CLOSED]; }
+
+spritegroup taimn_sprg_ore {
+    loading: [taimn_SPR_OPEN, taimn_SPR_ORE_1, taimn_SPR_ORE_2, taimn_SPR_ORE_3, taimn_SPR_ORE_4];
+    loaded: [taimn_SPR_CLOSED]; }
+
+spritegroup taimn_sprg_stone {
+    loading: [taimn_SPR_OPEN, taimn_SPR_STONE_1, taimn_SPR_STONE_2, taimn_SPR_STONE_3, taimn_SPR_STONE_4];
+    loaded: [taimn_SPR_CLOSED]; }
+
+spritegroup taimn_sprg_sand {
+    loading: [taimn_SPR_OPEN, taimn_SPR_SAND_1, taimn_SPR_SAND_2, taimn_SPR_SAND_3, taimn_SPR_SAND_4];
+    loaded: [taimn_SPR_CLOSED]; }
+
+switch (FEAT_TRAINS, SELF, taimn_gfx, cargo_type_in_veh) {
+    CLAY: taimn_sprg_sand;
+    COAL: taimn_sprg_coal;
+    GRVL: taimn_sprg_stone;
+    LIME: taimn_sprg_stone;
+    POTA: taimn_sprg_stone;
+    SAND: taimn_sprg_sand;
+    default: taimn_sprg_ore; }
+
+spriteset (taimn_SPR_CLOSED_copy, "gfx/taimn_1.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_ORE_4_copy, "gfx/taimn_10.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_ORE_3_copy, "gfx/taimn_9.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_ORE_2_copy, "gfx/taimn_8.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_ORE_1_copy, "gfx/taimn_7.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_OPEN_copy, "gfx/taimn_2.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_STONE_4_copy, "gfx/taimn_14.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_STONE_3_copy, "gfx/taimn_13.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_STONE_2_copy, "gfx/taimn_12.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_STONE_1_copy, "gfx/taimn_11.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_SAND_4_copy, "gfx/taimn_18.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_SAND_3_copy, "gfx/taimn_17.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_SAND_2_copy, "gfx/taimn_16.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_SAND_1_copy, "gfx/taimn_15.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_COAL_4_copy, "gfx/taimn_6.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_COAL_3_copy, "gfx/taimn_5.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_COAL_2_copy, "gfx/taimn_4.png") {
+    template12()
+}
+
+spriteset (taimn_SPR_COAL_1_copy, "gfx/taimn_3.png") {
+    template12()
+}
+
+spritegroup taimn_sprg_ore_copy {
+    loading: [taimn_SPR_OPEN_copy, taimn_SPR_ORE_1_copy, taimn_SPR_ORE_2_copy, taimn_SPR_ORE_3_copy, taimn_SPR_ORE_4_copy];
+    loaded: [taimn_SPR_CLOSED_copy]; }
+
+spritegroup taimn_sprg_stone_copy {
+    loading: [taimn_SPR_OPEN_copy, taimn_SPR_STONE_1_copy, taimn_SPR_STONE_2_copy, taimn_SPR_STONE_3_copy, taimn_SPR_STONE_4_copy];
+    loaded: [taimn_SPR_CLOSED_copy]; }
+
+spritegroup taimn_sprg_sand_copy {
+    loading: [taimn_SPR_OPEN_copy, taimn_SPR_SAND_1_copy, taimn_SPR_SAND_2_copy, taimn_SPR_SAND_3_copy, taimn_SPR_SAND_4_copy];
+    loaded: [taimn_SPR_CLOSED_copy]; }
+
+spritegroup taimn_sprg_coal_copy {
+    loading: [taimn_SPR_OPEN_copy, taimn_SPR_COAL_1_copy, taimn_SPR_COAL_2_copy, taimn_SPR_COAL_3_copy, taimn_SPR_COAL_4_copy];
+    loaded: [taimn_SPR_CLOSED_copy]; }
+
+switch (FEAT_TRAINS, SELF, taimn_gfx_copy, cargo_type_in_veh) {
+    CLAY: taimn_sprg_sand_copy;
+    COAL: taimn_sprg_coal_copy;
+    GRVL: taimn_sprg_stone_copy;
+    LIME: taimn_sprg_stone_copy;
+    POTA: taimn_sprg_stone_copy;
+    SAND: taimn_sprg_sand_copy;
+    default: taimn_sprg_ore_copy; }
+
+switch (FEAT_TRAINS, SELF, taimn_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: taimn_gfx_copy;
+    default: taimn_gfx; }
+
+item (FEAT_TRAINS, taimn) { graphics {
+    additional_text: string(STR_ADD_TAIMN, string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 56;
+    colour_mapping: switch_recolour_lights;
+    default: taimn_gfx_flipped;
+    length: 6;
+    purchase: taimn_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, taimn) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [BEAN, CASS, CERE, FICR, GRAI, MAIZ, OLSD, SALT, SGBT, SGCN, SUGR, WHEA, WOOL];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 19;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1993,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_TAIMN, string(STR_PUR_ORE_WAGON));
+    non_refittable_cargo_classes: bitmask(CC_NON_POURABLE);
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_BULK, CC_COVERED);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 6;
+    speed: 100 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 29 ton;
+}}

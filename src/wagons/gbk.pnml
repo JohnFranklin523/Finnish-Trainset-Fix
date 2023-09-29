@@ -1,0 +1,139 @@
+spriteset (gbk_SPR_PUR, "gfx/gbk_0.png") {
+    template4()
+}
+
+spriteset (gbk_SPR_DEF_CLOSED, "gfx/gbk_1.png") {
+    template11()
+}
+
+spriteset (gbk_SPR_DEF_OPEN, "gfx/gbk_2.png") {
+    template11()
+}
+
+spriteset (gbk_SPR_WOOD_CLOSED, "gfx/gbk_3.png") {
+    template11()
+}
+
+spriteset (gbk_SPR_WOOD_OPEN, "gfx/gbk_4.png") {
+    template11()
+}
+
+spriteset (gbk_SPR_LVST_CLOSED, "gfx/gbk_5.png") {
+    template11()
+}
+
+spriteset (gbk_SPR_LVST_OPEN, "gfx/gbk_6.png") {
+    template11()
+}
+
+spritegroup gbk_sprg_def {
+    loading: [gbk_SPR_DEF_OPEN];
+    loaded: [gbk_SPR_DEF_CLOSED]; }
+
+spritegroup gbk_sprg_wood {
+    loading: [gbk_SPR_WOOD_OPEN];
+    loaded: [gbk_SPR_WOOD_CLOSED]; }
+
+spritegroup gbk_sprg_lvst {
+    loading: [gbk_SPR_LVST_OPEN];
+    loaded: [gbk_SPR_LVST_CLOSED]; }
+
+switch (FEAT_TRAINS, SELF, gbk_cargo_gfx, cargo_type_in_veh) {
+    LVST: gbk_sprg_lvst;
+    PAPR: gbk_sprg_wood;
+    WDPR: gbk_sprg_wood;
+    default: gbk_sprg_def; }
+
+spriteset (gbk_SPR_DEF_CLOSED_copy, "gfx/gbk_1.png") {
+    template12()
+}
+
+spriteset (gbk_SPR_DEF_OPEN_copy, "gfx/gbk_2.png") {
+    template12()
+}
+
+spriteset (gbk_SPR_LVST_CLOSED_copy, "gfx/gbk_5.png") {
+    template12()
+}
+
+spriteset (gbk_SPR_LVST_OPEN_copy, "gfx/gbk_6.png") {
+    template12()
+}
+
+spriteset (gbk_SPR_WOOD_CLOSED_copy, "gfx/gbk_3.png") {
+    template12()
+}
+
+spriteset (gbk_SPR_WOOD_OPEN_copy, "gfx/gbk_4.png") {
+    template12()
+}
+
+spritegroup gbk_sprg_def_copy {
+    loading: [gbk_SPR_DEF_OPEN_copy];
+    loaded: [gbk_SPR_DEF_CLOSED_copy]; }
+
+spritegroup gbk_sprg_lvst_copy {
+    loading: [gbk_SPR_LVST_OPEN_copy];
+    loaded: [gbk_SPR_LVST_CLOSED_copy]; }
+
+spritegroup gbk_sprg_wood_copy {
+    loading: [gbk_SPR_WOOD_OPEN_copy];
+    loaded: [gbk_SPR_WOOD_CLOSED_copy]; }
+
+switch (FEAT_TRAINS, SELF, gbk_cargo_gfx_copy, cargo_type_in_veh) {
+    LVST: gbk_sprg_lvst_copy;
+    PAPR: gbk_sprg_wood_copy;
+    WDPR: gbk_sprg_wood_copy;
+    default: gbk_sprg_def_copy; }
+
+switch (FEAT_TRAINS, SELF, gbk_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: gbk_cargo_gfx_copy;
+    default: gbk_cargo_gfx; }
+
+item (FEAT_TRAINS, gbk) { graphics {
+    additional_text: string(STR_ADD_GBK, string(STR_ADD_MANUFACTURER), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 26;
+    colour_mapping: switch_recolour_lights;
+    default: gbk_gfx_flipped;
+    length: 6;
+    cargo_age_period: comfortlvst() << param_cargo_decay;
+    purchase: gbk_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, gbk) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [WOOD];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 8;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1965,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 30;
+    name: string(STR_PUR_GBK, string(STR_PUR_COVERED_WAGON));
+    non_refittable_cargo_classes: bitmask(CC_OVERSIZED, CC_REFRIGERATED);
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_COVERED, CC_EXPRESS, CC_HAZARDOUS, CC_PIECE_GOODS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 4;
+    speed: 100 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 14 ton;
+}}

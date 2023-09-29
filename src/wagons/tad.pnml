@@ -1,0 +1,144 @@
+spriteset (tad_SPR_PUR, "gfx/tad_0.png") {
+    template4()
+}
+
+spriteset (tad_SPR_CLOSED, "gfx/tad_1.png") {
+    template9()
+}
+
+spriteset (tad_SPR_OPEN, "gfx/tad_2.png") {
+    template9()
+}
+
+spriteset (tad_SPR_LOAD_1, "gfx/tad_3.png") {
+    template9()
+}
+
+spriteset (tad_SPR_LOAD_2, "gfx/tad_4.png") {
+    template9()
+}
+
+spriteset (tad_SPR_LOAD_3, "gfx/tad_5.png") {
+    template9()
+}
+
+spriteset (tad_SPR_UNLOAD_1, "gfx/tad_6.png") {
+    template9()
+}
+
+spriteset (tad_SPR_UNLOAD_2, "gfx/tad_7.png") {
+    template9()
+}
+
+spriteset (tad_SPR_UNLOAD_3, "gfx/tad_8.png") {
+    template9()
+}
+
+spritegroup tad_sprg_load {
+    loading: [tad_SPR_OPEN, tad_SPR_LOAD_1, tad_SPR_LOAD_2, tad_SPR_LOAD_3];
+    loaded: [tad_SPR_CLOSED]; }
+
+switch (FEAT_TRAINS, SELF, tad_gfx_unload, animation_counter % 3) {
+    0: tad_SPR_UNLOAD_1;
+    1: tad_SPR_UNLOAD_2;
+    2: tad_SPR_UNLOAD_3; }
+
+switch (FEAT_TRAINS, SELF, tad_gfx, vehicle_is_unloading) {
+    1: tad_gfx_unload;
+    default: tad_sprg_load; }
+
+spriteset (tad_SPR_CLOSED_copy, "gfx/tad_1.png") {
+    template10()
+}
+
+spriteset (tad_SPR_LOAD_3_copy, "gfx/tad_5.png") {
+    template10()
+}
+
+spriteset (tad_SPR_LOAD_2_copy, "gfx/tad_4.png") {
+    template10()
+}
+
+spriteset (tad_SPR_LOAD_1_copy, "gfx/tad_3.png") {
+    template10()
+}
+
+spriteset (tad_SPR_OPEN_copy, "gfx/tad_2.png") {
+    template10()
+}
+
+spriteset (tad_SPR_UNLOAD_3_copy, "gfx/tad_8.png") {
+    template10()
+}
+
+spriteset (tad_SPR_UNLOAD_2_copy, "gfx/tad_7.png") {
+    template10()
+}
+
+spriteset (tad_SPR_UNLOAD_1_copy, "gfx/tad_6.png") {
+    template10()
+}
+
+spritegroup tad_sprg_load_copy {
+    loading: [tad_SPR_OPEN_copy, tad_SPR_LOAD_1_copy, tad_SPR_LOAD_2_copy, tad_SPR_LOAD_3_copy];
+    loaded: [tad_SPR_CLOSED_copy]; }
+
+switch (FEAT_TRAINS, SELF, tad_gfx_unload_copy, animation_counter % 3) {
+    0: tad_SPR_UNLOAD_1_copy;
+    1: tad_SPR_UNLOAD_2_copy;
+    2: tad_SPR_UNLOAD_3_copy; }
+
+switch (FEAT_TRAINS, SELF, tad_gfx_copy, vehicle_is_unloading) {
+    1: tad_gfx_unload_copy;
+    default: tad_sprg_load_copy; }
+
+switch (FEAT_TRAINS, SELF, tad_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: tad_gfx_copy;
+    default: tad_gfx; }
+
+item (FEAT_TRAINS, tad) { graphics {
+    additional_text: string(STR_ADD_TAD, string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 56;
+    colour_mapping: recolour_bulk;
+    default: tad_gfx_flipped;
+    length: 7;
+    purchase: tad_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, tad) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [COAL, CORE, IORE];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 19;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1975,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_TAD, string(STR_PUR_COVERED_HOPPER_WAGON));
+    non_refittable_cargo_classes: bitmask(CC_NON_POURABLE);
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_BULK, CC_COVERED, CC_POWDERIZED);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 6;
+    speed: 100 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 24 ton;
+}}

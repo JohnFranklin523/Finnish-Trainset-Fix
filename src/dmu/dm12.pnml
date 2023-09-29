@@ -1,0 +1,130 @@
+switch (FEAT_TRAINS, SELF, dm12_snd_0_depot_100, vehicle_is_in_depot) {
+    0: sound("sfx/dm12_idle.wav", 100); }
+
+switch (FEAT_TRAINS, SELF, dm12_snd_0_100, extra_callback_info1) {
+    1: sound("sfx/dm12_acc.wav", 100);
+    7: sound("sfx/dm12_run.wav", 100);
+    8: dm12_snd_0_depot_100; }
+
+switch (FEAT_TRAINS, SELF, dm12_snd_0_depot_66, vehicle_is_in_depot) {
+    0: sound("sfx/dm12_idle.wav", 66); }
+
+switch (FEAT_TRAINS, SELF, dm12_snd_0_66, extra_callback_info1) {
+    1: sound("sfx/dm12_acc.wav", 66);
+    7: sound("sfx/dm12_run.wav", 66);
+    8: dm12_snd_0_depot_66; }
+
+switch (FEAT_TRAINS, SELF, dm12_snd_0_depot_33, vehicle_is_in_depot) {
+    0: sound("sfx/dm12_idle.wav", 33); }
+
+switch (FEAT_TRAINS, SELF, dm12_snd_0_33, extra_callback_info1) {
+    1: sound("sfx/dm12_acc.wav", 33);
+    7: sound("sfx/dm12_run.wav", 33);
+    8: dm12_snd_0_depot_33; }
+
+switch (FEAT_TRAINS, SELF, dm12_SND, param_volume) {
+    0: CB_FAILED;
+    1: dm12_snd_0_33;
+    2: dm12_snd_0_66;
+    3: dm12_snd_0_100; }
+
+spriteset (dm12_SPR_RED_PUR, "gfx/dm12_0.png") {
+    template4()
+}
+
+spriteset (dm12_SPR_RED_DEF, "gfx/dm12_1.png") {
+    template8()
+}
+
+spriteset (dm12_SPR_GREEN_PUR, "gfx/dm12_2.png") {
+    template4()
+}
+
+spriteset (dm12_SPR_GREEN_DEF, "gfx/dm12_3.png") {
+    template8()
+}
+
+switch (FEAT_TRAINS, SELF, dm12_subtext_0, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_RED), "", ""); }
+
+switch (FEAT_TRAINS, SELF, dm12_subtext_2012, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_RED), "", "");
+    3: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_GREEN), "", ""); }
+
+switch (FEAT_TRAINS, SELF, dm12_SUBTYPE_BY_YEAR, current_year) {
+    0..2011: dm12_subtext_0;
+    default: dm12_subtext_2012; }
+
+switch (FEAT_TRAINS, SELF, dm12_purchase, current_year) {
+    0..2011: dm12_SPR_RED_PUR;
+    default: dm12_SPR_GREEN_PUR; }
+
+switch (FEAT_TRAINS, SELF, dm12_autolivery, current_year) {
+    0..2011: dm12_SPR_RED_DEF;
+    default: dm12_SPR_GREEN_DEF; }
+
+switch (FEAT_TRAINS, SELF, dm12_buildlivery, build_year) {
+    0..2011: dm12_SPR_RED_DEF;
+    default: dm12_SPR_GREEN_DEF; }
+
+switch (FEAT_TRAINS, SELF, dm12_livery, cargo_subtype) {
+    0: dm12_autolivery;
+    1: dm12_buildlivery;
+    2: dm12_SPR_RED_DEF;
+    3: dm12_SPR_GREEN_DEF; }
+
+item (FEAT_TRAINS, dm12) { graphics {
+    additional_text: string(STR_ADD_DM12, string(STR_ADD_SERVICE), string(STR_ADD_REGIONAL_PASSENGERS), string(STR_ADD_LOCAL_PASSENGERS), string(STR_ADD_MANUFACTURER), string(STR_ADD_PRIME_MOVER), string(STR_ADD_TRANSMISSION), string(STR_ADD_HYDRAULIC), string(STR_ADD_CONSIST));
+    cargo_capacity: 63;
+    cargo_subtype_text: dm12_SUBTYPE_BY_YEAR;
+    colour_mapping: switch_recolour_lights;
+    default: dm12_livery;
+    length: 8;
+    cargo_age_period: (50*4) << param_cargo_decay;
+    purchase: dm12_purchase;
+    sound_effect: dm12_SND;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, dm12) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 34;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(2005,01,01);
+    length: 8;
+    loading_speed: param_loading_speed_local;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_DM12, string(STR_PUR_DIESEL));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 818 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 73;
+    speed: 120 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.15;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 48 ton;
+}}

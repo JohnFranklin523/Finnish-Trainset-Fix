@@ -1,0 +1,170 @@
+spriteset (hdk_SPR_PUR, "gfx/hdk_0.png") {
+    template4()
+}
+
+spriteset (hdk_SPR_EMPTY, "gfx/hdk_1.png") {
+    template1()
+}
+
+spriteset (hdk_SPR_DEF_1, "gfx/hdk_2.png") {
+    template1()
+}
+
+spriteset (hdk_SPR_DEF_2, "gfx/hdk_3.png") {
+    template1()
+}
+
+spriteset (hdk_SPR_STEL_1, "gfx/hdk_4.png") {
+    template1()
+}
+
+spriteset (hdk_SPR_STEL_2, "gfx/hdk_5.png") {
+    template1()
+}
+
+spriteset (hdk_SPR_WOOD_1, "gfx/hdk_6.png") {
+    template1()
+}
+
+spriteset (hdk_SPR_WOOD_2, "gfx/hdk_7.png") {
+    template1()
+}
+
+spriteset (hdk_SPR_WDPR_1, "gfx/hdk_8.png") {
+    template1()
+}
+
+spriteset (hdk_SPR_WDPR_2, "gfx/hdk_9.png") {
+    template1()
+}
+
+spritegroup hdk_sprg_def {
+    loading: [hdk_SPR_EMPTY, hdk_SPR_DEF_1, hdk_SPR_DEF_2];
+    loaded: [hdk_SPR_EMPTY, hdk_SPR_DEF_1, hdk_SPR_DEF_2]; }
+
+spritegroup hdk_sprg_stel {
+    loading: [hdk_SPR_EMPTY, hdk_SPR_STEL_1, hdk_SPR_STEL_2];
+    loaded: [hdk_SPR_EMPTY, hdk_SPR_STEL_1, hdk_SPR_STEL_2]; }
+
+spritegroup hdk_sprg_wood {
+    loading: [hdk_SPR_EMPTY, hdk_SPR_WOOD_1, hdk_SPR_WOOD_2];
+    loaded: [hdk_SPR_EMPTY, hdk_SPR_WOOD_1, hdk_SPR_WOOD_2]; }
+
+spritegroup hdk_sprg_wdpr {
+    loading: [hdk_SPR_EMPTY, hdk_SPR_WDPR_1, hdk_SPR_WDPR_2];
+    loaded: [hdk_SPR_EMPTY, hdk_SPR_WDPR_1, hdk_SPR_WDPR_2]; }
+
+switch (FEAT_TRAINS, SELF, hdk_cargo_gfx, cargo_type_in_veh) {
+    STEL: hdk_sprg_stel;
+    WDPR: hdk_sprg_wdpr;
+    WOOD: hdk_sprg_wood;
+    default: hdk_sprg_def; }
+
+spriteset (hdk_SPR_DEF_2_copy, "gfx/hdk_3.png") {
+    template5()
+}
+
+spriteset (hdk_SPR_DEF_1_copy, "gfx/hdk_2.png") {
+    template5()
+}
+
+spriteset (hdk_SPR_EMPTY_copy, "gfx/hdk_1.png") {
+    template5()
+}
+
+spriteset (hdk_SPR_WDPR_2_copy, "gfx/hdk_9.png") {
+    template5()
+}
+
+spriteset (hdk_SPR_WDPR_1_copy, "gfx/hdk_8.png") {
+    template5()
+}
+
+spriteset (hdk_SPR_WOOD_2_copy, "gfx/hdk_7.png") {
+    template5()
+}
+
+spriteset (hdk_SPR_WOOD_1_copy, "gfx/hdk_6.png") {
+    template5()
+}
+
+spriteset (hdk_SPR_STEL_2_copy, "gfx/hdk_5.png") {
+    template5()
+}
+
+spriteset (hdk_SPR_STEL_1_copy, "gfx/hdk_4.png") {
+    template5()
+}
+
+spritegroup hdk_sprg_def_copy {
+    loading: [hdk_SPR_EMPTY_copy, hdk_SPR_DEF_1_copy, hdk_SPR_DEF_2_copy];
+    loaded: [hdk_SPR_EMPTY_copy, hdk_SPR_DEF_1_copy, hdk_SPR_DEF_2_copy]; }
+
+spritegroup hdk_sprg_wdpr_copy {
+    loading: [hdk_SPR_EMPTY_copy, hdk_SPR_WDPR_1_copy, hdk_SPR_WDPR_2_copy];
+    loaded: [hdk_SPR_EMPTY_copy, hdk_SPR_WDPR_1_copy, hdk_SPR_WDPR_2_copy]; }
+
+spritegroup hdk_sprg_wood_copy {
+    loading: [hdk_SPR_EMPTY_copy, hdk_SPR_WOOD_1_copy, hdk_SPR_WOOD_2_copy];
+    loaded: [hdk_SPR_EMPTY_copy, hdk_SPR_WOOD_1_copy, hdk_SPR_WOOD_2_copy]; }
+
+spritegroup hdk_sprg_stel_copy {
+    loading: [hdk_SPR_EMPTY_copy, hdk_SPR_STEL_1_copy, hdk_SPR_STEL_2_copy];
+    loaded: [hdk_SPR_EMPTY_copy, hdk_SPR_STEL_1_copy, hdk_SPR_STEL_2_copy]; }
+
+switch (FEAT_TRAINS, SELF, hdk_cargo_gfx_copy, cargo_type_in_veh) {
+    STEL: hdk_sprg_stel_copy;
+    WDPR: hdk_sprg_wdpr_copy;
+    WOOD: hdk_sprg_wood_copy;
+    default: hdk_sprg_def_copy; }
+
+switch (FEAT_TRAINS, SELF, hdk_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: hdk_cargo_gfx_copy;
+    default: hdk_cargo_gfx; }
+
+item (FEAT_TRAINS, hdk) { graphics {
+    additional_text: string(STR_ADD_HDK, string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 19;
+    colour_mapping: switch_recolour_lights;
+    default: hdk_gfx_flipped;
+    length: 5;
+    purchase: hdk_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, hdk) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [LVST];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 9;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1928,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 50;
+    name: string(STR_PUR_HDK, string(STR_PUR_FLAT_WAGON));
+    non_refittable_cargo_classes: bitmask(CC_COVERED, CC_REFRIGERATED);
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_EXPRESS, CC_HAZARDOUS, CC_OVERSIZED, CC_PIECE_GOODS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 2;
+    speed: 80 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 9 ton;
+}}

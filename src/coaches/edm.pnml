@@ -1,0 +1,290 @@
+spriteset (edm_SPR_RED_PUR, "gfx/edm_0.png") {
+    template4()
+}
+
+spriteset (edm_SPR_RED_CLOSED, "gfx/edm_1.png") {
+    template6()
+}
+
+spriteset (edm_SPR_RED_OPEN, "gfx/edm_2.png") {
+    template6()
+}
+
+spriteset (edm_SPR_RED_CLOSED_REAR, "gfx/edm_3.png") {
+    template6()
+}
+
+spriteset (edm_SPR_RED_OPEN_REAR, "gfx/edm_4.png") {
+    template6()
+}
+
+spriteset (edm_SPR_GREEN_PUR, "gfx/edm_5.png") {
+    template4()
+}
+
+spriteset (edm_SPR_GREEN_CLOSED, "gfx/edm_6.png") {
+    template6()
+}
+
+spriteset (edm_SPR_GREEN_OPEN, "gfx/edm_7.png") {
+    template6()
+}
+
+spriteset (edm_SPR_GREEN_CLOSED_REAR, "gfx/edm_8.png") {
+    template6()
+}
+
+spriteset (edm_SPR_GREEN_OPEN_REAR, "gfx/edm_9.png") {
+    template6()
+}
+
+switch (FEAT_TRAINS, SELF, edm_subtext_0, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_RED), "", ""); }
+
+switch (FEAT_TRAINS, SELF, edm_subtext_2010, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_AUTO), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_BUILD), "", "");
+    2: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_RED), "", "");
+    3: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_GREEN), "", ""); }
+
+switch (FEAT_TRAINS, SELF, edm_SUBTYPE_BY_YEAR, current_year) {
+    0..2009: edm_subtext_0;
+    default: edm_subtext_2010; }
+
+spritegroup edm_sprg_red_rear {
+    loading: [edm_SPR_RED_OPEN_REAR];
+    loaded: [edm_SPR_RED_CLOSED_REAR]; }
+
+spritegroup edm_sprg_red {
+    loading: [edm_SPR_RED_OPEN];
+    loaded: [edm_SPR_RED_CLOSED]; }
+
+spritegroup edm_sprg_green_rear {
+    loading: [edm_SPR_GREEN_OPEN_REAR];
+    loaded: [edm_SPR_GREEN_CLOSED_REAR]; }
+
+spritegroup edm_sprg_green {
+    loading: [edm_SPR_GREEN_OPEN];
+    loaded: [edm_SPR_GREEN_CLOSED]; }
+
+switch (FEAT_TRAINS, SELF, edm_gfx_red, position_in_consist_from_end) {
+    1: edm_sprg_red_rear;
+    default: edm_sprg_red; }
+
+switch (FEAT_TRAINS, SELF, edm_gfx_green, position_in_consist_from_end) {
+    1: edm_sprg_green_rear;
+    default: edm_sprg_green; }
+
+switch (FEAT_TRAINS, SELF, edm_pur_gfx, current_year) {
+    0..2009: edm_SPR_RED_PUR;
+    default: edm_SPR_GREEN_PUR; }
+
+switch (FEAT_TRAINS, SELF, edm_autolivery, current_year) {
+    0..2009: edm_gfx_red;
+    default: edm_gfx_green; }
+
+switch (FEAT_TRAINS, SELF, edm_buildlivery, build_year) {
+    0..2009: edm_gfx_red;
+    default: edm_gfx_green; }
+
+switch (FEAT_TRAINS, SELF, edm_liverychoice, cargo_subtype) {
+    1: edm_buildlivery;
+    2: edm_gfx_red;
+    3: edm_gfx_green;
+    default: edm_autolivery; }
+
+spriteset (edm_SPR_GREEN_CLOSED_copy, "gfx/edm_6.png") {
+    template7()
+}
+
+spriteset (edm_SPR_GREEN_OPEN_copy, "gfx/edm_7.png") {
+    template7()
+}
+
+spriteset (edm_SPR_GREEN_CLOSED_REAR_copy, "gfx/edm_8.png") {
+    template7()
+}
+
+spriteset (edm_SPR_GREEN_OPEN_REAR_copy, "gfx/edm_9.png") {
+    template7()
+}
+
+spriteset (edm_SPR_RED_CLOSED_copy, "gfx/edm_1.png") {
+    template7()
+}
+
+spriteset (edm_SPR_RED_OPEN_copy, "gfx/edm_2.png") {
+    template7()
+}
+
+spriteset (edm_SPR_RED_CLOSED_REAR_copy, "gfx/edm_3.png") {
+    template7()
+}
+
+spriteset (edm_SPR_RED_OPEN_REAR_copy, "gfx/edm_4.png") {
+    template7()
+}
+
+switch (FEAT_TRAINS, SELF, edm_gfx_depot_2, extra_callback_info1) {
+    0x10: spriteset_empty;
+    default: edm_liverychoice; }
+
+switch (FEAT_TRAINS, SELF, edm_articulated, extra_callback_info1) {
+    1: edm_fake_arti_1;
+    2: edm_fake_arti_2;
+    3: CB_RESULT_NO_MORE_ARTICULATED_PARTS; }
+
+spritegroup edm_sprg_green_copy {
+    loading: [edm_SPR_GREEN_OPEN_copy];
+    loaded: [edm_SPR_GREEN_CLOSED_copy]; }
+
+spritegroup edm_sprg_green_rear_copy {
+    loading: [edm_SPR_GREEN_OPEN_REAR_copy];
+    loaded: [edm_SPR_GREEN_CLOSED_REAR_copy]; }
+
+spritegroup edm_sprg_red_copy {
+    loading: [edm_SPR_RED_OPEN_copy];
+    loaded: [edm_SPR_RED_CLOSED_copy]; }
+
+spritegroup edm_sprg_red_rear_copy {
+    loading: [edm_SPR_RED_OPEN_REAR_copy];
+    loaded: [edm_SPR_RED_CLOSED_REAR_copy]; }
+
+switch (FEAT_TRAINS, SELF, edm_gfx_green_copy, position_in_consist_from_end) {
+    1: edm_sprg_green_rear_copy;
+    default: edm_sprg_green_copy; }
+
+switch (FEAT_TRAINS, SELF, edm_gfx_red_copy, position_in_consist_from_end) {
+    1: edm_sprg_red_rear_copy;
+    default: edm_sprg_red_copy; }
+
+switch (FEAT_TRAINS, SELF, edm_buildlivery_copy, build_year) {
+    0..2009: edm_gfx_red_copy;
+    default: edm_gfx_green_copy; }
+
+switch (FEAT_TRAINS, SELF, edm_autolivery_copy, current_year) {
+    0..2009: edm_gfx_red_copy;
+    default: edm_gfx_green_copy; }
+
+switch (FEAT_TRAINS, SELF, edm_liverychoice_copy, cargo_subtype) {
+    1: edm_buildlivery_copy;
+    2: edm_gfx_red_copy;
+    3: edm_gfx_green_copy;
+    default: edm_autolivery_copy; }
+
+switch (FEAT_TRAINS, SELF, edm_gfx_depot_1, extra_callback_info1) {
+    0x10: edm_liverychoice_copy;
+    default: spriteset_empty; }
+
+item (FEAT_TRAINS, edm) { graphics {
+    additional_text: string(STR_ADD_EDM, string(STR_ADD_SERVICE), string(STR_ADD_SLEEPER), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_COMPOSITE), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_IC2_DOUBLE_DECKER), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    articulated_part: edm_articulated;
+    cargo_capacity: 0;
+    cargo_subtype_text: edm_SUBTYPE_BY_YEAR;
+    colour_mapping: switch_recolour_lights;
+    default: edm_gfx_depot_1;
+    length: 4;
+    running_cost_factor: 9 * cafecostfactor();
+    purchase: edm_pur_gfx;
+    visual_effect_and_powered: visual_effect_and_powered(
+VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, edm_fake_arti_1) { graphics {
+    additional_text: string(STR_ADD_EDM, string(STR_ADD_SERVICE), string(STR_ADD_SLEEPER), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_COMPOSITE), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_IC2_DOUBLE_DECKER), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    cargo_capacity: 38;
+    cargo_subtype_text: edm_SUBTYPE_BY_YEAR;
+    colour_mapping: switch_recolour_lights;
+    default: edm_gfx_depot_2;
+    cargo_age_period: (90 * cafedecayfactor()) << param_cargo_decay;
+    length: 2;
+    purchase: edm_pur_gfx;
+}}
+item (FEAT_TRAINS, edm_fake_arti_2) { graphics {
+    additional_text: string(STR_ADD_EDM, string(STR_ADD_SERVICE), string(STR_ADD_SLEEPER), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_COMPOSITE), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_IC2_DOUBLE_DECKER), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    cargo_capacity: 0;
+    cargo_subtype_text: edm_SUBTYPE_BY_YEAR;
+    colour_mapping: switch_recolour_lights;
+    default: spriteset_empty;
+    length: 4;
+    purchase: edm_pur_gfx;
+    visual_effect_and_powered: visual_effect_and_powered(
+VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, edm) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 463;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 245;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(2006,01,01);
+    length: 8;
+    loading_speed: param_loading_speed_sleeper;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_EDM, string(STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_SLEEPER_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 17;
+    speed: 160 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 49 ton;
+}}
+item (FEAT_TRAINS, edm_fake_arti_1) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 463;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_sleeper;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    name: string(STR_PUR_EDM, string(STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_SLEEPER_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, edm_fake_arti_2) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 463;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_sleeper;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    name: string(STR_PUR_EDM, string(STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_SLEEPER_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_PASSENGERS);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}

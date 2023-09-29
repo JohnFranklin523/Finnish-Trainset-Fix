@@ -1,0 +1,85 @@
+spriteset (b1_SPR_PUR, "gfx/b1_0.png") {
+    template4()
+}
+
+spriteset (b1_SPR_DEF, "gfx/b1_1.png") {
+    template1()
+}
+
+spriteset (b1_SPR_GREEN, "gfx/b1_2.png") {
+    template1()
+}
+
+switch (FEAT_TRAINS, SELF, b1_gfx, cargo_subtype) {
+    0: b1_SPR_DEF;
+    1: b1_SPR_GREEN; }
+
+switch (FEAT_TRAINS, SELF, b1_subtext, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_DEFAULT), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_GREEN), "", ""); }
+
+spriteset (b1_SPR_GREEN_copy, "gfx/b1_2.png") {
+    template5()
+}
+
+spriteset (b1_SPR_DEF_copy, "gfx/b1_1.png") {
+    template5()
+}
+
+switch (FEAT_TRAINS, SELF, b1_gfx_copy, cargo_subtype) {
+    0: b1_SPR_DEF_copy;
+    1: b1_SPR_GREEN_copy; }
+
+switch (FEAT_TRAINS, SELF, b1_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: b1_gfx_copy;
+    default: b1_gfx; }
+
+item (FEAT_TRAINS, b1) { graphics {
+    additional_text: string(STR_ADD_B1, string(STR_ADD_SERVICE), string(STR_ADD_GENERAL_PURPOSE), string(STR_ADD_MANUFACTURER), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 0;
+    cargo_subtype_text: b1_subtext;
+    colour_mapping: switch_recolour_lights;
+    default: b1_gfx_flipped;
+    length: 5;
+    purchase: b1_SPR_PUR;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_STEAM, -2, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, b1) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [PASS];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 2;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_STEAM;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1868,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 60;
+    name: string(STR_PUR_B1, string(STR_PUR_STEAM));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 470 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: NO_CARGO_CLASS;
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 62;
+    speed: 60 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.127;
+    vehicle_life: 60;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 26 ton;
+}}

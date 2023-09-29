@@ -1,0 +1,219 @@
+##grflangid 0x35
+##plural 0
+
+STR_GRF_DESC_EXTRA  :Suomalaista ratakalustoa 1800-luvun lopusta nykypäivään.
+STR_GRF_DESC_README :Lisätietoja readme-tiedostossa.
+
+STR_PARAM_LOADING_SPEED_LOCAL        :Paikallisliikenteen vaunujen lastausnopeus
+STR_PARAM_LOADING_SPEED_LOCAL_DESC   :Paikallisliikenteen vaunujen lastausnopeus (Oletusarvo: 40)
+STR_PARAM_LOADING_SPEED_EXPRESS      :Kaukoliikenteen vaunujen lastausnopeus
+STR_PARAM_LOADING_SPEED_EXPRESS_DESC :Kaukoliikenteen vaunujen lastausnopeus (Oletusarvo: 25)
+STR_PARAM_LOADING_SPEED_SLEEPER      :Makuuvaunujen lastausnopeus
+STR_PARAM_LOADING_SPEED_SLEEPER_DESC :Makuuvaunujen lastausnopeus (Oletusarvo: 15)
+
+STR_PARAM_PURCHASE_COST      :Ostohinnat
+STR_PARAM_PURCHASE_COST_DESC :Tällä asetuksella voit nostaa tai laskea kaluston ostohintoja. Vakioarvo on 25%.
+STR_PARAM_RUNNING_COST       :Käyttökustannukset
+STR_PARAM_RUNNING_COST_DESC  :Tällä asetuksella voit nostaa tai laskea kaluston käyttökustannuksia. Vakioarvo on 25%.
+
+STR_PARAM_DIVIDE_16 :6.25%
+STR_PARAM_DIVIDE_8  :12.5%
+STR_PARAM_DIVIDE_4  :25%
+STR_PARAM_DIVIDE_2  :50%
+STR_PARAM_NORMAL    :100%
+STR_PARAM_TIMES_2   :200%
+STR_PARAM_TIMES_4   :400%
+STR_PARAM_TIMES_8   :800%
+STR_PARAM_TIMES_16  :1600%
+
+STR_PARAM_RUNNING_COST_WAGON_ENABLE      :Vaunujen käyttökustannukset
+STR_PARAM_RUNNING_COST_WAGON_ENABLE_DESC :Tällä asetuksella voit poistaa vaunujen käyttökustannukset käytöstä.
+
+STR_PARAM_VOL          :Äänitehosteet
+STR_PARAM_VOL_DESC     :Vaihda junien käyntiäänien voimakkuutta, tai ota ne pois käytöstä.
+STR_PARAM_VOL_66       :66%
+STR_PARAM_VOL_33       :33%
+STR_PARAM_VOL_DISABLED :Pois
+
+STR_SUBTYPE_AUTO         :Kuluvan vuoden väritys
+STR_SUBTYPE_BLUE         :Sininen väritys
+STR_SUBTYPE_BUILD        :Rakennusvuoden väritys
+STR_SUBTYPE_DEFAULT      :Vakioväritys
+STR_SUBTYPE_DM7_REGEAR   :Wilson R11B-vaihteisto (nopeus 115 km/h)
+STR_SUBTYPE_DM8_2PART    :kaksivaunuinen "Tynkäporkkana"
+STR_SUBTYPE_DM8_3PART    :kolmevaunuinen (moottoriton välivaunu)
+STR_SUBTYPE_DM10_REGEAR  :Tekninen huippunopeus (120 km/h)
+STR_SUBTYPE_DR13_REGEAR  :T-vaihde (nopeus 100 km/h, vetovoima 290 kN)
+STR_SUBTYPE_DR14_REGEAR  :V-vaihde (nopeus 43 km/h, vetovoima 269 kN)
+STR_SUBTYPE_DV12_2500    :2500-sarja
+STR_SUBTYPE_DV12_2600    :2600-sarja
+STR_SUBTYPE_DV12_2700    :2700-sarja
+STR_SUBTYPE_DV12_2500R   :2500-sarja, saneerattu
+STR_SUBTYPE_DV12_2600R   :2600-sarja, saneerattu
+STR_SUBTYPE_DV12_2700R   :2700-sarja, saneerattu
+STR_SUBTYPE_DV12_REGEAR  :T-vaihde (nopeus 85 km/h, vetovoima 200 kN)
+STR_SUBTYPE_GREEN        :Vihreä väritys
+STR_SUBTYPE_GREEN_YELLOW :Viher-keltainen väritys
+STR_SUBTYPE_PROTOTYPE    :prototyyppi
+STR_SUBTYPE_RANDOM       :Satunnainen väritys
+STR_SUBTYPE_SM1_MINT     :vuoden 1990 prototyyppi
+STR_SUBTYPE_SM6_REGEAR   :Tekninen huippunopeus (250 km/h), korotetut käyttökustannukset
+STR_SUBTYPE_SR1_REGEAR   :Hammaspyörävälitysten muutos (nopeus 160 km/h, vetovoima 245 kN)
+STR_SUBTYPE_SR2_V        :"V" logo
+STR_SUBTYPE_SR2_VR       :"VR" logo
+STR_SUBTYPE_RED          :Punainen väritys
+STR_SUBTYPE_USR3         :USr3 (tehtaan esittelyveturin väritys)
+STR_SUBTYPE_VIOLET       :Violetti väritys
+STR_SUBTYPE_WHITE_RED    :Valko-punainen väritys
+STR_SUBTYPE_YELLOW       :Keltainen väritys
+STR_SUBTYPE_YELLOW_RED   :Kelta-punainen väritys
+STR_SUBTYPE_YELLOW_NOSE  :keltanokkaversio
+
+STR_ADD_1ST :1.
+STR_ADD_1_5ST :1.5.
+STR_ADD_2ND :2.
+STR_ADD_3RD :3.
+STR_ADD_3RD_2ND_TRANSITION :3.lk - 2.lk muutos
+STR_ADD_BLUE_COACH :Sininen vaunu
+STR_ADD_BOGIES :Telit
+STR_ADD_CAR_CARRIER_COACH :Autovaunu
+STR_ADD_CAR_HEATING :Autojen lohkolämmittimien sähkönsyöttö saatavilla
+STR_ADD_CHASSIS_GEN :Korimateriaali ja sukupolvi
+STR_ADD_COACH_CLASS :Vaunuluokka
+STR_ADD_COMPOSITE :Komposiitti
+STR_ADD_CONSIST :Junakokoonpano
+STR_ADD_ELECTRIC :Sähkö
+STR_ADD_EXPRESS_PASSENGERS :Kaukojunaliikenne
+STR_ADD_GENERAL_PURPOSE :Yleiskäyttö
+STR_ADD_HEAVY_FREIGHT :Raskas tavaraliikenne
+STR_ADD_HEAVY_SHUNTING :Raskas vaihtotyö
+STR_ADD_HYDRAULIC :Hydraulinen
+STR_ADD_HYDRAULIC_MECHANICAL :Hydraulis-mekaaninen
+STR_ADD_H_GEAR :H-vaihde
+STR_ADD_IC2_DOUBLE_DECKER :InterCity2-kaksikerrosvaunu
+STR_ADD_IC_SINGLE_DECK :InterCity-vaunu
+STR_ADD_INTERNATIONAL_PASSENGERS :Kansainvälinen kaukojunaliikenne
+STR_ADD_JACOBS_BOGIES :Jaakobin telit
+STR_ADD_LAST_MILE :Kaksi dieselmoottoria sähköistämättömien raiteiden vaihtotyöhön
+STR_ADD_LIGHT_FREIGHT :Kevyt tavaraliikenne
+STR_ADD_LIGHT_SHUNTING :Kevyt vaihtotyö
+STR_ADD_LOCAL_PASSENGERS :Lähijunaliikenne
+STR_ADD_MANUFACTURER :Valmistaja
+STR_ADD_MECHANICAL :Mekaaninen
+STR_ADD_MEDIUM_FREIGHT :Keskiraskas tavaraliikenne
+STR_ADD_OTHER_INFO :Lisätietoja
+STR_ADD_PET :Lemmikkiosasto
+STR_ADD_POSTAL :Postiliikenne
+STR_ADD_PRESIDENTIAL :Kekkosen kelmit
+STR_ADD_PRIME_MOVER :Päämoottori
+STR_ADD_REGEARING :Vaihtoehtoiset välitykset
+STR_ADD_REGIONAL_PASSENGERS :Taajama- ja lähijunaliikenne
+STR_ADD_SECURE_TRANSPORT :Turvallisuusliikenne
+STR_ADD_SERVICE :Käyttötarkoitus
+STR_ADD_SHUNTING :Vaihtotyö
+STR_ADD_SLEEPER :Yöjunaliikenne
+STR_ADD_SM7_INFO :Sähköradalla +724 hp
+STR_ADD_SMOKING :Tupakkaosasto
+STR_ADD_SPECIAL :Erikoistarve
+STR_ADD_STEEL :Teräs
+STR_ADD_TRACTION_MOTORS :Ratamoottorit
+STR_ADD_TRANSMISSION :Voimansiirto
+STR_ADD_T_GEAR :T-vaihde
+STR_ADD_UIC_AXLE_ORDER :UIC-akselijärjestys
+STR_ADD_V_GEAR :V-vaihde
+STR_ADD_WITH_DM3 :Suunniteltu käytettäväksi Dm3:n, Dm4:n ja Hr11:n kanssa
+STR_ADD_WITH_DM7 :Suunniteltu käytettäväksi Dm7:n kanssa
+STR_ADD_WITH_DMG7 :Suunniteltu käytettäväksi DmG7:n kanssa
+STR_ADD_WITH_SHIP :Käytetään laivakuljetuksen kanssa
+STR_ADD_WOOD :Puu
+STR_ADD_WOODEN_COACH :Puuvaunu
+STR_PUR_1ST_2ND_CLASS_EXPRESS_COACH :1/2.lk päivävaunu
+STR_PUR_1ST_3RD_CLASS_COACH :1/3.lk päivävaunu
+STR_PUR_1ST_CLASS_COACH :1.lk päivävaunu
+STR_PUR_1ST_CLASS_EXPRESS_COACH :1.lk päivävaunu
+STR_PUR_1ST_CLASS_IC_COACH :1.lk InterCity-päivävaunu
+STR_PUR_2ND_3RD_CLASS_COACH :2/3.lk päivävaunu
+STR_PUR_2ND_3RD_SLEEPER_COACH :2/3.lk makuuvaunu
+STR_PUR_2ND_BUSINESS_CLASS_IC_DOUBLEDECKER_COACH :Business/2.lk InterCity2-päivävaunu
+STR_PUR_2ND_CLASS_COACH :2.lk päivävaunu
+STR_PUR_2ND_CLASS_EXPRESS_COACH :2.lk päivävaunu
+STR_PUR_2ND_CLASS_EXPRESS_CONDUCTOR_LUGGAGE_COACH :2.lk konduktööri- ja matkatavaravaunu
+STR_PUR_2ND_CLASS_IC_COACH :2.lk InterCity-päivävaunu
+STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_COACH :2.lk InterCity2-päivävaunu
+STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_CONDUCTOR_COACH :2.lk InterCity2-konduktöörivaunu
+STR_PUR_2ND_CLASS_IC_DOUBLEDECKER_SLEEPER_COACH :2.lk InterCity2-makuuvaunu
+STR_PUR_2ND_CLASS_SALON_COACH :2.lk salonkivaunu
+STR_PUR_2ND_CLASS_SLEEPER_COACH :2.lk makuuvaunu
+STR_PUR_3RD_CLASS_COACH :3.lk päivävaunu
+STR_PUR_3RD_CLASS_CONDUCTOR_COACH :3.lk konduktöörivaunu
+STR_PUR_3RD_CLASS_LOCAL_COACH :3.lk lähiliikennevaunu
+STR_PUR_3RD_CLASS_LOCAL_COACH_2ND_GEN :3.lk lähiliikennevaunu (2. sukupolvi)
+STR_PUR_3RD_CLASS_SLEEPER_COACH :3.lk makuuvaunu
+STR_PUR_3RD_CLASS_SLEEPER_COACH_2ND_GEN :3.lk makuuvaunu (2. sukupolvi)
+STR_PUR_ACID_WAGON :Happovaunu
+STR_PUR_AMMONIA_WAGON :Ammoniakkivaunu
+STR_PUR_ARMOURED_COACH :Vankivaunu
+STR_PUR_AUTOMOBILE_CARRIER :Autovaunu
+STR_PUR_CAR_CARRIER_COACH :Autovaunu
+STR_PUR_COAL_WAGON :Hiilivaunu
+STR_PUR_COMBINED_TRANSPORT_WAGON :Yhdistettyjen kuljetusten vaunu
+STR_PUR_CONDUCTOR_COACH :Konduktöörivaunu
+STR_PUR_CONTAINER_WAGON :Konttivaunu
+STR_PUR_COVERED_CELLULOSE_WAGON :Selluloosavaunu
+STR_PUR_COVERED_HOPPER_WAGON :Irtotavaravaunu
+STR_PUR_COVERED_LUMBER_WAGON :Sahatavaravaunu
+STR_PUR_COVERED_WAGON :Yleisvaunu
+STR_PUR_DIESEL :Diesel
+STR_PUR_ELECTRIC :Sähkö
+STR_PUR_EXPRESS_ARMOURED_COACH :Vankivaunu
+STR_PUR_EXPRESS_BAR_COACH :Baarivaunu
+STR_PUR_EXPRESS_CAFE_RESTAURANT_COACH :Ravintolavaunu
+STR_PUR_EXPRESS_LUGGAGE_CONDUCTOR_COACH :Konduktööri- ja matkatavaravaunu
+STR_PUR_EXPRESS_RESTAURANT_COACH :Itsepalveluravintolavaunu
+STR_PUR_EXPRESS_TRAINSET :Kiitojunavaunusto
+STR_PUR_FLAT_WAGON :Avovaunu
+STR_PUR_FLAT_WAGON_LARGER :Avovaunu (iso)
+STR_PUR_FLAT_WAGON_SMALLER :Avovaunu (pieni)
+STR_PUR_GENERATOR_COACH :Aggregaattivaunu
+STR_PUR_GRAVEL_WAGON :Sora/Sepelivaunu
+STR_PUR_HEAVY_LOAD_CONTAINER_WAGON :Kontti- ja järeän tavaran vaunu
+STR_PUR_IC_DOUBLEDECKER_CAB_CAR :InterCity2-ohjausvaunu
+STR_PUR_IC_DOUBLEDECKER_RESTAURANT_COACH :InterCity2-ravintolavaunu
+STR_PUR_IC_RESTAURANT_COACH :InterCity-ravintolavaunu
+STR_PUR_LIMESTONE_WAGON :Sepelivaunu
+STR_PUR_LIQUID_GAS_WAGON :Nestekaasuvaunu
+STR_PUR_LOCAL_COACH :Lähiliikennevaunu
+STR_PUR_LUGGAGE_CONDUCTOR_COACH :Konduktööri- ja matkatavaravaunu
+STR_PUR_LUMBER_WAGON :Sahatavaravaunu
+STR_PUR_LYE_WAGON :Lipeävaunu
+STR_PUR_MAIL_COACH :Postivaunu
+STR_PUR_MAIL_COACH_2ND_GEN :Postivaunu (2. sukupolvi)
+STR_PUR_OIL_WAGON :Öljyvaunu
+STR_PUR_OPEN_WAGON :Yleisavovaunu
+STR_PUR_ORE_CONTAINER_WAGON :Rikastevaunu
+STR_PUR_ORE_WAGON :Rikastevaunu
+STR_PUR_PEAT_WOOD_CHIP_WAGON :Hakevaunu
+STR_PUR_PETROL_WAGON :Bensiinivaunu
+STR_PUR_POWDER_WAGON :Jauhevaunu
+STR_PUR_PRESIDENTIAL_COACH :Presidentin vaunu
+STR_PUR_REFRIGERATED_WAGON :Jäähdytysvaunu
+STR_PUR_RESTAURANT_COACH :Ravintolavaunu
+STR_PUR_SCRAP_WAGON :Romuvaunu
+STR_PUR_SIBELIUS_1ST_CLASS_INTERNATIONAL_COACH :1.lk Sibelius-päivävaunu
+STR_PUR_SIBELIUS_2ND_CLASS_INTERNATIONAL_COACH :2.lk Sibelius-päivävaunu
+STR_PUR_SIBELIUS_INTERNATIONAL_GENERATOR_CONDUCTOR_COACH :Sibelius-aggregaattivaunu
+STR_PUR_SIBELIUS_INTERNATIONAL_LUGGAGE_CONDUCTOR_COACH :Sibelius-konduktööri- ja matkatavaravaunu
+STR_PUR_SIBELIUS_INTERNATIONAL_RESTAURANT_COACH :Sibelius-ravintolavaunu
+STR_PUR_SILJA_LINE_2ND_CLASS_EXPRESS_COACH :"Silja Line"-laivajunavaunu
+STR_PUR_SLIDING_ROOF_WAGON :Siirtokatevaunu
+STR_PUR_STEAM :Höyry
+STR_PUR_STEEL_COIL_WAGON :Teräskelavaunu
+STR_PUR_TALC_WAGON :Talkkivaunu
+STR_PUR_TANK_WAGON :Säiliövaunu
+STR_PUR_TIMBER_WAGON :Raakapuuvaunu
+STR_PUR_TRAILER_FOR_DM6 :Vaunu Dm6:een
+STR_PUR_TRAILER_FOR_DM7 :Vaunu Dm7:ään
+STR_PUR_TRAILER_FOR_DMG7 :Vaunu DmG7:ään
+STR_PUR_TRANSFORMER_HEAVY :Suurkuormavaunu
+STR_PUR_WOOD_CHIP_CONTAINER_WAGON :Hakekonttivaunu
+STR_PUR_WOOD_CHIP_WAGON :Hakevaunu

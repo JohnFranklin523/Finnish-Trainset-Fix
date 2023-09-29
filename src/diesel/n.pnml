@@ -1,0 +1,107 @@
+switch (FEAT_TRAINS, SELF, n_snd_0_depot_100, vehicle_is_in_depot) {
+    0: sound("sfx/n_idle.wav", 100); }
+
+switch (FEAT_TRAINS, SELF, n_snd_0_100, extra_callback_info1) {
+    1: sound("sfx/n_acc.wav", 100);
+    7: sound("sfx/n_run.wav", 100);
+    8: n_snd_0_depot_100; }
+
+switch (FEAT_TRAINS, SELF, n_snd_0_depot_66, vehicle_is_in_depot) {
+    0: sound("sfx/n_idle.wav", 66); }
+
+switch (FEAT_TRAINS, SELF, n_snd_0_66, extra_callback_info1) {
+    1: sound("sfx/n_acc.wav", 66);
+    7: sound("sfx/n_run.wav", 66);
+    8: n_snd_0_depot_66; }
+
+switch (FEAT_TRAINS, SELF, n_snd_0_depot_33, vehicle_is_in_depot) {
+    0: sound("sfx/n_idle.wav", 33); }
+
+switch (FEAT_TRAINS, SELF, n_snd_0_33, extra_callback_info1) {
+    1: sound("sfx/n_acc.wav", 33);
+    7: sound("sfx/n_run.wav", 33);
+    8: n_snd_0_depot_33; }
+
+switch (FEAT_TRAINS, SELF, n_SND, param_volume) {
+    0: CB_FAILED;
+    1: n_snd_0_33;
+    2: n_snd_0_66;
+    3: n_snd_0_100; }
+
+spriteset (n_SPR_PUR, "gfx/n_0.png") {
+    template4()
+}
+
+spriteset (n_SPR_RED, "gfx/n_1.png") {
+    template8()
+}
+
+spriteset (n_SPR_YELLOW, "gfx/n_2.png") {
+    template8()
+}
+
+switch (FEAT_TRAINS, SELF, n_subtext_0, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_RED), "", ""); }
+
+switch (FEAT_TRAINS, SELF, n_subtext_2006, cargo_subtype) {
+    0: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_RED), "", "");
+    1: string(STR_SUBTYPE_HLP_1ST, string(STR_SUBTYPE_YELLOW), "", ""); }
+
+switch (FEAT_TRAINS, SELF, n_SUBTYPE_BY_YEAR, current_year) {
+    0..2005: n_subtext_0;
+    default: n_subtext_2006; }
+
+switch (FEAT_TRAINS, SELF, n_liverychoice, cargo_subtype) {
+    0: n_SPR_RED;
+    1: n_SPR_YELLOW; }
+
+item (FEAT_TRAINS, n) { graphics {
+    additional_text: string(STR_ADD_N, string(STR_ADD_SERVICE), string(STR_ADD_SHUNTING), string(STR_ADD_MEDIUM_FREIGHT), string(STR_ADD_MANUFACTURER), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_PRIME_MOVER), string(STR_ADD_TRACTION_MOTORS), string(STR_ADD_TRANSMISSION), string(STR_ADD_ELECTRIC));
+    cargo_capacity: 0;
+    cargo_subtype_text: n_SUBTYPE_BY_YEAR;
+    colour_mapping: switch_recolour_lights;
+    default: n_liverychoice;
+    length: 8;
+    purchase: n_SPR_PUR;
+    sound_effect: n_SND;
+    visual_effect_and_powered: visual_effect_and_powered(
+        VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, n) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [PASS];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 32;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1990,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 30;
+    name: string(STR_PUR_N, string(STR_PUR_DIESEL));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 975 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: NO_CARGO_CLASS;
+    reliability_decay: 50;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 81;
+    speed: 80 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.391;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 64 ton;
+}}

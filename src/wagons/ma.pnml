@@ -1,0 +1,214 @@
+spriteset (ma_SPR_PUR, "gfx/ma_0.png") {
+    template4()
+}
+
+spriteset (ma_SPR_EMPTY, "gfx/ma_1.png") {
+    template1()
+}
+
+spriteset (ma_SPR_COAL_1, "gfx/ma_2.png") {
+    template1()
+}
+
+spriteset (ma_SPR_COAL_2, "gfx/ma_3.png") {
+    template1()
+}
+
+spriteset (ma_SPR_ORE_1, "gfx/ma_4.png") {
+    template1()
+}
+
+spriteset (ma_SPR_ORE_2, "gfx/ma_5.png") {
+    template1()
+}
+
+spriteset (ma_SPR_WORE_1, "gfx/ma_6.png") {
+    template1()
+}
+
+spriteset (ma_SPR_WORE_2, "gfx/ma_7.png") {
+    template1()
+}
+
+spriteset (ma_SPR_GRVL_1, "gfx/ma_8.png") {
+    template1()
+}
+
+spriteset (ma_SPR_GRVL_2, "gfx/ma_9.png") {
+    template1()
+}
+
+spriteset (ma_SPR_GRAI, "gfx/ma_10.png") {
+    template1()
+}
+
+spriteset (ma_SPR_TARP, "gfx/ma_11.png") {
+    template1()
+}
+
+spritegroup ma_sprg_coal {
+    loading: [ma_SPR_EMPTY, ma_SPR_COAL_1, ma_SPR_COAL_2];
+    loaded: [ma_SPR_EMPTY, ma_SPR_COAL_1, ma_SPR_COAL_2]; }
+
+spritegroup ma_sprg_ore {
+    loading: [ma_SPR_EMPTY, ma_SPR_ORE_1, ma_SPR_ORE_2];
+    loaded: [ma_SPR_EMPTY, ma_SPR_ORE_1, ma_SPR_ORE_2]; }
+
+spritegroup ma_sprg_wore {
+    loading: [ma_SPR_EMPTY, ma_SPR_WORE_1, ma_SPR_WORE_2];
+    loaded: [ma_SPR_EMPTY, ma_SPR_WORE_1, ma_SPR_WORE_2]; }
+
+spritegroup ma_sprg_grvl {
+    loading: [ma_SPR_EMPTY, ma_SPR_GRVL_1, ma_SPR_GRVL_2];
+    loaded: [ma_SPR_EMPTY, ma_SPR_GRVL_1, ma_SPR_GRVL_2]; }
+
+spritegroup ma_sprg_grai {
+    loading: [ma_SPR_EMPTY, ma_SPR_GRAI];
+    loaded: [ma_SPR_TARP]; }
+
+switch (FEAT_TRAINS, SELF, ma_gfx, cargo_type_in_veh) {
+    AORE: ma_sprg_ore;
+    CLAY: ma_sprg_grvl;
+    CMNT: ma_sprg_grvl;
+    COAL: ma_sprg_coal;
+    CORE: ma_sprg_ore;
+    FERT: ma_sprg_wore;
+    GRVL: ma_sprg_wore;
+    IORE: ma_sprg_ore;
+    LIME: ma_sprg_grvl;
+    POTA: ma_sprg_ore;
+    SAND: ma_sprg_wore;
+    SCMT: ma_sprg_wore;
+    SULP: ma_sprg_wore;
+    default: ma_sprg_grai; }
+
+spriteset (ma_SPR_TARP_copy, "gfx/ma_11.png") {
+    template5()
+}
+
+spriteset (ma_SPR_GRAI_copy, "gfx/ma_10.png") {
+    template5()
+}
+
+spriteset (ma_SPR_EMPTY_copy, "gfx/ma_1.png") {
+    template5()
+}
+
+spriteset (ma_SPR_WORE_2_copy, "gfx/ma_7.png") {
+    template5()
+}
+
+spriteset (ma_SPR_WORE_1_copy, "gfx/ma_6.png") {
+    template5()
+}
+
+spriteset (ma_SPR_GRVL_2_copy, "gfx/ma_9.png") {
+    template5()
+}
+
+spriteset (ma_SPR_GRVL_1_copy, "gfx/ma_8.png") {
+    template5()
+}
+
+spriteset (ma_SPR_ORE_2_copy, "gfx/ma_5.png") {
+    template5()
+}
+
+spriteset (ma_SPR_ORE_1_copy, "gfx/ma_4.png") {
+    template5()
+}
+
+spriteset (ma_SPR_COAL_2_copy, "gfx/ma_3.png") {
+    template5()
+}
+
+spriteset (ma_SPR_COAL_1_copy, "gfx/ma_2.png") {
+    template5()
+}
+
+spritegroup ma_sprg_grai_copy {
+    loading: [ma_SPR_EMPTY_copy, ma_SPR_GRAI_copy];
+    loaded: [ma_SPR_TARP_copy]; }
+
+spritegroup ma_sprg_wore_copy {
+    loading: [ma_SPR_EMPTY_copy, ma_SPR_WORE_1_copy, ma_SPR_WORE_2_copy];
+    loaded: [ma_SPR_EMPTY_copy, ma_SPR_WORE_1_copy, ma_SPR_WORE_2_copy]; }
+
+spritegroup ma_sprg_grvl_copy {
+    loading: [ma_SPR_EMPTY_copy, ma_SPR_GRVL_1_copy, ma_SPR_GRVL_2_copy];
+    loaded: [ma_SPR_EMPTY_copy, ma_SPR_GRVL_1_copy, ma_SPR_GRVL_2_copy]; }
+
+spritegroup ma_sprg_ore_copy {
+    loading: [ma_SPR_EMPTY_copy, ma_SPR_ORE_1_copy, ma_SPR_ORE_2_copy];
+    loaded: [ma_SPR_EMPTY_copy, ma_SPR_ORE_1_copy, ma_SPR_ORE_2_copy]; }
+
+spritegroup ma_sprg_coal_copy {
+    loading: [ma_SPR_EMPTY_copy, ma_SPR_COAL_1_copy, ma_SPR_COAL_2_copy];
+    loaded: [ma_SPR_EMPTY_copy, ma_SPR_COAL_1_copy, ma_SPR_COAL_2_copy]; }
+
+switch (FEAT_TRAINS, SELF, ma_gfx_copy, cargo_type_in_veh) {
+    AORE: ma_sprg_ore_copy;
+    CLAY: ma_sprg_grvl_copy;
+    CMNT: ma_sprg_grvl_copy;
+    COAL: ma_sprg_coal_copy;
+    CORE: ma_sprg_ore_copy;
+    FERT: ma_sprg_wore_copy;
+    GRVL: ma_sprg_wore_copy;
+    IORE: ma_sprg_ore_copy;
+    LIME: ma_sprg_grvl_copy;
+    POTA: ma_sprg_ore_copy;
+    SAND: ma_sprg_wore_copy;
+    SCMT: ma_sprg_wore_copy;
+    SULP: ma_sprg_wore_copy;
+    default: ma_sprg_grai_copy; }
+
+switch (FEAT_TRAINS, SELF, ma_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: ma_gfx_copy;
+    default: ma_gfx; }
+
+item (FEAT_TRAINS, ma) { graphics {
+    additional_text: string(STR_ADD_MA, string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 21;
+    colour_mapping: switch_recolour_lights;
+    default: ma_gfx_flipped;
+    length: 5;
+    purchase: ma_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, ma) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 4;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1924,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 50;
+    name: string(STR_PUR_MA, string(STR_PUR_OPEN_WAGON));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_BULK, CC_COVERED);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 2;
+    speed: 65 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 8 ton;
+}}

@@ -1,0 +1,475 @@
+spriteset (gbln_SPR_PUR, "gfx/gbln_0.png") {
+    template4()
+}
+
+spriteset (gbln_SPR_V1_CLOSED, "gfx/gbln_1.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_OPEN, "gfx/gbln_2.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_DEF_1, "gfx/gbln_3.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_DEF_2, "gfx/gbln_4.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_DEF_3, "gfx/gbln_5.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_STEL_1, "gfx/gbln_6.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_STEL_2, "gfx/gbln_7.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_STEL_3, "gfx/gbln_8.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_WOOD_1, "gfx/gbln_9.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_WOOD_2, "gfx/gbln_10.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_WOOD_3, "gfx/gbln_11.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_PAPR_1, "gfx/gbln_12.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_PAPR_2, "gfx/gbln_13.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_PAPR_3, "gfx/gbln_14.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_PLAS_1, "gfx/gbln_15.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_PLAS_2, "gfx/gbln_16.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V1_PLAS_3, "gfx/gbln_17.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_CLOSED, "gfx/gbln_18.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_OPEN, "gfx/gbln_19.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_DEF_1, "gfx/gbln_20.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_DEF_2, "gfx/gbln_21.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_DEF_3, "gfx/gbln_22.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_STEL_1, "gfx/gbln_23.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_STEL_2, "gfx/gbln_24.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_STEL_3, "gfx/gbln_25.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_WOOD_1, "gfx/gbln_26.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_WOOD_2, "gfx/gbln_27.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_WOOD_3, "gfx/gbln_28.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_PAPR_1, "gfx/gbln_29.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_PAPR_2, "gfx/gbln_30.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_PAPR_3, "gfx/gbln_31.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_PLAS_1, "gfx/gbln_32.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_PLAS_2, "gfx/gbln_33.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_V2_PLAS_3, "gfx/gbln_34.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_LVST_CLOSED, "gfx/gbln_35.png") {
+    template11()
+}
+
+spriteset (gbln_SPR_LVST_OPEN, "gfx/gbln_36.png") {
+    template11()
+}
+
+spritegroup gbln_sprg_v1_def {
+    loading: [gbln_SPR_V1_OPEN, gbln_SPR_V1_DEF_1, gbln_SPR_V1_DEF_2, gbln_SPR_V1_DEF_3];
+    loaded: [gbln_SPR_V1_CLOSED]; }
+
+spritegroup gbln_sprg_v1_stel {
+    loading: [gbln_SPR_V1_OPEN, gbln_SPR_V1_STEL_1, gbln_SPR_V1_STEL_2, gbln_SPR_V1_STEL_3];
+    loaded: [gbln_SPR_V1_CLOSED]; }
+
+spritegroup gbln_sprg_v1_wood {
+    loading: [gbln_SPR_V1_OPEN, gbln_SPR_V1_WOOD_1, gbln_SPR_V1_WOOD_2, gbln_SPR_V1_WOOD_3];
+    loaded: [gbln_SPR_V1_CLOSED]; }
+
+spritegroup gbln_sprg_v1_papr {
+    loading: [gbln_SPR_V1_OPEN, gbln_SPR_V1_PAPR_1, gbln_SPR_V1_PAPR_2, gbln_SPR_V1_PAPR_3];
+    loaded: [gbln_SPR_V1_CLOSED]; }
+
+spritegroup gbln_sprg_v1_plas {
+    loading: [gbln_SPR_V1_OPEN, gbln_SPR_V1_PLAS_1, gbln_SPR_V1_PLAS_2, gbln_SPR_V1_PLAS_3];
+    loaded: [gbln_SPR_V1_CLOSED]; }
+
+spritegroup gbln_sprg_v2_def {
+    loading: [gbln_SPR_V2_OPEN, gbln_SPR_V2_DEF_1, gbln_SPR_V2_DEF_2, gbln_SPR_V2_DEF_3];
+    loaded: [gbln_SPR_V2_CLOSED]; }
+
+spritegroup gbln_sprg_v2_stel {
+    loading: [gbln_SPR_V2_OPEN, gbln_SPR_V2_STEL_1, gbln_SPR_V2_STEL_2, gbln_SPR_V2_STEL_3];
+    loaded: [gbln_SPR_V2_CLOSED]; }
+
+spritegroup gbln_sprg_v2_wood {
+    loading: [gbln_SPR_V2_OPEN, gbln_SPR_V2_WOOD_1, gbln_SPR_V2_WOOD_2, gbln_SPR_V2_WOOD_3];
+    loaded: [gbln_SPR_V2_CLOSED]; }
+
+spritegroup gbln_sprg_v2_papr {
+    loading: [gbln_SPR_V2_OPEN, gbln_SPR_V2_PAPR_1, gbln_SPR_V2_PAPR_2, gbln_SPR_V2_PAPR_3];
+    loaded: [gbln_SPR_V2_CLOSED]; }
+
+spritegroup gbln_sprg_v2_plas {
+    loading: [gbln_SPR_V2_OPEN, gbln_SPR_V2_PLAS_1, gbln_SPR_V2_PLAS_2, gbln_SPR_V2_PLAS_3];
+    loaded: [gbln_SPR_V2_CLOSED]; }
+
+spritegroup gbln_sprg_lvst {
+    loading: [gbln_SPR_LVST_OPEN];
+    loaded: [gbln_SPR_LVST_CLOSED]; }
+
+switch (FEAT_TRAINS, SELF, gbln_cargo_gfx_v1, cargo_type_in_veh) {
+    PAPR: gbln_sprg_v1_papr;
+    PLAS: gbln_sprg_v1_plas;
+    STEL: gbln_sprg_v1_stel;
+    WDPR: gbln_sprg_v1_wood;
+    default: gbln_sprg_v1_def; }
+
+switch (FEAT_TRAINS, SELF, gbln_cargo_gfx_v2, cargo_type_in_veh) {
+    PAPR: gbln_sprg_v2_papr;
+    PLAS: gbln_sprg_v2_plas;
+    STEL: gbln_sprg_v2_stel;
+    WDPR: gbln_sprg_v2_wood;
+    default: gbln_sprg_v2_def; }
+
+random_switch (FEAT_TRAINS, SELF, gbln_cargo_random) {
+    1: gbln_cargo_gfx_v1;
+    1: gbln_cargo_gfx_v2; }
+
+switch (FEAT_TRAINS, SELF, gbln_cargo_gfx, cargo_type_in_veh) {
+    LVST: gbln_sprg_lvst;
+    default: gbln_cargo_random; }
+
+spriteset (gbln_SPR_V2_CLOSED_copy, "gfx/gbln_18.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_DEF_3_copy, "gfx/gbln_22.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_DEF_2_copy, "gfx/gbln_21.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_DEF_1_copy, "gfx/gbln_20.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_OPEN_copy, "gfx/gbln_19.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_PLAS_3_copy, "gfx/gbln_34.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_PLAS_2_copy, "gfx/gbln_33.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_PLAS_1_copy, "gfx/gbln_32.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_PAPR_3_copy, "gfx/gbln_31.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_PAPR_2_copy, "gfx/gbln_30.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_PAPR_1_copy, "gfx/gbln_29.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_WOOD_3_copy, "gfx/gbln_28.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_WOOD_2_copy, "gfx/gbln_27.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_WOOD_1_copy, "gfx/gbln_26.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_STEL_3_copy, "gfx/gbln_25.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_STEL_2_copy, "gfx/gbln_24.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V2_STEL_1_copy, "gfx/gbln_23.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_CLOSED_copy, "gfx/gbln_1.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_DEF_3_copy, "gfx/gbln_5.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_DEF_2_copy, "gfx/gbln_4.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_DEF_1_copy, "gfx/gbln_3.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_OPEN_copy, "gfx/gbln_2.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_PLAS_3_copy, "gfx/gbln_17.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_PLAS_2_copy, "gfx/gbln_16.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_PLAS_1_copy, "gfx/gbln_15.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_PAPR_3_copy, "gfx/gbln_14.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_PAPR_2_copy, "gfx/gbln_13.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_PAPR_1_copy, "gfx/gbln_12.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_WOOD_3_copy, "gfx/gbln_11.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_WOOD_2_copy, "gfx/gbln_10.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_WOOD_1_copy, "gfx/gbln_9.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_STEL_3_copy, "gfx/gbln_8.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_STEL_2_copy, "gfx/gbln_7.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_V1_STEL_1_copy, "gfx/gbln_6.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_LVST_CLOSED_copy, "gfx/gbln_35.png") {
+    template12()
+}
+
+spriteset (gbln_SPR_LVST_OPEN_copy, "gfx/gbln_36.png") {
+    template12()
+}
+
+spritegroup gbln_sprg_v2_def_copy {
+    loading: [gbln_SPR_V2_OPEN_copy, gbln_SPR_V2_DEF_1_copy, gbln_SPR_V2_DEF_2_copy, gbln_SPR_V2_DEF_3_copy];
+    loaded: [gbln_SPR_V2_CLOSED_copy]; }
+
+spritegroup gbln_sprg_v2_plas_copy {
+    loading: [gbln_SPR_V2_OPEN_copy, gbln_SPR_V2_PLAS_1_copy, gbln_SPR_V2_PLAS_2_copy, gbln_SPR_V2_PLAS_3_copy];
+    loaded: [gbln_SPR_V2_CLOSED_copy]; }
+
+spritegroup gbln_sprg_v2_papr_copy {
+    loading: [gbln_SPR_V2_OPEN_copy, gbln_SPR_V2_PAPR_1_copy, gbln_SPR_V2_PAPR_2_copy, gbln_SPR_V2_PAPR_3_copy];
+    loaded: [gbln_SPR_V2_CLOSED_copy]; }
+
+spritegroup gbln_sprg_v2_wood_copy {
+    loading: [gbln_SPR_V2_OPEN_copy, gbln_SPR_V2_WOOD_1_copy, gbln_SPR_V2_WOOD_2_copy, gbln_SPR_V2_WOOD_3_copy];
+    loaded: [gbln_SPR_V2_CLOSED_copy]; }
+
+spritegroup gbln_sprg_v2_stel_copy {
+    loading: [gbln_SPR_V2_OPEN_copy, gbln_SPR_V2_STEL_1_copy, gbln_SPR_V2_STEL_2_copy, gbln_SPR_V2_STEL_3_copy];
+    loaded: [gbln_SPR_V2_CLOSED_copy]; }
+
+spritegroup gbln_sprg_v1_def_copy {
+    loading: [gbln_SPR_V1_OPEN_copy, gbln_SPR_V1_DEF_1_copy, gbln_SPR_V1_DEF_2_copy, gbln_SPR_V1_DEF_3_copy];
+    loaded: [gbln_SPR_V1_CLOSED_copy]; }
+
+spritegroup gbln_sprg_v1_plas_copy {
+    loading: [gbln_SPR_V1_OPEN_copy, gbln_SPR_V1_PLAS_1_copy, gbln_SPR_V1_PLAS_2_copy, gbln_SPR_V1_PLAS_3_copy];
+    loaded: [gbln_SPR_V1_CLOSED_copy]; }
+
+spritegroup gbln_sprg_v1_papr_copy {
+    loading: [gbln_SPR_V1_OPEN_copy, gbln_SPR_V1_PAPR_1_copy, gbln_SPR_V1_PAPR_2_copy, gbln_SPR_V1_PAPR_3_copy];
+    loaded: [gbln_SPR_V1_CLOSED_copy]; }
+
+spritegroup gbln_sprg_v1_wood_copy {
+    loading: [gbln_SPR_V1_OPEN_copy, gbln_SPR_V1_WOOD_1_copy, gbln_SPR_V1_WOOD_2_copy, gbln_SPR_V1_WOOD_3_copy];
+    loaded: [gbln_SPR_V1_CLOSED_copy]; }
+
+spritegroup gbln_sprg_v1_stel_copy {
+    loading: [gbln_SPR_V1_OPEN_copy, gbln_SPR_V1_STEL_1_copy, gbln_SPR_V1_STEL_2_copy, gbln_SPR_V1_STEL_3_copy];
+    loaded: [gbln_SPR_V1_CLOSED_copy]; }
+
+spritegroup gbln_sprg_lvst_copy {
+    loading: [gbln_SPR_LVST_OPEN_copy];
+    loaded: [gbln_SPR_LVST_CLOSED_copy]; }
+
+switch (FEAT_TRAINS, SELF, gbln_cargo_gfx_v2_copy, cargo_type_in_veh) {
+    PAPR: gbln_sprg_v2_papr_copy;
+    PLAS: gbln_sprg_v2_plas_copy;
+    STEL: gbln_sprg_v2_stel_copy;
+    WDPR: gbln_sprg_v2_wood_copy;
+    default: gbln_sprg_v2_def_copy; }
+
+switch (FEAT_TRAINS, SELF, gbln_cargo_gfx_v1_copy, cargo_type_in_veh) {
+    PAPR: gbln_sprg_v1_papr_copy;
+    PLAS: gbln_sprg_v1_plas_copy;
+    STEL: gbln_sprg_v1_stel_copy;
+    WDPR: gbln_sprg_v1_wood_copy;
+    default: gbln_sprg_v1_def_copy; }
+
+random_switch (FEAT_TRAINS, SELF, gbln_cargo_random_copy) {
+    1: gbln_cargo_gfx_v1_copy;
+    1: gbln_cargo_gfx_v2_copy; }
+
+switch (FEAT_TRAINS, SELF, gbln_cargo_gfx_copy, cargo_type_in_veh) {
+    LVST: gbln_sprg_lvst_copy;
+    default: gbln_cargo_random_copy; }
+
+switch (FEAT_TRAINS, SELF, gbln_gfx_flipped, var[0xC8]) {
+    0xFE..0xFF: gbln_cargo_gfx_copy;
+    default: gbln_cargo_gfx; }
+
+item (FEAT_TRAINS, gbln) { graphics {
+    additional_text: string(STR_ADD_GBLN, string(STR_ADD_MANUFACTURER), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 30;
+    colour_mapping: switch_recolour_lights;
+    default: gbln_gfx_flipped;
+    length: 6;
+    cargo_age_period: comfortlvst() << param_cargo_decay;
+    purchase: gbln_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, gbln) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [WOOD];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 9;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1995,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 30;
+    name: string(STR_PUR_GBLN, string(STR_PUR_COVERED_WAGON));
+    non_refittable_cargo_classes: bitmask(CC_OVERSIZED, CC_REFRIGERATED);
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_COVERED, CC_EXPRESS, CC_HAZARDOUS, CC_PIECE_GOODS);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 4;
+    speed: 120 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 14 ton;
+}}

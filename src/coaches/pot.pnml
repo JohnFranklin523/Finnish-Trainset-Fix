@@ -1,0 +1,178 @@
+spriteset (pot_SPR_PUR, "gfx/pot_0.png") {
+    template4()
+}
+
+spriteset (pot_SPR_CLOSED, "gfx/pot_1.png") {
+    template6()
+}
+
+spriteset (pot_SPR_OPEN, "gfx/pot_2.png") {
+    template6()
+}
+
+spriteset (pot_SPR_CLOSED_REAR, "gfx/pot_3.png") {
+    template6()
+}
+
+spriteset (pot_SPR_OPEN_REAR, "gfx/pot_4.png") {
+    template6()
+}
+
+spritegroup pot_sprg_rear {
+    loading: [pot_SPR_OPEN_REAR];
+    loaded: [pot_SPR_CLOSED_REAR]; }
+
+spritegroup pot_sprg {
+    loading: [pot_SPR_OPEN];
+    loaded: [pot_SPR_CLOSED]; }
+
+switch (FEAT_TRAINS, SELF, pot_gfx, position_in_consist_from_end) {
+    1: pot_sprg_rear;
+    default: pot_sprg; }
+
+spriteset (pot_SPR_CLOSED_copy, "gfx/pot_1.png") {
+    template7()
+}
+
+spriteset (pot_SPR_OPEN_copy, "gfx/pot_2.png") {
+    template7()
+}
+
+spriteset (pot_SPR_CLOSED_REAR_copy, "gfx/pot_3.png") {
+    template7()
+}
+
+spriteset (pot_SPR_OPEN_REAR_copy, "gfx/pot_4.png") {
+    template7()
+}
+
+switch (FEAT_TRAINS, SELF, pot_gfx_depot_2, extra_callback_info1) {
+    0x10: spriteset_empty;
+    default: pot_gfx; }
+
+switch (FEAT_TRAINS, SELF, pot_articulated, extra_callback_info1) {
+    1: pot_fake_arti_1;
+    2: pot_fake_arti_2;
+    3: CB_RESULT_NO_MORE_ARTICULATED_PARTS; }
+
+spritegroup pot_sprg_copy {
+    loading: [pot_SPR_OPEN_copy];
+    loaded: [pot_SPR_CLOSED_copy]; }
+
+spritegroup pot_sprg_rear_copy {
+    loading: [pot_SPR_OPEN_REAR_copy];
+    loaded: [pot_SPR_CLOSED_REAR_copy]; }
+
+switch (FEAT_TRAINS, SELF, pot_gfx_copy, position_in_consist_from_end) {
+    1: pot_sprg_rear_copy;
+    default: pot_sprg_copy; }
+
+switch (FEAT_TRAINS, SELF, pot_gfx_depot_1, extra_callback_info1) {
+    0x10: pot_gfx_copy;
+    default: spriteset_empty; }
+
+item (FEAT_TRAINS, pot) { graphics {
+    additional_text: string(STR_ADD_POT, string(STR_ADD_SERVICE), string(STR_ADD_POSTAL), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_STEEL), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_BLUE_COACH), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    articulated_part: pot_articulated;
+    cargo_capacity: 0;
+    colour_mapping: switch_recolour_lights;
+    default: pot_gfx_depot_1;
+    length: 4;
+    purchase: pot_SPR_PUR;
+    visual_effect_and_powered: visual_effect_and_powered(
+VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, pot_fake_arti_1) { graphics {
+    additional_text: string(STR_ADD_POT, string(STR_ADD_SERVICE), string(STR_ADD_POSTAL), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_STEEL), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_BLUE_COACH), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    cargo_capacity: 60;
+    colour_mapping: switch_recolour_lights;
+    default: pot_gfx_depot_2;
+    length: 2;
+    purchase: pot_SPR_PUR;
+}}
+item (FEAT_TRAINS, pot_fake_arti_2) { graphics {
+    additional_text: string(STR_ADD_POT, string(STR_ADD_SERVICE), string(STR_ADD_POSTAL), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_STEEL), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_BLUE_COACH), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES));
+    cargo_capacity: 0;
+    colour_mapping: switch_recolour_lights;
+    default: spriteset_empty;
+    length: 4;
+    purchase: pot_SPR_PUR;
+    visual_effect_and_powered: visual_effect_and_powered(
+VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+
+item (FEAT_TRAINS, pot) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 200 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 66;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1967,01,01);
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: 50;
+    name: string(STR_PUR_POT, string(STR_PUR_MAIL_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_MAIL);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 17;
+    speed: 140 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 40 ton;
+}}
+item (FEAT_TRAINS, pot_fake_arti_1) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    name: string(STR_PUR_POT, string(STR_PUR_MAIL_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_MAIL);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}
+item (FEAT_TRAINS, pot_fake_arti_2) { property {
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [];
+    climates_available: NO_CLIMATE;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    length: 8;
+    loading_speed: param_loading_speed_express;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    name: string(STR_PUR_POT, string(STR_PUR_MAIL_COACH));
+    non_refittable_cargo_classes: NO_CARGO_CLASS;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_MAIL);
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}}

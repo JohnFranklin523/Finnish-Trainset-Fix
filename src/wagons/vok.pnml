@@ -1,0 +1,604 @@
+spriteset (vok_SPR_PUR, "gfx/vok_0.png") {
+    template4()
+}
+
+spriteset (vok_SPR_V1_EMPTY, "gfx/vok_1.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_COAL_1, "gfx/vok_2.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_COAL_2, "gfx/vok_3.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_COAL_3, "gfx/vok_4.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_ORE_1, "gfx/vok_5.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_ORE_2, "gfx/vok_6.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_ORE_3, "gfx/vok_7.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_GRAI_1, "gfx/vok_8.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_GRAI_2, "gfx/vok_9.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_GRAI_3, "gfx/vok_10.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_STONE_1, "gfx/vok_11.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_STONE_2, "gfx/vok_12.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_STONE_3, "gfx/vok_13.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_SAND_1, "gfx/vok_14.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_SAND_2, "gfx/vok_15.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_SAND_3, "gfx/vok_16.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_WDPR_1, "gfx/vok_17.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_WDPR_2, "gfx/vok_18.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_WDPR_3, "gfx/vok_19.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_SUGR_1, "gfx/vok_20.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_SUGR_2, "gfx/vok_21.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V1_SUGR_3, "gfx/vok_22.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_EMPTY, "gfx/vok_23.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_COAL_1, "gfx/vok_24.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_COAL_2, "gfx/vok_25.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_COAL_3, "gfx/vok_26.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_ORE_1, "gfx/vok_27.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_ORE_2, "gfx/vok_28.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_ORE_3, "gfx/vok_29.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_GRAI_1, "gfx/vok_30.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_GRAI_2, "gfx/vok_31.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_GRAI_3, "gfx/vok_32.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_STONE_1, "gfx/vok_33.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_STONE_2, "gfx/vok_34.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_STONE_3, "gfx/vok_35.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_SAND_1, "gfx/vok_36.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_SAND_2, "gfx/vok_37.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_SAND_3, "gfx/vok_38.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_WDPR_1, "gfx/vok_39.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_WDPR_2, "gfx/vok_40.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_WDPR_3, "gfx/vok_41.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_SUGR_1, "gfx/vok_42.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_SUGR_2, "gfx/vok_43.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V2_SUGR_3, "gfx/vok_44.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_EMPTY, "gfx/vok_45.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_COAL_1, "gfx/vok_46.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_COAL_2, "gfx/vok_47.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_COAL_3, "gfx/vok_48.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_ORE_1, "gfx/vok_49.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_ORE_2, "gfx/vok_50.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_ORE_3, "gfx/vok_51.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_GRAI_1, "gfx/vok_52.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_GRAI_2, "gfx/vok_53.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_GRAI_3, "gfx/vok_54.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_STONE_1, "gfx/vok_55.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_STONE_2, "gfx/vok_56.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_STONE_3, "gfx/vok_57.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_SAND_1, "gfx/vok_58.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_SAND_2, "gfx/vok_59.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_SAND_3, "gfx/vok_60.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_WDPR_1, "gfx/vok_61.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_WDPR_2, "gfx/vok_62.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_WDPR_3, "gfx/vok_63.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_SUGR_1, "gfx/vok_64.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_SUGR_2, "gfx/vok_65.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V3_SUGR_3, "gfx/vok_66.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_EMPTY, "gfx/vok_67.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_COAL_1, "gfx/vok_68.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_COAL_2, "gfx/vok_69.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_COAL_3, "gfx/vok_70.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_ORE_1, "gfx/vok_71.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_ORE_2, "gfx/vok_72.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_ORE_3, "gfx/vok_73.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_GRAI_1, "gfx/vok_74.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_GRAI_2, "gfx/vok_75.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_GRAI_3, "gfx/vok_76.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_STONE_1, "gfx/vok_77.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_STONE_2, "gfx/vok_78.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_STONE_3, "gfx/vok_79.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_SAND_1, "gfx/vok_80.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_SAND_2, "gfx/vok_81.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_SAND_3, "gfx/vok_82.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_WDPR_1, "gfx/vok_83.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_WDPR_2, "gfx/vok_84.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_WDPR_3, "gfx/vok_85.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_SUGR_1, "gfx/vok_86.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_SUGR_2, "gfx/vok_87.png") {
+    template8()
+}
+
+spriteset (vok_SPR_V4_SUGR_3, "gfx/vok_88.png") {
+    template8()
+}
+
+spritegroup vok_sprg_v1_coal {
+    loading: [vok_SPR_V1_EMPTY, vok_SPR_V1_COAL_1, vok_SPR_V1_COAL_2, vok_SPR_V1_COAL_3];
+    loaded: [vok_SPR_V1_EMPTY, vok_SPR_V1_COAL_1, vok_SPR_V1_COAL_2, vok_SPR_V1_COAL_3]; }
+
+spritegroup vok_sprg_v1_ore {
+    loading: [vok_SPR_V1_EMPTY, vok_SPR_V1_ORE_1, vok_SPR_V1_ORE_2, vok_SPR_V1_ORE_3];
+    loaded: [vok_SPR_V1_EMPTY, vok_SPR_V1_ORE_1, vok_SPR_V1_ORE_2, vok_SPR_V1_ORE_3]; }
+
+spritegroup vok_sprg_v1_grai {
+    loading: [vok_SPR_V1_EMPTY, vok_SPR_V1_GRAI_1, vok_SPR_V1_GRAI_2, vok_SPR_V1_GRAI_3];
+    loaded: [vok_SPR_V1_EMPTY, vok_SPR_V1_GRAI_1, vok_SPR_V1_GRAI_2, vok_SPR_V1_GRAI_3]; }
+
+spritegroup vok_sprg_v1_stone {
+    loading: [vok_SPR_V1_EMPTY, vok_SPR_V1_STONE_1, vok_SPR_V1_STONE_2, vok_SPR_V1_STONE_3];
+    loaded: [vok_SPR_V1_EMPTY, vok_SPR_V1_STONE_1, vok_SPR_V1_STONE_2, vok_SPR_V1_STONE_3]; }
+
+spritegroup vok_sprg_v1_sand {
+    loading: [vok_SPR_V1_EMPTY, vok_SPR_V1_SAND_1, vok_SPR_V1_SAND_2, vok_SPR_V1_SAND_3];
+    loaded: [vok_SPR_V1_EMPTY, vok_SPR_V1_SAND_1, vok_SPR_V1_SAND_2, vok_SPR_V1_SAND_3]; }
+
+spritegroup vok_sprg_v1_wdpr {
+    loading: [vok_SPR_V1_EMPTY, vok_SPR_V1_WDPR_1, vok_SPR_V1_WDPR_2, vok_SPR_V1_WDPR_3];
+    loaded: [vok_SPR_V1_EMPTY, vok_SPR_V1_WDPR_1, vok_SPR_V1_WDPR_2, vok_SPR_V1_WDPR_3]; }
+
+spritegroup vok_sprg_v1_sugr {
+    loading: [vok_SPR_V1_EMPTY, vok_SPR_V1_SUGR_1, vok_SPR_V1_SUGR_2, vok_SPR_V1_SUGR_3];
+    loaded: [vok_SPR_V1_EMPTY, vok_SPR_V1_SUGR_1, vok_SPR_V1_SUGR_2, vok_SPR_V1_SUGR_3]; }
+
+spritegroup vok_sprg_v2_coal {
+    loading: [vok_SPR_V2_EMPTY, vok_SPR_V2_COAL_1, vok_SPR_V2_COAL_2, vok_SPR_V2_COAL_3];
+    loaded: [vok_SPR_V2_EMPTY, vok_SPR_V2_COAL_1, vok_SPR_V2_COAL_2, vok_SPR_V2_COAL_3]; }
+
+spritegroup vok_sprg_v2_ore {
+    loading: [vok_SPR_V2_EMPTY, vok_SPR_V2_ORE_1, vok_SPR_V2_ORE_2, vok_SPR_V2_ORE_3];
+    loaded: [vok_SPR_V2_EMPTY, vok_SPR_V2_ORE_1, vok_SPR_V2_ORE_2, vok_SPR_V2_ORE_3]; }
+
+spritegroup vok_sprg_v2_grai {
+    loading: [vok_SPR_V2_EMPTY, vok_SPR_V2_GRAI_1, vok_SPR_V2_GRAI_2, vok_SPR_V2_GRAI_3];
+    loaded: [vok_SPR_V2_EMPTY, vok_SPR_V2_GRAI_1, vok_SPR_V2_GRAI_2, vok_SPR_V2_GRAI_3]; }
+
+spritegroup vok_sprg_v2_stone {
+    loading: [vok_SPR_V2_EMPTY, vok_SPR_V2_STONE_1, vok_SPR_V2_STONE_2, vok_SPR_V2_STONE_3];
+    loaded: [vok_SPR_V2_EMPTY, vok_SPR_V2_STONE_1, vok_SPR_V2_STONE_2, vok_SPR_V2_STONE_3]; }
+
+spritegroup vok_sprg_v2_sand {
+    loading: [vok_SPR_V2_EMPTY, vok_SPR_V2_SAND_1, vok_SPR_V2_SAND_2, vok_SPR_V2_SAND_3];
+    loaded: [vok_SPR_V2_EMPTY, vok_SPR_V2_SAND_1, vok_SPR_V2_SAND_2, vok_SPR_V2_SAND_3]; }
+
+spritegroup vok_sprg_v2_wdpr {
+    loading: [vok_SPR_V2_EMPTY, vok_SPR_V2_WDPR_1, vok_SPR_V2_WDPR_2, vok_SPR_V2_WDPR_3];
+    loaded: [vok_SPR_V2_EMPTY, vok_SPR_V2_WDPR_1, vok_SPR_V2_WDPR_2, vok_SPR_V2_WDPR_3]; }
+
+spritegroup vok_sprg_v2_sugr {
+    loading: [vok_SPR_V2_EMPTY, vok_SPR_V2_SUGR_1, vok_SPR_V2_SUGR_2, vok_SPR_V2_SUGR_3];
+    loaded: [vok_SPR_V2_EMPTY, vok_SPR_V2_SUGR_1, vok_SPR_V2_SUGR_2, vok_SPR_V2_SUGR_3]; }
+
+spritegroup vok_sprg_v3_coal {
+    loading: [vok_SPR_V3_EMPTY, vok_SPR_V3_COAL_1, vok_SPR_V3_COAL_2, vok_SPR_V3_COAL_3];
+    loaded: [vok_SPR_V3_EMPTY, vok_SPR_V3_COAL_1, vok_SPR_V3_COAL_2, vok_SPR_V3_COAL_3]; }
+
+spritegroup vok_sprg_v3_ore {
+    loading: [vok_SPR_V3_EMPTY, vok_SPR_V3_ORE_1, vok_SPR_V3_ORE_2, vok_SPR_V3_ORE_3];
+    loaded: [vok_SPR_V3_EMPTY, vok_SPR_V3_ORE_1, vok_SPR_V3_ORE_2, vok_SPR_V3_ORE_3]; }
+
+spritegroup vok_sprg_v3_grai {
+    loading: [vok_SPR_V3_EMPTY, vok_SPR_V3_GRAI_1, vok_SPR_V3_GRAI_2, vok_SPR_V3_GRAI_3];
+    loaded: [vok_SPR_V3_EMPTY, vok_SPR_V3_GRAI_1, vok_SPR_V3_GRAI_2, vok_SPR_V3_GRAI_3]; }
+
+spritegroup vok_sprg_v3_stone {
+    loading: [vok_SPR_V3_EMPTY, vok_SPR_V3_STONE_1, vok_SPR_V3_STONE_2, vok_SPR_V3_STONE_3];
+    loaded: [vok_SPR_V3_EMPTY, vok_SPR_V3_STONE_1, vok_SPR_V3_STONE_2, vok_SPR_V3_STONE_3]; }
+
+spritegroup vok_sprg_v3_sand {
+    loading: [vok_SPR_V3_EMPTY, vok_SPR_V3_SAND_1, vok_SPR_V3_SAND_2, vok_SPR_V3_SAND_3];
+    loaded: [vok_SPR_V3_EMPTY, vok_SPR_V3_SAND_1, vok_SPR_V3_SAND_2, vok_SPR_V3_SAND_3]; }
+
+spritegroup vok_sprg_v3_wdpr {
+    loading: [vok_SPR_V3_EMPTY, vok_SPR_V3_WDPR_1, vok_SPR_V3_WDPR_2, vok_SPR_V3_WDPR_3];
+    loaded: [vok_SPR_V3_EMPTY, vok_SPR_V3_WDPR_1, vok_SPR_V3_WDPR_2, vok_SPR_V3_WDPR_3]; }
+
+spritegroup vok_sprg_v3_sugr {
+    loading: [vok_SPR_V3_EMPTY, vok_SPR_V3_SUGR_1, vok_SPR_V3_SUGR_2, vok_SPR_V3_SUGR_3];
+    loaded: [vok_SPR_V3_EMPTY, vok_SPR_V3_SUGR_1, vok_SPR_V3_SUGR_2, vok_SPR_V3_SUGR_3]; }
+
+spritegroup vok_sprg_v4_coal {
+    loading: [vok_SPR_V4_EMPTY, vok_SPR_V4_COAL_1, vok_SPR_V4_COAL_2, vok_SPR_V4_COAL_3];
+    loaded: [vok_SPR_V4_EMPTY, vok_SPR_V4_COAL_1, vok_SPR_V4_COAL_2, vok_SPR_V4_COAL_3]; }
+
+spritegroup vok_sprg_v4_ore {
+    loading: [vok_SPR_V4_EMPTY, vok_SPR_V4_ORE_1, vok_SPR_V4_ORE_2, vok_SPR_V4_ORE_3];
+    loaded: [vok_SPR_V4_EMPTY, vok_SPR_V4_ORE_1, vok_SPR_V4_ORE_2, vok_SPR_V4_ORE_3]; }
+
+spritegroup vok_sprg_v4_grai {
+    loading: [vok_SPR_V4_EMPTY, vok_SPR_V4_GRAI_1, vok_SPR_V4_GRAI_2, vok_SPR_V4_GRAI_3];
+    loaded: [vok_SPR_V4_EMPTY, vok_SPR_V4_GRAI_1, vok_SPR_V4_GRAI_2, vok_SPR_V4_GRAI_3]; }
+
+spritegroup vok_sprg_v4_stone {
+    loading: [vok_SPR_V4_EMPTY, vok_SPR_V4_STONE_1, vok_SPR_V4_STONE_2, vok_SPR_V4_STONE_3];
+    loaded: [vok_SPR_V4_EMPTY, vok_SPR_V4_STONE_1, vok_SPR_V4_STONE_2, vok_SPR_V4_STONE_3]; }
+
+spritegroup vok_sprg_v4_sand {
+    loading: [vok_SPR_V4_EMPTY, vok_SPR_V4_SAND_1, vok_SPR_V4_SAND_2, vok_SPR_V4_SAND_3];
+    loaded: [vok_SPR_V4_EMPTY, vok_SPR_V4_SAND_1, vok_SPR_V4_SAND_2, vok_SPR_V4_SAND_3]; }
+
+spritegroup vok_sprg_v4_wdpr {
+    loading: [vok_SPR_V4_EMPTY, vok_SPR_V4_WDPR_1, vok_SPR_V4_WDPR_2, vok_SPR_V4_WDPR_3];
+    loaded: [vok_SPR_V4_EMPTY, vok_SPR_V4_WDPR_1, vok_SPR_V4_WDPR_2, vok_SPR_V4_WDPR_3]; }
+
+spritegroup vok_sprg_v4_sugr {
+    loading: [vok_SPR_V4_EMPTY, vok_SPR_V4_SUGR_1, vok_SPR_V4_SUGR_2, vok_SPR_V4_SUGR_3];
+    loaded: [vok_SPR_V4_EMPTY, vok_SPR_V4_SUGR_1, vok_SPR_V4_SUGR_2, vok_SPR_V4_SUGR_3]; }
+
+switch (FEAT_TRAINS, SELF, vok_gfx_v1, cargo_type_in_veh) {
+    AORE: vok_sprg_v1_ore;
+    BDMT: vok_sprg_v1_stone;
+    CLAY: vok_sprg_v1_sand;
+    CMNT: vok_sprg_v1_stone;
+    COAL: vok_sprg_v1_coal;
+    CORE: vok_sprg_v1_ore;
+    FERT: vok_sprg_v1_stone;
+    GRVL: vok_sprg_v1_stone;
+    IORE: vok_sprg_v1_ore;
+    LIME: vok_sprg_v1_stone;
+    POTA: vok_sprg_v1_ore;
+    SAND: vok_sprg_v1_sand;
+    SCMT: vok_sprg_v1_sand;
+    SGBT: vok_sprg_v1_wdpr;
+    SGCN: vok_sprg_v1_wdpr;
+    SUGR: vok_sprg_v1_sugr;
+    SULP: vok_sprg_v1_ore;
+    WDPR: vok_sprg_v1_wdpr;
+    default: vok_sprg_v1_grai; }
+
+switch (FEAT_TRAINS, SELF, vok_gfx_v2, cargo_type_in_veh) {
+    AORE: vok_sprg_v2_ore;
+    BDMT: vok_sprg_v2_stone;
+    CLAY: vok_sprg_v2_sand;
+    CMNT: vok_sprg_v2_stone;
+    COAL: vok_sprg_v2_coal;
+    CORE: vok_sprg_v2_ore;
+    FERT: vok_sprg_v2_stone;
+    GRVL: vok_sprg_v2_stone;
+    IORE: vok_sprg_v2_ore;
+    LIME: vok_sprg_v2_stone;
+    POTA: vok_sprg_v2_ore;
+    SAND: vok_sprg_v2_sand;
+    SCMT: vok_sprg_v2_sand;
+    SGBT: vok_sprg_v2_wdpr;
+    SGCN: vok_sprg_v2_wdpr;
+    SUGR: vok_sprg_v2_sugr;
+    SULP: vok_sprg_v2_ore;
+    WDPR: vok_sprg_v2_wdpr;
+    default: vok_sprg_v2_grai; }
+
+switch (FEAT_TRAINS, SELF, vok_gfx_v3, cargo_type_in_veh) {
+    AORE: vok_sprg_v3_ore;
+    BDMT: vok_sprg_v3_stone;
+    CLAY: vok_sprg_v3_sand;
+    CMNT: vok_sprg_v3_stone;
+    COAL: vok_sprg_v3_coal;
+    CORE: vok_sprg_v3_ore;
+    FERT: vok_sprg_v3_stone;
+    GRVL: vok_sprg_v3_stone;
+    IORE: vok_sprg_v3_ore;
+    LIME: vok_sprg_v3_stone;
+    POTA: vok_sprg_v3_ore;
+    SAND: vok_sprg_v3_sand;
+    SCMT: vok_sprg_v3_sand;
+    SGBT: vok_sprg_v3_wdpr;
+    SGCN: vok_sprg_v3_wdpr;
+    SUGR: vok_sprg_v3_sugr;
+    SULP: vok_sprg_v3_ore;
+    WDPR: vok_sprg_v3_wdpr;
+    default: vok_sprg_v3_grai; }
+
+switch (FEAT_TRAINS, SELF, vok_gfx_v4, cargo_type_in_veh) {
+    AORE: vok_sprg_v4_ore;
+    BDMT: vok_sprg_v4_stone;
+    CLAY: vok_sprg_v4_sand;
+    CMNT: vok_sprg_v4_stone;
+    COAL: vok_sprg_v4_coal;
+    CORE: vok_sprg_v4_ore;
+    FERT: vok_sprg_v4_stone;
+    GRVL: vok_sprg_v4_stone;
+    IORE: vok_sprg_v4_ore;
+    LIME: vok_sprg_v4_stone;
+    POTA: vok_sprg_v4_ore;
+    SAND: vok_sprg_v4_sand;
+    SCMT: vok_sprg_v4_sand;
+    SGBT: vok_sprg_v4_wdpr;
+    SGCN: vok_sprg_v4_wdpr;
+    SUGR: vok_sprg_v4_sugr;
+    SULP: vok_sprg_v4_ore;
+    WDPR: vok_sprg_v4_wdpr;
+    default: vok_sprg_v4_grai; }
+
+random_switch (FEAT_TRAINS, SELF, vok_gfx) {
+    1: vok_gfx_v1;
+    1: vok_gfx_v2;
+    1: vok_gfx_v3;
+    1: vok_gfx_v4; }
+
+item (FEAT_TRAINS, vok) { graphics {
+    additional_text: string(STR_ADD_VOK, string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES), string(STR_ADD_UIC_AXLE_ORDER));
+    cargo_capacity: 69;
+    colour_mapping: switch_recolour_lights;
+    default: vok_gfx;
+    length: 8;
+    purchase: vok_SPR_PUR;
+}}
+
+item (FEAT_TRAINS, vok) { property {
+    ai_special_flag: 0;
+    air_drag_coefficient: 0;
+    bitmask_vehicle_info: 0;
+    cargo_age_period: 185 << param_cargo_decay;
+    cargo_allow_refit: [];
+    cargo_capacity: 1;
+    cargo_disallow_refit: [BEAN, CASS, CERE, FICR, GRAI, MAIZ, OLSD, SALT, SGBT, SGCN, SUGR, WHEA, WOOL];
+    climates_available: ALL_CLIMATES;
+    cost_factor: 11;
+    default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+    dual_headed: 0;
+    engine_class: ENGINE_CLASS_DIESEL;
+    extra_power_per_wagon: 0;
+    extra_weight_per_wagon: 0;
+    introduction_date: date(1978,01,01);
+    length: 8;
+    loading_speed: 5;
+    misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_FLIP);
+    model_life: VEHICLE_NEVER_EXPIRES;
+    name: string(STR_PUR_VOK, string(STR_PUR_OPEN_WAGON));
+    non_refittable_cargo_classes: bitmask(CC_COVERED);
+    power: 0 hpM;
+    refit_cost: 0;
+    refittable_cargo_classes: bitmask(CC_BULK);
+    reliability_decay: 20;
+    retire_early: 0;
+    running_cost_base: RUNNING_COST_STEAM;
+    running_cost_factor: 8;
+    speed: 80 km/h;
+    sprite_id: SPRITE_ID_NEW_TRAIN;
+    track_type: RAIL;
+    tractive_effort_coefficient: 0.3;
+    vehicle_life: 255;
+    visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    weight: 22 ton;
+}}
