@@ -178,7 +178,7 @@ item (FEAT_TRAINS, sm5) { property {
     running_cost_factor: 136;
     speed: 160 km/h;
     sprite_id: SPRITE_ID_NEW_TRAIN;
-    track_type: RAIL;
+    track_type: BAAN;
     tractive_effort_coefficient: 0.152;
     vehicle_life: 255;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
@@ -200,7 +200,7 @@ item (FEAT_TRAINS, sm5_part_1) { property {
     refit_cost: 0;
     refittable_cargo_classes: bitmask(CC_PASSENGERS);
     sprite_id: SPRITE_ID_NEW_TRAIN;
-    track_type: RAIL;
+    track_type: BAAN;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 }}
 item (FEAT_TRAINS, sm5_part_2) { property {
@@ -219,7 +219,7 @@ item (FEAT_TRAINS, sm5_part_2) { property {
     refit_cost: 0;
     refittable_cargo_classes: bitmask(CC_PASSENGERS);
     sprite_id: SPRITE_ID_NEW_TRAIN;
-    track_type: RAIL;
+    track_type: BAAN;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 }}
 item (FEAT_TRAINS, sm5_part_3) { property {
@@ -238,6 +238,6 @@ item (FEAT_TRAINS, sm5_part_3) { property {
     refit_cost: 0;
     refittable_cargo_classes: bitmask(CC_PASSENGERS);
     sprite_id: SPRITE_ID_NEW_TRAIN;
-    track_type: RAIL;
+    track_type: BAAN;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 }}

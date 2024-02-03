@@ -1,6 +1,7 @@
 railtypetable {
     RAIL,
     ELRL,
+    RLA0,
 // xUSSR
     ERA1,
     ERA2,
@@ -87,5 +88,7 @@ railtypetable {
     SJCA,
     SJDA,
     SJEA,
-    RT_METRO: [SAE3, "3RDR", MTRO, ELRL]
+    BAAN: [BAAN, RLA0, SAAN, RAIL],
+    BAAA: [BAAA, ERA0, SAAA, ELRL],
+    RT_METRO: [BAA3, SAE3, "3RDR", MTRO, ELRL]
 }

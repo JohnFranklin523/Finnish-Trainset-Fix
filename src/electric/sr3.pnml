@@ -84,11 +84,11 @@ switch (FEAT_TRAINS, SELF, sr3_liverychoice, cargo_subtype) {
     3: sr3_SPR_GP;
     4: sr3_SPR_G; }
 
-switch (FEAT_TRAINS, SELF, sr3_visual, twentyfivekvac()) {
+switch (FEAT_TRAINS, SELF, sr3_visual, tile_powers_railtype("SAAA") || tile_powers_railtype("BAAA")) {
     1: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 0, DISABLE_WAGON_POWER);
     default: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER); }
 
-switch (FEAT_TRAINS, SELF, sr3_power, twentyfivekvac()) {
+switch (FEAT_TRAINS, SELF, sr3_power, tile_powers_railtype("SAAA") || tile_powers_railtype("BAAA")) {
     1: return 8464;
     default: 475; }
 
@@ -137,7 +137,7 @@ item (FEAT_TRAINS, sr3) { property {
     running_cost_factor: 61;
     speed: 200 km/h;
     sprite_id: SPRITE_ID_NEW_TRAIN;
-    track_type: RAIL;
+    track_type: BAAN;
     tractive_effort_coefficient: 0.389;
     vehicle_life: 40;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);

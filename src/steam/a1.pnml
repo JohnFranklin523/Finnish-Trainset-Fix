@@ -66,7 +66,7 @@ item (FEAT_TRAINS, a1) { property {
     running_cost_factor: 70;
     speed: 80 km/h;
     sprite_id: SPRITE_ID_NEW_TRAIN;
-    track_type: RAIL;
+    track_type: BAAN;
     tractive_effort_coefficient: 0.061;
     vehicle_life: 51;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
@@ -88,6 +88,6 @@ item (FEAT_TRAINS, a1_part_1) { property {
     refit_cost: 0;
     refittable_cargo_classes: NO_CARGO_CLASS;
     sprite_id: SPRITE_ID_NEW_TRAIN;
-    track_type: RAIL;
+    track_type: BAAN;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 }}

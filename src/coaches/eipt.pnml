@@ -133,7 +133,7 @@ item (FEAT_TRAINS, eipt) { property {
     running_cost_factor: 12;
     speed: 140 km/h;
     sprite_id: SPRITE_ID_NEW_TRAIN;
-    track_type: RAIL;
+    track_type: BAAN;
     tractive_effort_coefficient: 0.3;
     vehicle_life: 255;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
@@ -155,7 +155,7 @@ item (FEAT_TRAINS, eipt_fake_arti_1) { property {
     refit_cost: 0;
     refittable_cargo_classes: bitmask(CC_PASSENGERS);
     sprite_id: SPRITE_ID_NEW_TRAIN;
-    track_type: RAIL;
+    track_type: BAAN;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 }}
 item (FEAT_TRAINS, eipt_fake_arti_2) { property {
@@ -174,6 +174,6 @@ item (FEAT_TRAINS, eipt_fake_arti_2) { property {
     refit_cost: 0;
     refittable_cargo_classes: bitmask(CC_PASSENGERS);
     sprite_id: SPRITE_ID_NEW_TRAIN;
-    track_type: RAIL;
+    track_type: BAAN;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 }}

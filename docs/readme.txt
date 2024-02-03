@@ -38,7 +38,7 @@ team. See credits.
 
 2.1 Requirements
 ----------------
-- OpenTTD 1.2.0 or nightly r23842, or higher
+- OpenTTD 1.11.0 or higher
 - Not compatible with TTDPatch
 
 
@@ -131,7 +131,7 @@ Pietu Tuovinen, Mikael Sarhervo, Timo Keski-Pitäjä and others.
 ----------------------------
 
 Q: Why can't I use this in older versions of OpenTTD or TTDPatch?
-A: This NewGRF uses some features only available to OpenTTD r23842 and
+A: This NewGRF uses some features only available to OpenTTD 1.11.0 and
    newer. Furthermore, the most recent version of NML used to build this
    NewGRF, produces GRF version 8. This is only supported by OpenTTD
    r23166 and newer anyways.

@@ -29,7 +29,7 @@ item (FEAT_TRAINS, f2) { property {
     running_cost_factor: 66;
     speed: 60 km/h;
     sprite_id: SPRITE_ID_NEW_TRAIN;
-    track_type: RAIL;
+    track_type: BAAN;
     tractive_effort_coefficient: 0.089;
     vehicle_life: 27;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
