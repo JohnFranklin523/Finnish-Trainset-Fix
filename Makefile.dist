@@ -1,14 +1,2 @@
-################################################################
-# Definitions needed for tar releases
-# This part is automatically generated
-################################################################
-REPO_HASH := 619944a30dbe
-REPO_REVISION := 4
-NEWGRF_VERSION := 4
-REPO_VERSION_STRING := 0.3
-REPO_TITLE := Finnish Trainset Fix 0.3
-REPO_DATE := 20240203
-REPO_TAGS := 0.3
-HG := 
-GIT := :
-PYTHON := :
+REPO_REVISION       := 5
+REPO_VERSION_STRING := 0.3.1

@@ -1,0 +1,6 @@
+*.nml
+*.grf
+*.tar
+custom_tags.txt
+.nmlcache
+finnishtrainsetfix-*

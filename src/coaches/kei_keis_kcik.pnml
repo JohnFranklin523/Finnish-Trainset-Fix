@@ -27,27 +27,27 @@ switch (FEAT_TRAINS, SELF, kei_keis_kcik_articulated, extra_callback_info1) {
 item (FEAT_TRAINS, kei_keis_kcik) { graphics {
     additional_text: string(STR_ADD_KEI_KEIS_KCIK, string(STR_ADD_SERVICE), string(STR_ADD_EXPRESS_PASSENGERS), string(STR_ADD_CHASSIS_GEN), string(STR_ADD_STEEL), string(STR_ADD_1ST), string(STR_ADD_UIC_AXLE_ORDER), string(STR_ADD_COACH_CLASS), string(STR_ADD_SPECIAL), string(STR_ADD_MANUFACTURER), string(STR_ADD_BOGIES), string(STR_ADD_OTHER_INFO), string(STR_ADD_WITH_DM3));
     articulated_part: kei_keis_kcik_articulated;
-    cargo_capacity: 110;
+    cargo_capacity: 36;
     colour_mapping: switch_recolour_lights;
     default: kei_keis_kcik_pos_gfx;
     length: 8;
     running_cost_factor: 14 * cafecostfactor();
-    cargo_age_period: (50 * cafedecayfactor()) << param_cargo_decay;
+    cargo_age_period: (80 * cafedecayfactor()) << param_cargo_decay;
     purchase: kei_keis_kcik_SPR_PUR;
 }}
 item (FEAT_TRAINS, kei_keis_kcik_part_1) { graphics {
-    cargo_capacity: 110;
+    cargo_capacity: 36;
     colour_mapping: switch_recolour_lights;
     default: kei_keis_kcik_pos_gfx;
     length: 8;
-    cargo_age_period: (50 * cafedecayfactor()) << param_cargo_decay;
+    cargo_age_period: (80 * cafedecayfactor()) << param_cargo_decay;
 }}
 item (FEAT_TRAINS, kei_keis_kcik_part_2) { graphics {
-    cargo_capacity: 110;
+    cargo_capacity: 36;
     colour_mapping: switch_recolour_lights;
     default: kei_keis_kcik_pos_gfx;
     length: 8;
-    cargo_age_period: (50 * cafedecayfactor()) << param_cargo_decay;
+    cargo_age_period: (80 * cafedecayfactor()) << param_cargo_decay;
 }}
 
 item (FEAT_TRAINS, kei_keis_kcik) { property {

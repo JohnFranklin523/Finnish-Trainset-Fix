@@ -1,4 +1,4 @@
-﻿Finnish Trainset Fix 0.2 README
+﻿Finnish Trainset Fix README
 ===============================
 
 ----------
