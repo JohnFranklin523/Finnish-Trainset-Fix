@@ -31,7 +31,7 @@ item (FEAT_TRAINS, foty) { property {
     sprite_id: SPRITE_ID_NEW_TRAIN;
     track_type: BAAN;
     tractive_effort_coefficient: 0.3;
-    vehicle_life: 255;
+    vehicle_life: 40;
     visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
     weight: 41 ton;
 }}
